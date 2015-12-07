@@ -1,0 +1,138 @@
+## mako
+<%namespace name='static' file='static_content.html'/>
+<%namespace file='main.html' import="login_query"/>
+<%!
+from django.core.urlresolvers import reverse
+from django.utils.translation import ugettext as _
+
+from microsite_configuration import microsite
+from microsite_configuration.templatetags.microsite import platform_name
+from lms.djangoapps.ccx.overrides import get_current_ccx
+
+# App that handles subdomain specific branding
+import branding
+# app that handles site status messages
+from status.status import get_site_status_msg
+%>
+
+## Provide a hook for themes to inject branding on top.
+<%block name="navigation_top" />
+
+<%block>
+<%
+try:
+    course_id = course.id
+except:
+    # can't figure out a better way to get at a possibly-defined course var
+    course_id = None
+site_status_msg = get_site_status_msg(course_id)
+%>
+% if site_status_msg:
+<div class="site-status">
+  <div class="inner-wrapper">
+    <span class="white-error-icon"></span>
+    <p>${site_status_msg}</p>
+  </div>
+</div>
+% endif
+</%block>
+
+% if not settings.DEBUG and 'dev' not in settings.SITE_NAME:
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+var yaParams = {/*Здесь параметры визита*/};
+</script>
+
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter24232456 = new Ya.Metrika({id:24232456,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    trackHash:true,params:window.yaParams||{ }});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/24232456" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+% endif
+
+<header id="global-navigation" class="global ${"slim" if course else ""} lektorium " >
+  <nav class="nav-wrapper" aria-label="${_('Global')}">
+    <h1 class="logo">
+      <a href="${marketing_link('ROOT')}">
+        ${platform_name()}
+      </a>
+    </h1>
+
+    % if course:
+    <h2><div>${course.display_name_with_default}</div></h2>
+    % endif
+
+    % if user.is_authenticated():
+    <ol class="nav-global authenticated">
+      <li><a href="https://www.lektorium.tv/mooc2/?field_type=school">Старшеклассникам<br>и абитуриентам</a></li>
+      <li><a href="https://www.lektorium.tv/mooc2/?field_type=student">Студентам<br>и специалистам</a></li>
+      <li><a href="https://www.lektorium.tv/mooc2/?field_type=qualification">Повышение<br>квалификации</a></li>
+      <li><a href="https://www.lektorium.tv/medialibrary">Архив<br>видеолекций</a></li>
+      <li><a href="https://www.lektorium.tv/offline">Очные<br>программы</a></li>
+
+      <li class="nav-user">
+        <ol class="user">
+          <li class="primary">
+            <a href="${reverse('dashboard')}" class="user-link">
+              <!--span class="avatar"></span-->
+              <!--span class="sr">${_("Dashboard for:")} </span> ${user.username} -->
+              <span class="sr">${_("Dashboard for:")} </span>Личный кабинет
+            </a>
+          </li>
+          <li class="primary">
+            <a href="#" class="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr">${_("More options dropdown")}</span> &#9662;</a>
+            <ul class="dropdown-menu" aria-label="More Options" role="menu">
+                <li class="user-nickname">Вы&nbsp;авторизованы как&nbsp;<b>${user.profile.nickname_or_default | n}</b></li>
+              <%block name="navigation_dropdown_menu_links" >
+              <li><a href="${reverse('dashboard')}">Мои курсы</a></li>
+              <li><a href="http://www.lektorium.tv/editprofile">Настройки</a></li>
+              </%block>
+              <li><a href="${reverse('logout')}" role="menuitem">Выход</a></li>
+            </ul>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    % else:
+    <ol class="nav-global">
+      <li><a href="https://www.lektorium.tv/mooc2/?field_type=school">Старшеклассникам<br>и абитуриентам</a></li>
+      <li><a href="https://www.lektorium.tv/mooc2/?field_type=student">Студентам<br>и специалистам</a></li>
+      <li><a href="https://www.lektorium.tv/mooc2/?field_type=qualification">Повышение<br>квалификации</a></li>
+      <li><a href="https://www.lektorium.tv/medialibrary">Архив<br>видеолекций</a></li>
+      <li><a href="https://www.lektorium.tv/offline">Очные<br>программы</a></li>
+      <li class="nav-user">
+        <a class="cta cta-login" href="${reverse('signin_user')}${login_query()}">${_("Log in")}</a>
+      </li>
+    </ol>
+    % endif
+  </nav>
+</header>
+% if course:
+<!--[if lte IE 9]>
+<div class="ie-banner" aria-hidden="true">${_('<strong>Warning:</strong> Your browser is not fully supported. We strongly recommend using {chrome_link} or {ff_link}.').format(chrome_link='<a href="https://www.google.com/intl/en/chrome/browser/" target="_blank">Chrome</a>', ff_link='<a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a>')}</div>
+<![endif]-->
+% endif
+
+<%include file="help_modal.html"/>

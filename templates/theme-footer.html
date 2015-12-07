@@ -1,0 +1,45 @@
+## mako
+<%! from django.core.urlresolvers import reverse %>
+<%! from django.utils.translation import ugettext as _ %>
+<%namespace name='static' file='static_content.html'/>
+<%! from microsite_configuration.templatetags.microsite import platform_name %>
+
+<div class="wrapper wrapper-footer">
+  <footer>
+    <div class="large-3 columns">
+      <h2>Разделы</h2>
+      <p><a href="https://mooc.lektorium.tv">Курсы</a></p>
+      <p><a href="https://www.lektorium.tv/medialibrary">Архив видеолекций</a></p>
+      <p><a href="https://www.lektorium.tv/offline">Очные программы</a></p>
+      <p><a href="https://www.lektorium.tv/forum">Форум</a></p>
+      <p><a href="https://www.lektorium.tv/news">Блог</a></p>
+      <p><a href="http://parsec.lektorium.tv/">Конференция Парсек 2015</a></p>
+    </div>
+    <div class="large-3 columns">
+      <h2>Партнёрам</h2>
+      <p><a href="https://www.lektorium.tv/publish">Публикация</a></p>
+      <p><a href="https://www.lektorium.tv/video">Видеосъёмка и трансляции</a></p>
+      <p><a href="https://www.lektorium.tv/mooc_about">MOOC производство</a></p>
+      <p><a href="https://www.lektorium.tv/mediagrants">Медиагранты</a></p>
+      <p><a href="https://www.lektorium.tv/adv">Реклама</a></p>
+    </div>
+    <div class="large-3 columns">
+      <h2>Пользователям</h2>
+      <p><a href="https://www.lektorium.tv/beta-testirovanie">Бета-тестирование</a></p>
+      <p><a href="https://www.lektorium.tv/help">Служба поддержки</a></p>
+      <p><a href="https://www.youtube.com/user/OpenLektorium">Умный канал на Youtube</a></p>
+      <p><a href="https://vk.com/openlektorium">Умный паблик Вконтакте</a></p>
+      <p><a href="https://www.facebook.com/groups/Lektorium">Умная группа в Facebook</a></p>
+      <p><a href="https://twitter.com/lektorium">Twitter</a></p>
+    </div>
+    <div class="large-3 columns">
+      <h2>Инфо</h2>
+      <p><a href="https://www.lektorium.tv/rules">Правовая информация</a></p>
+      <p><a href="https://www.lektorium.tv/about">О Лекториуме</a></p>
+      <p><a href="https://www.lektorium.tv/team">Команда</a></p>
+      <p><a href="https://www.lektorium.tv/donate">Поддержать проект</a></p>
+      <p><a href="https://www.lektorium.tv/promo-logo">Логотипы</a></p>
+      <p><a href="https://www.lektorium.tv/contacts">Контактная информация</a></p>
+    </div>
+  </footer>
+</div>

@@ -1,0 +1,385 @@
+/* variables */
+$sans-serif: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$serif: $sans-serif;
+$m-blue-d1: #6ea131;
+$m-blue-d3: #88C540;
+
+$header-bg: #24262F;
+$footer-bg: #24262F;
+$lektorium-header-link-color: white;
+$lektorium-footer-link-color: #808080;
+$lektorium-footer-heading-color: white;
+
+$header-height: 80px;
+$header-slim-height: 60px;
+
+$font-intro-path: '../themes/lektorium/fonts/intro';
+
+@font-face {
+  font-family: "intro";
+  src: url("#{$font-intro-path}/intro.eot");
+  src: url("#{$font-intro-path}/intro.eot?#iefix") format("embedded-opentype"),
+  url("#{$font-intro-path}/intro.woff") format("woff"),
+  url("#{$font-intro-path}/intro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/***** theme layout *****/
+body {
+    min-width: 1050px !important;
+}
+
+header.global.lektorium {
+  height: $header-height;
+  padding: 0;
+
+  a {
+    color: $lektorium-header-link-color !important;
+    text-decoration: none;
+    text-transform: none;
+
+    &:hover, &:focus {
+      color: $lektorium-header-link-color;
+      text-decoration: none;
+    }
+  }
+
+  h1, h2, .nav-global {
+    display: table-cell;
+    float: none;
+    vertical-align: middle;
+  }
+
+  nav {
+    display: table;
+    width: 100%;
+    min-width: 1050px;
+    margin: 0 auto;
+    padding: 0 !important;
+  }
+
+  h1.logo {
+    float: none;
+    width: 105px;
+    height: 100%;
+    margin: 0;
+    padding: 0 26px;
+
+    a {
+      font-family: "intro";
+      font-weight: bold;
+      text-decoration: none;
+      letter-spacing: 0;
+      font-size: 16px;
+    }
+  }
+
+  .nav-global {
+    min-width: 700px;
+    white-space: nowrap;
+    text-align: right;
+
+    &>li {
+        padding: 0 5px;
+        margin: 0;
+        vertical-align: middle;
+        text-align: left;
+
+      &>a {
+        display: table-cell;
+        height: $header-height;
+        padding: 0 10px;
+        vertical-align: middle;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 1.2px;
+
+        &:hover {
+          background-color: #1d1f26;
+          outline-color: white;
+        }
+      }
+    }
+
+    li.nav-user {
+      padding-right: 10px;
+
+      a.cta-login{
+        display: inline-block;
+        height: auto;
+        padding: 8px;
+        line-height: 1;
+        border-radius: 3px;
+        background-color: #88c540;
+        text-shadow: rgba(26, 30, 34, 0.6) 0px 1px 3px;
+
+        &:hover {
+          background-color: #6ea131;
+        }
+      }
+    }
+
+    a.user-link {
+        padding: 8px 4px 8px 16px;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+
+    .primary>a {
+        font-weight: normal;
+        box-shadow: none;
+        background-color: #3A3D4C;
+        font-size: 12px;
+    }
+
+    a.dropdown {
+        padding: 8px !important;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+
+    .user .dropdown-menu::before {
+        display: none;
+    }
+
+    .dropdown-menu {
+      top: 30px;
+
+      li {
+        margin: 0;
+      }
+
+      a {
+        letter-spacing: 1px;
+        font-size: 12px;
+        font-weight: normal;
+        color: #1d9dd9 !important;
+      }
+    }
+
+    .user-nickname {
+      font-size: 12px;
+      font-weight: normal;
+      text-transform: none;
+      letter-spacing: 1px;
+      padding: 6px;
+    }
+  }
+}
+header.global.lektorium.slim {
+  height: $header-slim-height;
+  padding: 0 !important;
+
+  h1.logo {
+    padding-right: 10px;
+
+    &:before {
+        top: 12px;
+    }
+  }
+
+  h2{
+    display: table-cell;
+    float: none;
+    width: auto;
+    padding-left: 5px;
+    white-space: normal;
+    font-weight: 600;
+    text-shadow: 0 1px 0 #646464;
+    color: white;
+  }
+
+  .nav-global{
+    display: table-cell;
+
+    &>li {
+      padding: 0;
+
+      &>a {
+          padding: 0 5px;
+          height: $header-slim-height;
+          letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+/* from _footer.scss */
+.wrapper-footer {
+  background-color: $footer-bg !important;
+  color: $lektorium-footer-link-color;
+  padding-bottom: 0;
+
+  footer {
+    font-size: 80%;
+    padding: 0 ($baseline/2) 0 ($baseline/2);
+
+    h2 {
+      font-family: "intro";
+      font-size: 14px;
+      color: $lektorium-footer-heading-color;
+      font-weight: normal;
+    }
+
+    p {
+      line-height: 1;
+      margin-top: 0;
+      margin-bottom: 16px;
+      text-rendering: optimizelegibility;
+
+      a {
+        &:link, &:visited, &:hover, &:focus, &:active {
+          color: #BDBDBD;
+        }
+
+        &:hover, &:focus, &:active {
+          border-bottom-width: 0;
+          color: #5E619B !important;
+        }
+      }
+    }
+
+    *, *:before, *:after {
+      -moz-box-sizing: border-box;
+    }
+
+    .large-3 {
+      position: relative;
+      width: 25%;
+    }
+
+    .columns {
+      float: left;
+      padding: 0;
+    }
+  }
+}
+
+/*
+Sticky Footer Solution
+by Steve Hatcher
+http://stever.ca
+http://www.cssstickyfooter.com
+*/
+
+/*
+<div id="wrap">
+  <div id="main">
+  </div>
+</div>
+
+<div id="footer">
+</div>
+*/
+
+* {margin:0;padding:0;}
+
+/* must declare 0 margins on everything, also for main layout components use padding, not
+vertical margins (top and bottom) to add spacing, else those margins get added to total height
+and your footer gets pushed down a bit more, creating vertical scroll bars in the browser */
+
+html, body {height: 100%;}
+.window-wrap {
+    height: 100%;
+    min-height: 100%;
+}
+
+#content {
+  padding-bottom: 220px; /* must be same height as the footer */
+}
+
+.sticky-footer-wrapper {
+  overflow:auto;
+  min-height: 100%;
+}
+
+.wrapper-footer {position: relative;
+  margin-top: -220px; /* negative value of footer height */
+  height: 220px;
+  clear:both;}
+
+/*Opera Fix*/
+body:before {/* thanks to Maleika (Kohoutec)*/
+  content:"";
+  height:100%;
+  float:left;
+  width:0;
+  margin-top:-32767px;/* thank you Erik J - negate effect of float*/
+}
+
+/* IMPORTANT
+
+You also need to include this conditional style in the <head> of your HTML file to feed this style to IE 6 and lower and 8 and higher.
+
+<!--[if !IE 7]>
+  <style type="text/css">
+    #wrap {display:table;height:100%}
+  </style>
+<![endif]-->
+
+*/
+
+
+/***** misc *****/
+/* from _base.sass */
+.sr {
+  @extend %text-sr;
+}
+
+/* from _mixins.scss */
+%ui-disabled {
+  cursor: inherit;
+}
+
+/* from course/instructor/_instructor_2.scss */
+.instructor-dashboard-wrapper-2 section.idash-section#membership {
+  label[for="auto-enroll-beta"]:hover + .auto-enroll-beta-hint {
+    width: auto;
+    display: inherit;
+  }
+}
+
+/* from elements/_controls.scss */
+%btn-primary {
+  text-align: center;
+
+  &:hover, &:active, &:focus {
+    background: #6ea121;
+  }
+
+  &.current, &.active {
+    &:hover, &:active, &:focus {
+      background: #6ea121;
+    }
+  }
+}
+
+/* from multicourse/_courses.scss */
+.find-courses, .university-profile {
+  header.search {
+    background: none;
+    background-image: url("../themes/lektorium/images/top.jpg");
+    // background-position: center top !important;
+    background-position: center top;
+  }
+}
+
+/* from multicourse/_home.scss */
+.home {
+  > header {
+    background-image: url("../themes/lektorium/images/top.jpg");
+  }
+}
+
+/* Custom css */
+.course-info .date-block {
+    text-align: right;
+}
+
+.course-info header.course-profile {
+    margin-top: 0;
+    padding-top: 60px;
+    clear: both;
+}
