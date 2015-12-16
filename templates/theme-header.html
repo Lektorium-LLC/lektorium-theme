@@ -37,7 +37,7 @@ site_status_msg = get_site_status_msg(course_id)
 % endif
 </%block>
 
-% if not settings.DEBUG and 'dev' not in settings.SITE_NAME:
+% if not settings.DEBUG and 'mooctest' not in settings.SITE_NAME:
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
 var yaParams = {/*Здесь параметры визита*/};
