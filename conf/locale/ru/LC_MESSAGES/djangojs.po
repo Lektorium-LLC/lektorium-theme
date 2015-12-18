@@ -230,7 +230,6 @@ msgstr "ОК"
 #: test_root/staticfiles/cms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
 #: test_root/staticfiles/lms/templates/instructor/instructor_dashboard_2/cohort-form.1e14ea524130.underscore
 #: test_root/staticfiles/lms/templates/instructor/instructor_dashboard_2/cohort-form.underscore
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js
 msgid "Cancel"
 msgstr "Отмена"
 
@@ -2931,7 +2930,6 @@ msgstr ""
 #: test_root/staticfiles/cms/coffee/fixtures/video/metadata-translations-item.underscore
 #: test_root/staticfiles/cms/templates/video/metadata-translations-item.e6ce4d1caffe.underscore
 #: test_root/staticfiles/cms/templates/video/metadata-translations-item.underscore
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/SelectFilter2.js
 msgid "Remove"
 msgstr "Удалить"
 
@@ -11194,159 +11192,6 @@ msgstr "gettext("
 #: test_root/staticfiles/lms/templates/discovery/search_facets_list.underscore
 msgid "Refine your search"
 msgstr "Уточнить параметры поиска"
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/SelectFilter2.js
-msgid "Available %s"
-msgstr "Доступно %s"
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/SelectFilter2.js
-msgid ""
-"This is the list of available %s. You may choose some by selecting them in "
-"the box below and then clicking the \"Choose\" arrow between the two boxes."
-msgstr ""
-"Это список доступных  %s. Вы можете выбрать некоторые выделенные темы в поле "
-"ниже, а затем кликнуть стрелку \"Выбрать\" между двумя полями. "
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/SelectFilter2.js
-msgid "Type into this box to filter down the list of available %s."
-msgstr "Введите значение в это поле, чтобы отфильтровать доступные %s."
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/SelectFilter2.js
-msgid "Filter"
-msgstr "Фильтр"
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/SelectFilter2.js
-msgid "Choose all"
-msgstr "Выбрать все"
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/SelectFilter2.js
-msgid "Click to choose all %s at once."
-msgstr "Кликните, чтобы выбрать все %s сразу."
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/SelectFilter2.js
-msgid "Choose"
-msgstr "Выбрать"
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/SelectFilter2.js
-msgid "Chosen %s"
-msgstr "Выбрано %s"
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/SelectFilter2.js
-msgid ""
-"This is the list of chosen %s. You may remove some by selecting them in the "
-"box below and then clicking the \"Remove\" arrow between the two boxes."
-msgstr ""
-"Это список выбранных %s.  Вы можете удалить некоторые выбранные темы в поле "
-"ниже, кликните стрелку \"Удалить\" между двумя полями."
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/SelectFilter2.js
-msgid "Remove all"
-msgstr "Удалить все"
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/SelectFilter2.js
-msgid "Click to remove all chosen %s at once."
-msgstr "Кликните, чтобы удалить все выбранные %s один раз."
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/actions.js
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/actions.min.js
-msgid "%(sel)s of %(cnt)s selected"
-msgid_plural "%(sel)s of %(cnt)s selected"
-msgstr[0] "выбран %(sel)s из %(cnt)s"
-msgstr[1] "выбрано %(sel)s из %(cnt)s"
-msgstr[2] "выбраны %(sel)s из %(cnt)s"
-msgstr[3] "выбраны %(sel)s из %(cnt)s"
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/actions.js
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/actions.min.js
-msgid ""
-"You have unsaved changes on individual editable fields. If you run an "
-"action, your unsaved changes will be lost."
-msgstr ""
-"Вы не сохранили изменения в отдельных полях. Если вы начнете действовать, "
-"ваши несохраненные изменения будут утеряны. "
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/actions.js
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/actions.min.js
-msgid ""
-"You have selected an action, but you haven't saved your changes to "
-"individual fields yet. Please click OK to save. You'll need to re-run the "
-"action."
-msgstr ""
-"Вы выбрали действие, но ещё не сохранили внесённые изменения в отдельных "
-"полях. Пожалуйста, сохраните их, нажав ОК. Вам придётся выполнить действие "
-"вновь."
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/actions.js
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/actions.min.js
-msgid ""
-"You have selected an action, and you haven't made any changes on individual "
-"fields. You're probably looking for the Go button rather than the Save "
-"button."
-msgstr ""
-"Вы выбрали действие, и не сделали никаких изменений в отдельных полях. ВЫ, "
-"вероятно ищете кнопку \"Начать\", а не кнопку \"Сохранить\"."
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/calendar.js
-msgid ""
-"January February March April May June July August September October November "
-"December"
-msgstr ""
-"Январь Февраль Март Апрель Май Июнь Июль Август Сентябрь Октябрь Ноябрь "
-"Декабрь"
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/calendar.js
-msgid "S M T W T F S"
-msgstr "Пн Вт Ср Чт Пт Сб Вс"
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/collapse.js
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/collapse.min.js
-msgid "Show"
-msgstr "Показать"
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/collapse.js
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/collapse.min.js
-msgid "Hide"
-msgstr "Скрыть"
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js
-msgid "Now"
-msgstr "Сейчас"
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js
-msgid "Clock"
-msgstr "Часы"
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js
-msgid "Choose a time"
-msgstr "Выбрать время"
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js
-msgid "Midnight"
-msgstr "Полночь"
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js
-msgid "6 a.m."
-msgstr "6:00"
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js
-msgid "Noon"
-msgstr "Полдень"
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js
-msgid "Today"
-msgstr "Сегодня"
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js
-msgid "Calendar"
-msgstr "Календарь"
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js
-msgid "Yesterday"
-msgstr "Вчера"
-
-#: edx-ora2/lib/python2.7/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js
-msgid "Tomorrow"
-msgstr "Завтра"
 
 #: openassessment/xblock/static/js/openassessment-lms.min.js
 #: openassessment/xblock/static/js/openassessment-studio.min.js
