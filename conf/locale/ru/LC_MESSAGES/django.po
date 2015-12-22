@@ -1,12 +1,12 @@
 # edX translation file.
-# Copyright (C) 2015 edbox.center
+# Copyright (C) 2015 Lektorium
 # This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
 #
 # Translators:
 # Liubov Fomicheva <liubov.nelapa@gmail.com>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: edbox.center\n"
+"Project-Id-Version: lektorium-edx\n"
 "Report-Msgid-Bugs-To: info@lektorium.tv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -493,7 +493,7 @@ msgstr "Просмотреть курс как:"
 
 # #### course menu overrides and related messages #####
 #: lms/djangoapps/instructor/views/instructor_dashboard.py
-msgctxt "instructor dashboard section title"
+msgctxt "Instructor dashboard title"
 msgid "Course Info"
 msgstr "Информация о курсе"
 
@@ -1142,11 +1142,6 @@ msgstr "сертификат"
 msgid "certificates"
 msgstr "сертификаты"
 
-#: lms/djangoapps/instructor/views/instructor_dashboard.py
-msgctxt "Instructor dashboard title"
-msgid "Course Info"
-msgstr "Новости"
-
 #: lms/templates/courseware/course_about.html
 msgid "Course Completed - {end_date}"
 msgstr "Курс завершён {end_date}"
@@ -1169,6 +1164,1062 @@ msgstr "Еженедельная нагрузка"
 
 msgid "Truly yours, Lektorium educational project team."
 msgstr "С уважением, команда просветительского проекта Лекториум."
+
+#: cms/djangoapps/course_creators/models.py:34
+#: common/djangoapps/edx_proctoring/models.py:170
+msgid "pending"
+msgstr "ожидание"
+
+#: common/djangoapps/edx_proctoring/admin.py:82
+msgid "internally reviewed"
+msgstr "отсмотрен"
+
+#: common/djangoapps/edx_proctoring/admin.py:91
+msgid "All Unreviewed"
+msgstr "Все неотсмотренныe"
+
+#: common/djangoapps/edx_proctoring/admin.py:92
+msgid "All Unreviewed Failures"
+msgstr "Все отказы при отсмотре"
+
+#: common/djangoapps/edx_proctoring/api.py:798
+msgid "your course"
+msgstr "Ваш курс"
+
+#: common/djangoapps/edx_proctoring/api.py:846
+#, python-brace-format
+msgid "Proctoring Session Results Update for {course_name} {exam_name}"
+msgstr ""
+"Обновление результатов сдачи наблюдаемых испытаний «{exam_name}» курса "
+"«{course_name}»"
+
+#: common/djangoapps/edx_proctoring/api.py:1154
+msgid "Taking As Proctored Exam"
+msgstr "Сдаётся с наблюдением"
+
+#: common/djangoapps/edx_proctoring/api.py:1159
+msgid "Proctored Option Available"
+msgstr "Возможно сдать с наблюдением"
+
+#: common/djangoapps/edx_proctoring/api.py:1164
+msgid "Taking As Open Exam"
+msgstr "Сдаётся без наблюдения"
+
+#: common/djangoapps/edx_proctoring/api.py:1169
+msgid "Pending Session Review"
+msgstr "Ожидание отсмотра"
+
+#: common/djangoapps/edx_proctoring/api.py:1174
+msgid "Passed Proctoring"
+msgstr "Отсмотр пройден"
+
+#: common/djangoapps/edx_proctoring/api.py:1179
+#: common/djangoapps/edx_proctoring/api.py:1184
+msgid "Failed Proctoring"
+msgstr "Отказ при отсмотре"
+
+#: common/djangoapps/edx_proctoring/api.py:1189
+#: common/djangoapps/edx_proctoring/api.py:1213
+msgid "Exam Expired"
+msgstr "Испытание окончено"
+
+#: common/djangoapps/edx_proctoring/api.py:1198
+msgid "Ungraded Practice Exam"
+msgstr "Неоцениваемое пробное испытание"
+
+#: common/djangoapps/edx_proctoring/api.py:1203
+msgid "Practice Exam Completed"
+msgstr "Пробное испытание завершёно"
+
+#: common/djangoapps/edx_proctoring/api.py:1208
+msgid "Practice Exam Failed"
+msgstr "Пробное испытание провалено"
+
+#: common/djangoapps/edx_proctoring/api.py:1221
+msgid "Timed Exam"
+msgstr "Ограниченное по времени испытание"
+
+#: common/djangoapps/edx_proctoring/models.py:171
+msgid "satisfactory"
+msgstr "принят"
+
+#: common/djangoapps/edx_proctoring/models.py:172
+msgid "unsatisfactory"
+msgstr "не принят"
+
+#: common/djangoapps/edx_proctoring/models.py:661
+msgid "Additional Time (minutes)"
+msgstr "Дополнительное время (в минутах)"
+
+#: common/djangoapps/edx_proctoring/models.py:662
+msgid "Review Policy Exception"
+msgstr "Исключение при отсмотре"
+
+#: common/djangoapps/edx_proctoring/templates/emails/proctoring_attempt_status_email.html:3
+#, python-format
+msgid ""
+"\n"
+"\n"
+"This email is to let you know that the status of your proctoring session "
+"review for %(exam_name)s in\n"
+"<a href=\"%(course_url)s\">%(course_name)s </a> is %(status)s. If you have "
+"any questions about proctoring,\n"
+"contact %(platform)s support at %(contact_email)s.\n"
+"\n"
+msgstr ""
+"\n"
+"Уведомляем Вас, что проверка Вашего наблюдаемого испытания %(exam_name)s по "
+"курсу <a href=\"%(course_url)s\">%(course_name)s </a> находится в состоянии "
+"%(status)s. Если у Вас есть вопросы по наблюдаемым испытаниям, свяжитесь с "
+"технической поддержкой проекта %(platform)s по адресу %(contact_email)s.\n"
+"\n"
+
+#: common/djangoapps/edx_proctoring/templates/practice_exam/entrance.html:4
+msgid ""
+"\n"
+"      Try a proctored exam\n"
+"    "
+msgstr ""
+"\n"
+"Попробовать сдать наблюдаемое испытание\n"
+"    "
+
+#: common/djangoapps/edx_proctoring/templates/practice_exam/entrance.html:9
+msgid ""
+"\n"
+"      Get familiar with proctoring for real exams later in the course. This "
+"practice exam has no impact\n"
+"      on your grade in the course.\n"
+"    "
+msgstr ""
+"\n"
+"Ознакомьтесь с прохождением наблюдаемых испытаний, которые Вам предстоит "
+"сдать в дальнейшем. Это пробное испытание никак не повлияет на Вашу итоговую "
+"оценку в курсе. "
+
+#: common/djangoapps/edx_proctoring/templates/practice_exam/entrance.html:15
+msgid "Continue to my practice exam"
+msgstr "Перейти к пробному испытанию"
+
+#: common/djangoapps/edx_proctoring/templates/practice_exam/entrance.html:17
+msgid ""
+"\n"
+"        You will be guided through steps to set up online proctoring "
+"software and to perform various checks.\n"
+"      "
+msgstr ""
+"\n"
+"Вы пройдёте все шаги по установке программного обеспечения для наблюдения и "
+"по выполнению различных проверок.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/practice_exam/error.html:4
+msgid ""
+"\n"
+"      There was a problem with your practice proctoring session\n"
+"    "
+msgstr ""
+"\n"
+"Возникла проблема при обработке Вашего пробного испытания\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/practice_exam/error.html:10
+msgid ""
+"\n"
+"      Your practice proctoring results: <b class=\"failure\"> Unsatisfactory "
+"</b>\n"
+"    "
+msgstr ""
+"\n"
+"Результат прохождения пробного наблюдаемого испытания: <b class=\"failure\"> "
+"Не принято </b>\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/practice_exam/error.html:16
+msgid ""
+"\n"
+"      Your proctoring session ended before you completed this practice "
+"exam.\n"
+"      You can retry this practice exam if you had problems setting up the "
+"online proctoring software.\n"
+"    "
+msgstr ""
+"\n"
+"Наблюдение за экзаменом прервалось до завершения Вами испытания.\n"
+"Вы можете заново сдать это пробное испытание, если у Вас возникли проблемы "
+"при настройке программного обеспечения для онлайн-наблюдения. "
+
+#: common/djangoapps/edx_proctoring/templates/practice_exam/error.html:25
+msgid "Try this practice exam again"
+msgstr "Заново сдать пробное испытание"
+
+#: common/djangoapps/edx_proctoring/templates/practice_exam/submitted.html:4
+msgid ""
+"\n"
+"      You have submitted this practice proctored exam\n"
+"    "
+msgstr ""
+"\n"
+"Вы отправили это пробное испытание на отстмотр\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/practice_exam/submitted.html:10
+msgid ""
+"\n"
+"      Practice exams do not affect your grade or your credit eligibility.\n"
+"      You have completed this practice exam and can continue with your "
+"course work.\n"
+"    "
+msgstr ""
+"\n"
+"Пробные испытания не влияют на Вашу оценку или Ваш зачёт.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/practice_exam/submitted.html:18
+msgid "You can also retry this practice exam"
+msgstr "Также Вы можете пересдать это пробное испытание"
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/confirm-decline.html:5
+msgid ""
+"\n"
+"        Are you sure you want to take this exam without proctoring?\n"
+"      "
+msgstr ""
+"\n"
+"Вы действительно хотите пройти это испытание без наблюдения?\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/confirm-decline.html:10
+msgid ""
+"\n"
+"        If you take this exam without proctoring, you will <strong> no "
+"longer be eligible for academic credit. </strong>\n"
+"      "
+msgstr ""
+"\n"
+"Если Вы пройдёте это испытание без наблюдения, Вы уже <strong> не сможете "
+"получить зачётные баллы. </strong>\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/confirm-decline.html:16
+msgid "Continue Exam Without Proctoring"
+msgstr "Перейти к испытанию без наблюдения"
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/confirm-decline.html:19
+msgid "Go Back"
+msgstr "Назад"
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/entrance.html:4
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/failed-prerequisites.html:4
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/pending-prerequisites.html:4
+msgid ""
+"\n"
+"      This exam is proctored\n"
+"    "
+msgstr ""
+"\n"
+"Это испытание наблюдаемое\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/entrance.html:9
+msgid ""
+"\n"
+"      To be eligible to earn credit for this course, you must take and pass "
+"the proctoring review for this exam.\n"
+"    "
+msgstr ""
+"\n"
+"Чтобы иметь возможность получить зачётные баллы за прохождение этого курса, "
+"Вам необходимо пройти это испытание под наблюдением и получить положительный "
+"результат отсмотра.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/entrance.html:14
+msgid "Continue to my proctored exam. I want to be eligible for credit."
+msgstr "Перейти к наблюдаемому испытанию. Я хочу получить зачёт."
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/entrance.html:16
+msgid ""
+"\n"
+"        You will be guided through steps to set up online proctoring "
+"software and to perform various checks.</br>\n"
+"      "
+msgstr ""
+"\n"
+"Вы пройдёте все шаги по установке программного обеспечения для наблюдения и "
+"по выполнению различных проверок.</br>\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/entrance.html:24
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/failed-prerequisites.html:37
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/pending-prerequisites.html:37
+msgid "Take this exam without proctoring."
+msgstr "Пройти испытание без наблюдения."
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/entrance.html:27
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/pending-prerequisites.html:41
+msgid ""
+"\n"
+"        I am not interested in academic credit.\n"
+"      "
+msgstr ""
+"\n"
+"Мне не нужен зачёт.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/error.html:4
+msgid ""
+"\n"
+"      There was a problem with your proctoring session\n"
+"    "
+msgstr ""
+"\n"
+"Возникла проблема при обработке Вашего наблюдаемого испытания\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/error.html:10
+msgid ""
+"\n"
+"      Your proctoring session results: <b class=\"failure\"> Unsatisfactory "
+"</b>\n"
+"    "
+msgstr ""
+"\n"
+"Результат прохождения наблюдаемого испытания: <b class=\"failure\"> Не "
+"принято </b>\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/error.html:16
+msgid ""
+"\n"
+"      Your proctoring session ended before you completed this exam, so your "
+"proctoring results are incomplete.\n"
+"      You will not be eligible to use this course for academic credit, even "
+"if you achieve a passing grade.\n"
+"    "
+msgstr ""
+"\n"
+"Наблюдение прервалось до окончания Вами испытания, поэтому результат "
+"отсмотра отрицательный.\n"
+"Вы не сможете получить зачёт по этому курсу, даже если Вы получите проходной "
+"балл. "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/error.html:23
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/expired.html:15
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/rejected.html:17
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/submitted.html:23
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/verified.html:17
+#, python-format
+msgid ""
+"\n"
+"      View your credit eligibility status on your <a href="
+"\"%(progress_page_url)s\">Progress</a> page.\n"
+"    "
+msgstr ""
+"\n"
+"      View your credit eligibility status on your <a href="
+"\"%(progress_page_url)s\">Progress</a> page.\n"
+" Чтобы увидеть, можете ли Вы получить зачёт, перейдите на страницу <a href="
+"\"%(progress_page_url)s\">Ваших достижений</a>.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/error.html:30
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/rejected.html:24
+msgid ""
+"\n"
+"      If you have concerns about your proctoring session results, contact "
+"your course team.\n"
+"    "
+msgstr ""
+"\n"
+"Если у Вас есть вопросы по результатам отсмотра наблюдаемого испытания, "
+"свяжитесь с командой курса.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/expired.html:4
+msgid ""
+"\n"
+"      The due date for this exam has passed\n"
+"    "
+msgstr ""
+"\n"
+"Срок сдачи этого испытания истёк\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/expired.html:9
+msgid ""
+"\n"
+"      Because the due date has passed, you are no longer able to take this "
+"exam.\n"
+"    "
+msgstr ""
+"\n"
+"Поскольку истёк срок сдачи, Вы больше не сможете пройти это испытание.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/failed-prerequisites.html:9
+#, python-format
+msgid ""
+"\n"
+"    You did not satisfy the requirements for taking this exam with "
+"proctoring, and are not eligible for credit. See your <a href="
+"\"%(progress_page_url)s\">Progress</a> page for a list of requirements and "
+"your status for each.\n"
+"    "
+msgstr ""
+"\n"
+"Вы не выполнили все необходимые требования для прохождения этого испытания "
+"под наблюдением и не сможете получить зачёт. Чтобы увидеть список "
+"необходимых и удовлетворённых требований, перейдите на страницу <a href="
+"\"%(progress_page_url)s\">Ваших достижений</a>.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/failed-prerequisites.html:14
+msgid ""
+"\n"
+"    You did not satisfy the following prerequisites:\n"
+"    "
+msgstr ""
+"\n"
+"Вы не выполнили следующие требования:\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/failed-prerequisites.html:30
+msgid ""
+"\n"
+"    Due to unsatisfied prerequisites, you can only take this exam without "
+"proctoring.\n"
+"    "
+msgstr ""
+"\n"
+"Из-за несоответствиия требованиям Вы можете пройти это испытание только без "
+"наблюдения.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/failed-prerequisites.html:41
+msgid ""
+"\n"
+"        I understand that I am not eligible for academic credit.\n"
+"      "
+msgstr ""
+"\n"
+"Я понимаю, что я не получу зачёт.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/failed-prerequisites.html:47
+#, python-format
+msgid ""
+"\n"
+"      If you have questions about the status of your requirements for course "
+"credit, contact %(platform_name)s Support.\n"
+"    "
+msgstr ""
+"\n"
+"Если у Вас есть вопросы по удовлетворению требований для зачёта, свяжитесь с "
+"технической поддержкой проекта %(platform_name)s.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/footer.html:5
+msgid ""
+"\n"
+"        About Proctored Exams\n"
+"        "
+msgstr ""
+"\n"
+"        Подробнее о наблюдаемых испытаниях\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/instructions.html:6
+msgid ""
+"\n"
+"      Follow these steps to set up and start your proctored exam.\n"
+"    "
+msgstr ""
+"\n"
+"Для перехода к наблюдаемому испытанию выполните следующие действия.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/instructions.html:11
+msgid ""
+"\n"
+"        1. Copy this unique exam code. You will be prompted to paste this "
+"code later before you start the exam.\n"
+"      "
+msgstr ""
+"\n"
+"        1. Скопируйте уникальный код испытания. Вам потребуется вставить "
+"этот код позже, когда Вы приступите к испытанию. "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/instructions.html:19
+msgid ""
+"\n"
+"        Select the exam code, then copy it using Command+C (Mac) or Control"
+"+C (Windows).\n"
+"      "
+msgstr ""
+"\n"
+"Выделите код экзамена и скопируйте его, используя Command+C (Mac) или Control"
+"+C (Windows).\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/instructions.html:24
+msgid ""
+"\n"
+"        2. Follow the link below to set up proctoring.\n"
+"      "
+msgstr ""
+"\n"
+"        2. Перейдите по ссылке ниже для настройки наблюдения.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/instructions.html:32
+msgid ""
+"\n"
+"        A new window will open. You will run a system check before "
+"downloading the proctoring application.\n"
+"      "
+msgstr ""
+"\n"
+"Ссылка откроется в новом окне. Перед загрузкой приложения для наблюдения Вы "
+"пройдёте через проверку системы.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/instructions.html:37
+msgid ""
+"\n"
+"        You will be asked to verify your identity before you begin the exam. "
+"Make sure you have valid photo identification, such as a driver's license or "
+"passport, before you continue.\n"
+"      "
+msgstr ""
+"\n"
+"Перед началом испытания Вам подребуется подтвердить свою личность. Перед "
+"переходом к следующему шагу удостоверьтесь, что у Вас есть действующий "
+"документ с фотографией, например, водительские права или паспорт.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/instructions.html:46
+msgid "Don't want to take this exam with online proctoring?"
+msgstr "Не хотите сдавать этот экзамен с онлайн-наблюдением?"
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/instructions.html:47
+msgid "Take this exam as an open exam instead."
+msgstr "Сдайте этот экзамен без наблюдения."
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/pending-prerequisites.html:9
+#, python-format
+msgid ""
+"\n"
+"    You have not completed the prerequisites for this exam. All requirements "
+"must be satisfied before you can take this proctored exam and be eligible "
+"for credit. See your <a href=\"%(progress_page_url)s\">Progress</a> page for "
+"a list of requirements in the order that they must be completed.\n"
+"    "
+msgstr ""
+"\n"
+"Вы не выполнили требования для прохождения этого испытания. Все требования "
+"необходимо удовлетворить перед прохождением испытания и получением права на "
+"зачёт.\n"
+"Чтобы увидеть список необходимых требований в порядке их выполнения, "
+"перейдите на страницу <a href=\"%(progress_page_url)s\">Ваших достижений</"
+"a>.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/pending-prerequisites.html:14
+msgid ""
+"\n"
+"    The following prerequisites are in a <strong>pending</strong> state and "
+"must be successfully completed before you can proceed:\n"
+"    "
+msgstr ""
+"\n"
+"Следующие требования <strong>ожидают выполнения</strong> перед тем, как Вы "
+"сможете перейти к следующему шагу:\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/pending-prerequisites.html:30
+#, python-format
+msgid ""
+"\n"
+"    You can take this exam with proctoring only when all prerequisites have "
+"been successfully completed. Check your <a href=\"%(progress_page_url)s"
+"\">Progress</a>  page to see if prerequisite results have been updated. You "
+"can also take this exam now without proctoring, but you will not be eligible "
+"for credit.\n"
+"    "
+msgstr ""
+"\n"
+"Вы сможете пройти это испытание с наблюдением, только когда будут "
+"удовлетворены все требования. Чтобы удостовериться, что список "
+"удовлетворённых требований обновлен, перейдите на страницу <a href="
+"\"%(progress_page_url)s\">Ваших достижений</a>. Также Вы можете пройти это "
+"испытание без наблюдения, но тогда Вы не сможете получить зачёт.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/proctoring_launch_callback.html:164
+msgid " Your Proctoring Session Has Started "
+msgstr " Наблюдение начато "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/proctoring_launch_callback.html:165
+#, python-format
+msgid ""
+" From this point in time, you must follow the <a href="
+"\"%(link_urls.online_proctoring_rules)s\" target=\"_blank\">online "
+"proctoring rules</a> to pass the proctoring review for your exam. "
+msgstr ""
+" С этого момента Вам необходимо следовать <a href="
+"\"%(link_urls.online_proctoring_rules)s\" target=\"_blank\">правилам онлайн-"
+"наблюдения</a>, чтобы успешно пройти отсмотр для данного испытанияJ. "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/proctoring_launch_callback.html:168
+msgid ""
+"\n"
+"            Do not close this window before you finish your exam. if you "
+"close this window, your proctoring session ends, and you will not "
+"successfully complete the proctored exam.\n"
+"          "
+msgstr ""
+"\n"
+"Не закрывайте это окно до завершения испытания. Если Вы закроете это окно, "
+"наблюдение прервётся, и Вы не сможете успешно завершить наблюдаемое "
+"испытание.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/proctoring_launch_callback.html:173
+#, python-format
+msgid ""
+"\n"
+"            Return to the %(platform_name)s course window to start your "
+"exam. When you have finished your exam and\n"
+"            have marked it as complete, you can close this window to end the "
+"proctoring session\n"
+"            and upload your proctoring session data for review.\n"
+"          "
+msgstr ""
+"\n"
+"Чтобы приступить к испытанию, вернитесь к окну курса %(platform_name)s. "
+"Когда Вы закончите испытание и \n"
+"и отметите его как завершённое, Вам можно будет закрыть это окно, чтобы "
+"остановить наблюдение\n"
+"и загрузить запись наблюдения для отсмотра.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/proctoring_launch_callback.html:183
+msgid " Go to my exam "
+msgstr " Перейти к испытанию "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/ready_to_start.html:5
+msgid ""
+"\n"
+"      Follow these instructions\n"
+"    "
+msgstr ""
+"\n"
+"Следуйте данным инструкциям\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/ready_to_start.html:10
+#, python-format
+msgid ""
+"\n"
+"        &#8226; When you start your exam you will have %(total_time)s to "
+"complete it. </br>\n"
+"        &#8226; You cannot stop the timer once you start. </br>\n"
+"        &#8226; If time expires before you finish your exam, your completed "
+"answers will be\n"
+"                submitted for review. </br>\n"
+"      "
+msgstr ""
+"\n"
+"        &#8226; Когда Вы приступите к испытанию, у Вас будет %(total_time)s "
+"для его выполнения.</br>\n"
+"        &#8226; Вы не сможете остановить таймер после запуска. </br>\n"
+"        &#8226; Если время закончится до того, как Вы завершите выполнение "
+"испытания, \n"
+"                на отсмотр будут отправлены все завершённые Вами задачи. </"
+"br>\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/ready_to_start.html:19
+msgid ""
+"\n"
+"          Start my exam\n"
+"        "
+msgstr ""
+"\n"
+"Начать испытание\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/ready_to_submit.html:4
+msgid ""
+"\n"
+"      Are you sure you want to end your proctored exam?\n"
+"    "
+msgstr ""
+"\n"
+"Вы действительно хотите завершить Ваше наблюдаемое испытание?\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/ready_to_submit.html:9
+msgid ""
+"\n"
+"      After you submit your exam, your responses are graded and your "
+"proctoring session is reviewed.\n"
+"      You might be eligible to earn academic credit for this course if you "
+"complete all required exams\n"
+"      as well as achieve a final grade that meets credit requirements for "
+"the course.\n"
+"    "
+msgstr ""
+"\n"
+"После отправки Ваши ответы будут оценены, а запись наблюдения отсмотрена. \n"
+"Вы сможете получить зачёт за этот курс, если Вы завершите все необходимые "
+"испытания, \n"
+"а также получите итоговую оценку, удовлетворяющую требованиям для зачёта за "
+"этот курс.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/ready_to_submit.html:16
+msgid ""
+"\n"
+"      Yes, end my proctored exam\n"
+"    "
+msgstr ""
+"\n"
+"Да, завершить наблюдаемое испытание\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/ready_to_submit.html:22
+msgid ""
+"\n"
+"        No, I'd like to continue working\n"
+"      "
+msgstr ""
+"\n"
+"Нет, я продолжу работу\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/rejected.html:4
+msgid ""
+"\n"
+"      Your proctoring session was reviewed and did not pass requirements\n"
+"    "
+msgstr ""
+"\n"
+"По итогам отсмотра записи наблюдения Вашe испытание сочтено не "
+"соответствующим требованиям\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/rejected.html:10
+#, python-format
+msgid ""
+"\n"
+"      You are no longer eligible for academic credit for this course, "
+"regardless of your final grade.\n"
+"      If you have questions about the status of your proctored exam results, "
+"contact %(platform_name)s Support.\n"
+"    "
+msgstr ""
+"\n"
+"Вы больше не можете получить зачёт за курс, вне зависимости от Вашей "
+"итоговой оценки.\n"
+"Если у Вас есть вопросы по результатам Вашего наблюдаемого испытания, "
+"свяжитесь с технической поддержкой проекта %(platform_name)s.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/submitted.html:4
+msgid ""
+"\n"
+"      You have submitted this proctored exam for review\n"
+"    "
+msgstr ""
+"\n"
+"Вы отправили это наблюдаемое испытание на отсмотр\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/submitted.html:10
+msgid ""
+"\n"
+"      &#8226; After you quit the proctoring session, the recorded data is "
+"uploaded for review. </br>\n"
+"      &#8226; Proctoring results are usually available within 5 business "
+"days after you submit your exam.\n"
+"    "
+msgstr ""
+"\n"
+"      &#8226; После завершения наблюдения записанные данные загружаются для "
+"отсмотра. </br>\n"
+"      &#8226; Результаты отсмотра обычно появляются в течение 5 рабочих дней "
+"после отправки данных испытания.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/submitted.html:17
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/waiting_for_app_shutdown.html:16
+#, python-format
+msgid ""
+"\n"
+"      If you have questions about the status of your proctored exam results, "
+"contact %(platform_name)s Support.\n"
+"    "
+msgstr ""
+"\n"
+"Если у Вас есть вопросы по результатам Вашего наблюдаемого испытания, "
+"свяжитесь с технической поддержкой проекта %(platform_name)s.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/verified.html:4
+msgid ""
+"\n"
+"      Your proctoring session was reviewed and passed all requirements\n"
+"    "
+msgstr ""
+"\n"
+"По итогам отсмотра записи наблюдения Вашe испытание удовлетворяет всем "
+"требованиям\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/verified.html:10
+msgid ""
+"\n"
+"      You are eligible to purchase academic credit for this course if you "
+"complete all required exams\n"
+"      and also achieve a final grade that meets the credit requirements for "
+"the course.\n"
+"    "
+msgstr ""
+"\n"
+"Вы можете получить зачёт за этот курс, если завершите все необходимые "
+"испытания \n"
+"и получите итоговую оценку, удовлетворяющию требованиям для получения зачёта "
+"за курс.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/waiting_for_app_shutdown.html:4
+msgid ""
+"\n"
+"      You are about to complete your proctored exam\n"
+"    "
+msgstr ""
+"\n"
+"Вы собираетесь завершить своё наблюдаемое испытание\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/proctored_exam/waiting_for_app_shutdown.html:9
+msgid ""
+"\n"
+"      Make sure you return to the proctoring software and select <strong> "
+"Quit </strong> to end proctoring\n"
+"      and submit your exam.\n"
+"    "
+msgstr ""
+"\n"
+"Не забудьте вернуться к окну программного обеспечения для наблюдения и "
+"нажать <strong> Выход </strong>\n"
+"для завершения наблюдения и отправки записи на отсмотр.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/timed_exam/entrance.html:4
+#, python-format
+msgid ""
+"\n"
+"    %(exam_name)s is a Timed Exam (%(total_time)s)\n"
+"    "
+msgstr ""
+"\n"
+"    %(exam_name)s ограничен(о) по времени (%(total_time)s)\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/timed_exam/entrance.html:9
+msgid "This exam has a time limit associated with it."
+msgstr "Для этого испытания установлено ограничение по времени."
+
+#: common/djangoapps/edx_proctoring/templates/timed_exam/entrance.html:11
+msgid "To pass this exam, you must complete the problems in the time allowed."
+msgstr ""
+"Для прохождения этого испытания Вам необходимо выполнить задания в течение "
+"указанного времени."
+
+#: common/djangoapps/edx_proctoring/templates/timed_exam/entrance.html:13
+msgid "After you select "
+msgstr "После того, как Вы нажмёте "
+
+#: common/djangoapps/edx_proctoring/templates/timed_exam/entrance.html:15
+msgid "I am ready to start this timed exam"
+msgstr "Я готов начать это испытание"
+
+#: common/djangoapps/edx_proctoring/templates/timed_exam/entrance.html:17
+msgid ", you will have "
+msgstr ", Вам будет необходимо за "
+
+#: common/djangoapps/edx_proctoring/templates/timed_exam/entrance.html:17
+msgid " to complete and submit the exam."
+msgstr " завершить испытание и отправить его на проверку."
+
+#: common/djangoapps/edx_proctoring/templates/timed_exam/entrance.html:21
+msgid ""
+"\n"
+"        I am ready to start this timed exam.\n"
+"      "
+msgstr ""
+"\n"
+"Я готов начать это испытание. "
+
+#: common/djangoapps/edx_proctoring/templates/timed_exam/footer.html:3
+msgid "Can I request additional time to complete my exam?"
+msgstr "Могу ли я запросить дополнительное время для завершения испытания?"
+
+#: common/djangoapps/edx_proctoring/templates/timed_exam/footer.html:4
+msgid ""
+"\n"
+"      If you have disabilities or are taking the exam in difficult "
+"conditions,\n"
+"      you might be eligible for an additional time allowance on timed "
+"exams.\n"
+"      Ask your course team for information about additional time "
+"allowances.\n"
+"    "
+msgstr ""
+"\n"
+"Если у Вас есть инвалидность или Вы проходите испытание в затруднённых "
+"условиях,\n"
+"Вам может быть дано дополнительное время для прохождения ограниченных по "
+"времени испытаний.\n"
+"За информацией о получении дополнительного времени обратитесь к команде "
+"курса.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/timed_exam/ready_to_submit.html:4
+msgid ""
+"\n"
+"      Are you sure that you want to submit your timed exam?\n"
+"    "
+msgstr ""
+"\n"
+"Вы действительно хотите отправить испытание на проверку? "
+
+#: common/djangoapps/edx_proctoring/templates/timed_exam/ready_to_submit.html:9
+msgid ""
+"\n"
+"      Make sure your answers are ready to be submitted, and then submit your "
+"exam. Your exam will then be graded.\n"
+"    "
+msgstr ""
+"\n"
+"Удостоверьтесь, что Ваши ответы готовы к отправке, а затем отправьте "
+"испытание на проверку. Затем испытание будет оценено.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/timed_exam/ready_to_submit.html:14
+msgid ""
+"\n"
+"      Yes, submit my timed exam.\n"
+"    "
+msgstr ""
+"\n"
+"Да, отправить испытание на проверку.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/timed_exam/ready_to_submit.html:20
+msgid ""
+"\n"
+"        No, I want to continue working.\n"
+"      "
+msgstr ""
+"\n"
+"Нет, я продолжу работу\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/timed_exam/submitted.html:4
+msgid ""
+"\n"
+"      You have submitted your timed exam.\n"
+"    "
+msgstr ""
+"\n"
+"Вы отправили это ограниченное по времени испытание на проверку.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/timed_exam/submitted.html:10
+#, python-format
+msgid ""
+"\n"
+"      Your grade for this timed exam will be immediately available on the <a "
+"href=\"%(progress_page_url)s\">Progress</a> page.\n"
+"    "
+msgstr ""
+"\n"
+"Ваша оценка за это испытание будет сразу же доступна на странице <a href="
+"\"%(progress_page_url)s\">Ваших достижений</a> .\n"
+" "
+
+#: common/djangoapps/edx_proctoring/templates/timed_exam/submitted.html:14
+msgid ""
+"\n"
+"        After the due date has passed, you can review the exam, but you "
+"cannot change your answers.\n"
+"      "
+msgstr ""
+"\n"
+"По истечению срока сдачи испытания Вы сможете его просмотреть, но не сможете "
+"изменить свои ответы.\n"
+" "
+
+#: common/djangoapps/edx_proctoring/utils.py:70
+#, python-brace-format
+msgid "{num_of_hours} hour"
+msgstr "{num_of_hours} час"
+
+#: common/djangoapps/edx_proctoring/utils.py:73
+#, python-brace-format
+msgid "{num_of_hours} hours"
+msgstr "{num_of_hours} часа"
+
+#: common/djangoapps/edx_proctoring/utils.py:81
+#: common/djangoapps/edx_proctoring/utils.py:91
+#, python-brace-format
+msgid "{num_of_minutes} minutes"
+msgstr "{num_of_minutes} минут(ы)"
+
+#: common/djangoapps/edx_proctoring/utils.py:84
+#, python-brace-format
+msgid " and {num_of_minutes} minute"
+msgstr " и {num_of_minutes} минута"
+
+#: common/djangoapps/edx_proctoring/utils.py:86
+#, python-brace-format
+msgid "{num_of_minutes} minute"
+msgstr "{num_of_minutes} минута"
+
+#: common/djangoapps/edx_proctoring/utils.py:89
+#, python-brace-format
+msgid " and {num_of_minutes} minutes"
+msgstr " и {num_of_minutes} минут(ы)"
+
+#: common/djangoapps/edx_proctoring/views.py:92
+msgid "could not determine the course_id"
+msgstr "не удалось определить идентификатор курса"
+
+#: common/djangoapps/edx_proctoring/views.py:102
+msgid "Must be a Staff User to Perform this request."
+msgstr "Только сотрудникам разрешено выполнение данного запроса."
+
+#: common/djangoapps/edx_proctoring/views.py:361
+#: common/djangoapps/edx_proctoring/views.py:570
+#, python-brace-format
+msgid "you have {remaining_time} remaining"
+msgstr "у Вас осталось {remaining_time}"
+
+#: common/djangoapps/edx_proctoring/views.py:367
+msgid "you have less than a minute remaining"
+msgstr "у Вас осталось меньше минуты"
+
+#: common/djangoapps/edx_proctoring/views.py:562
+msgid "proctored"
+msgstr "наблюдаемое"
+
+#: common/djangoapps/edx_proctoring/views.py:562
+msgid "timed"
+msgstr "ограниченное по времени"
 
 #: common/djangoapps/student/forms.py
 msgid ""
@@ -4475,7 +5526,7 @@ msgstr "Нет"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Entrance Exam Enabled"
-msgstr "Вступительный экзамен активирован"
+msgstr "Вступительное испытание активировано"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
@@ -4483,13 +5534,13 @@ msgid ""
 "your course content. Note, you must enable Entrance Exams for this course "
 "setting to take effect."
 msgstr ""
-"Укажите, должны ли студенты пройти вступительный тест до того, как смогут "
-"посмотреть содержание курса.  Заметьте, что вы должны активировать "
+"Укажите, должны ли студенты пройти вступительное испытание до того, как "
+"смогут посмотреть содержание курса.  Заметьте, что вы должны активировать "
 "вступительные тесты на этом курсе для того, чтобы эта настройка действовала."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Entrance Exam Minimum Score (%)"
-msgstr "Проходной балл за вступительный тест (%)"
+msgstr "Проходной балл за вступительное испытание (%)"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
@@ -4497,19 +5548,19 @@ msgid ""
 "view your course content. Note, you must enable Entrance Exams for this "
 "course setting to take effect."
 msgstr ""
-"Укажите минимальный процент баллов за вступительный тест, необходимых для "
-"того, чтобы студенты смогли посмотреть содержание курса.  Заметьте, что вы "
-"должны активировать вступительные тесты на этом курсе для того, чтобы эта "
-"настройка действовала."
+"Укажите минимальный процент баллов за вступительное испытание, необходимых "
+"для того, чтобы студенты смогли посмотреть содержание курса. Обратите "
+"внимание, что вы должны активировать вступительные тесты на этом курсе для "
+"того, чтобы эта настройка действовала."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Entrance Exam ID"
-msgstr "Идентификатор вступительного теста"
+msgstr "Идентификатор вступительного испытания"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Content module identifier (location) of entrance exam."
 msgstr ""
-"Идентификатор (местонахождение) модуля, содержащего вступительный тест."
+"Идентификатор (местонахождение) модуля, содержащего вступительное испытание."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Social Media Sharing URL"
@@ -4551,7 +5602,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Enable Proctored Exams"
-msgstr "Разрешить проведение экзаменов в очной форме"
+msgstr "Разрешить проведение наблюдаемых испытаний"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid ""
@@ -4559,9 +5610,9 @@ msgid ""
 "your course. Note that enabling proctored exams will also enable timed exams."
 msgstr ""
 "Введите \"true\" или \"false\".  Если введено значение \"true\", на вашем "
-"курсе будет разрешено проведение экзаменов в очной форме. Обратите внимание, "
-"что при использовании этой возможности также можно будет добавлять экзамены, "
-"ограниченные по времени."
+"курсе будет разрешено проведение наблюдаемых испытаний. Обратите внимание, "
+"что при использовании этой возможности также можно будет добавлять "
+"испытания, ограниченные по времени."
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Enable Timed Exams"
@@ -4830,7 +5881,7 @@ msgstr ""
 #: common/lib/xmodule/xmodule/library_content_module.py
 #: common/lib/xmodule/xmodule/lti_module.py
 msgid "Scored"
-msgstr "Оценено"
+msgstr "Оценивается"
 
 #: common/lib/xmodule/xmodule/library_content_module.py
 msgid ""
@@ -5376,7 +6427,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
 msgid "Tag this module as part of an Entrance Exam section"
-msgstr "Пометить этот модуль как часть раздела вступительного теста"
+msgstr "Пометить этот модуль как часть раздела вступительного испытания"
 
 #: common/lib/xmodule/xmodule/modulestore/inheritance.py
 msgid ""
@@ -5385,7 +6436,7 @@ msgid ""
 msgstr ""
 "Введите true или false. При установке значения true, отправленные ответы к "
 "модулям заданий будут учитываться в оценочном/отборочном алгоритме "
-"вступительного теста."
+"вступительного испытания."
 
 #. Translators: "Self" is used to denote an openended response that is self-
 #. graded
@@ -5653,15 +6704,15 @@ msgstr "Введите дату, к которой необходимо сдат
 
 #: common/lib/xmodule/xmodule/seq_module.py
 msgid "Is Entrance Exam"
-msgstr "Это вступительный тест"
+msgstr "Это вступительное испытание"
 
 #: common/lib/xmodule/xmodule/seq_module.py
 msgid ""
 "Tag this course module as an Entrance Exam. Note, you must enable Entrance "
 "Exams for this course setting to take effect."
 msgstr ""
-"Пометить этот модуль курса в качестве вступительного теста.  Заметьте, что "
-"вы должны активировать вступительные тесты на этом курсе, чтобы эта "
+"Пометить этот модуль курса в качестве вступительного испытания.  Заметьте, "
+"что вы должны активировать вступительные тесты на этом курсе, чтобы эта "
 "настройка действовала."
 
 #: common/lib/xmodule/xmodule/seq_module.py
@@ -5694,11 +6745,12 @@ msgstr "Разрешено ли очное проведение"
 
 #: common/lib/xmodule/xmodule/seq_module.py
 msgid "This setting indicates whether this exam is a proctored exam."
-msgstr "Эта настройка показывает, проводится ли данный экзамен в очной форме."
+msgstr ""
+"Эта настройка показывает, проводится ли данное испытание с наблюдением."
 
 #: common/lib/xmodule/xmodule/seq_module.py
 msgid "Is Practice Exam"
-msgstr "Пробный экзамен"
+msgstr "Пробное испытание"
 
 #: common/lib/xmodule/xmodule/seq_module.py
 msgid ""
@@ -7738,8 +8790,8 @@ msgid ""
 "The proctored exam results report is being created. To view the status of "
 "the report, see Pending Instructor Tasks below."
 msgstr ""
-"Отчёт о результатах очного экзамена на стадии подготовки.  Статус создания "
-"отчёта отображается ниже, в списке текущих задач преподавателя."
+"Отчёт о результатах наблюдаемого испытания на стадии подготовки.  Статус "
+"создания отчёта отображается ниже, в списке текущих задач преподавателя."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
@@ -7747,7 +8799,7 @@ msgid ""
 "status of the report, see Pending Instructor Tasks below. You will be able "
 "to download the report when it is complete."
 msgstr ""
-"Отчёт о результатах очного экзамена в настоящий момент на стадии "
+"Отчёт о результатах наблюдаемого испытания в настоящий момент на стадии "
 "подготовки.  Статус создания отчёта отображается ниже, в списке текущих "
 "задач преподавателя.  Готовый отчёт будет доступен для скачивания."
 
@@ -7778,7 +8830,7 @@ msgstr "Произошла ошибка при удалении баллов."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Course has no entrance exam section."
-msgstr "Курс не содержит вступительного теста."
+msgstr "Курс не содержит вступительного испытания."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "all_students and delete_module are mutually exclusive."
@@ -7790,7 +8842,7 @@ msgstr "Требуются права преподавателя"
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Course has no valid entrance exam section."
-msgstr "Курс не содержит допустимого вступительного теста."
+msgstr "Курс не содержит допустимого вступительного испытания."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "All Students"
@@ -7848,11 +8900,11 @@ msgstr "Срок сдачи {1} для студента {0} успешно сб�
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "This student (%s) will skip the entrance exam."
-msgstr "Этот студент (%s) может пропустить вступительный тест."
+msgstr "Этот студент (%s) может пропустить вступительное испытание."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "This student (%s) is already allowed to skip the entrance exam."
-msgstr "Этому студенту (%s) уже разрешено пропустить вступительный тест."
+msgstr "Этому студенту (%s) уже разрешено пропустить вступительное испытание."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid ""
@@ -8243,7 +9295,7 @@ msgstr "Продление сроков сдачи {0} {1} ({2})"
 
 #: lms/djangoapps/instructor_task/api_helper.py
 msgid "Not all problems in entrance exam support re-scoring."
-msgstr "Не все задания во вступительном тесте поддерживают пересдачу."
+msgstr "Не все задания во вступительном испытании поддерживают пересдачу."
 
 #. Translators: This is a past-tense verb that is inserted into task progress
 #. messages as {action}.
@@ -8454,13 +9506,14 @@ msgid ""
 "Unable to find entrance exam submission to be {action} for student "
 "'{student}'"
 msgstr ""
-"Не найдено решение вступительного теста чтобы {action} студента '{student}'"
+"Не найдено решение вступительного испытания чтобы {action} студента "
+"'{student}'"
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #. {student} is a student identifier.
 #: lms/djangoapps/instructor_task/views.py
 msgid "Entrance exam successfully {action} for student '{student}'"
-msgstr "Вступительный тест успешно {action} студентом '{student}'"
+msgstr "Вступительное испытание успешно {action} студентом '{student}'"
 
 #. Translators: {action} is a past-tense verb that is localized separately.
 #: lms/djangoapps/instructor_task/views.py
@@ -11431,7 +12484,7 @@ msgstr ""
 
 #: cms/djangoapps/contentstore/views/entrance_exam.py
 msgid "Completed Course Entrance Exam"
-msgstr "Завершённый вступительный тест"
+msgstr "Завершённое вступительное испытание"
 
 #: cms/djangoapps/contentstore/views/export_git.py
 msgid "Course successfully exported to git repository"
@@ -11636,10 +12689,6 @@ msgstr "{course}_video_urls"
 #: cms/djangoapps/course_creators/models.py
 msgid "unrequested"
 msgstr "незарегистрирован"
-
-#: cms/djangoapps/course_creators/models.py
-msgid "pending"
-msgstr "ожидание"
 
 #: cms/djangoapps/course_creators/models.py
 msgid "granted"
@@ -14389,7 +15438,7 @@ msgstr "Содержимое курса ещё не добавлено"
 
 #: lms/templates/courseware/courseware.html
 msgid "Your score is {current_score}%. You have passed the entrance exam."
-msgstr "Ваша оценка равна {current_score}%. Вы сдали вступительный экзамен."
+msgstr "Ваша оценка равна {current_score}%. Вы прошли вступительное испытание."
 
 #: lms/templates/courseware/error-message.html
 msgid ""
@@ -16143,7 +17192,7 @@ msgstr "Основная Информация о Курсе"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Course Name:"
-msgstr "Название Курса:"
+msgstr "Название курса:"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Course Display Name:"
@@ -16271,12 +17320,12 @@ msgstr "Скачать список людей, которым доступна 
 msgid ""
 "Click to generate a CSV file of all proctored exam results in this course."
 msgstr ""
-"Щёлкните здесь, чтобы создать файл в формате CSV с результатами всех очных "
-"экзаменов этого курса."
+"Щёлкните здесь, чтобы создать файл в формате CSV с результатами всех "
+"наблюдаемых испытаний этого курса."
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid "Generate Proctored Exam Results Report"
-msgstr "Создать отчёт о результатах очного экзамена"
+msgstr "Создать отчёт о результатах наблюдаемых испытаний"
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid "Click to generate a CSV file of survey results for this course."
@@ -17463,7 +18512,7 @@ msgstr "Показать историю фоновых задач для сту�
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Entrance Exam Adjustment"
-msgstr "Настройка вступительного теста"
+msgstr "Настройка вступительного испытания"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Student's {platform_name} email address or username:"
@@ -17474,8 +18523,8 @@ msgid ""
 "Select an action for the student's entrance exam. This action will affect "
 "every problem in the student's exam."
 msgstr ""
-"Выберите действие для вступительного теста. Это действие повлияет на все "
-"задания теста."
+"Выберите действие для вступительного испытания. Это действие повлияет на все "
+"задания испытания."
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Reset Number of Student Attempts"
@@ -17487,15 +18536,15 @@ msgstr "Заново оценить все задания"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Let Student Skip Entrance Exam"
-msgstr "Разрешить обучающимся пропускать экзамен"
+msgstr "Разрешить обучающимся пропускать вступительное испытание"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid ""
 "You can also delete all of the student's answers and scores for the entire "
 "entrance exam."
 msgstr ""
-"Вы также можете удалить все ответы и оценки студентов, полученные за весь "
-"вступительный экзамен."
+"Вы также можете удалить все ответы и оценки студентов, полученные за все "
+"вступительные испытания."
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Delete Student's Answers and Scores"
@@ -17791,10 +18840,6 @@ msgstr "Убрать отметку"
 #: lms/templates/peer_grading/peer_grading_problem.html
 msgid "Keep Flag"
 msgstr "Оставить отметку"
-
-#: lms/templates/peer_grading/peer_grading_problem.html
-msgid "Go Back"
-msgstr "Вернуться"
 
 #: lms/templates/registration/activate_account_notice.html
 msgid "Thanks for Registering!"
@@ -21203,11 +22248,11 @@ msgstr "Минимальная оценка"
 
 #: cms/templates/settings.html
 msgid "Successful Proctored Exam"
-msgstr "Очный экзамен сдан"
+msgstr "Наблюдаемое испытание успешно пройдено"
 
 #: cms/templates/settings.html
 msgid "Proctored Exam {number}"
-msgstr "Очный экзамен {number}"
+msgstr "Наблюдаемое испытание {number}"
 
 #: cms/templates/settings.html
 msgid "ID Verification"
@@ -21432,7 +22477,7 @@ msgid ""
 "You can now view and author your course entrance exam from the {link_start}"
 "Course Outline{link_end}."
 msgstr ""
-"Теперь вы можете просматривать и редактировать вступительный экзамен к "
+"Теперь вы можете просматривать и редактировать вступительное испытание к "
 "курсу  {link_start}Course Outline{link_end}."
 
 #: cms/templates/settings.html
@@ -21449,7 +22494,7 @@ msgid ""
 "exam. "
 msgstr ""
 "Количество баллов, которое должен набрать студент для успешного прохождения "
-"вступительного теста."
+"вступительного испытания."
 
 #: cms/templates/settings.html
 msgid "Course Pacing"
