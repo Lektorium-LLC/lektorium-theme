@@ -2311,8 +2311,9 @@ msgid ""
 "You need to <a href=\"{login_url}\">log in</a> or <a href="
 "\"{signup_url}\">sign up</a> to view all course updates."
 msgstr ""
-"Чтобы просмотреть все новости курса, Вам нужно <a href=\"%(login_url)s"
-"\">войти</a> или <a href=\"%(signup_url)s\">зарегистрироваться</a>."
+"Чтобы просмотреть все новости курса, Вам нужно <a href="
+"\"{login_url}\">войти</a> или <a href=\"{signup_url}\">зарегистрироваться</"
+"a>."
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "{category} Program Course"
@@ -18536,7 +18537,7 @@ msgstr "Заново оценить все задания"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Let Student Skip Entrance Exam"
-msgstr "Разрешить обучающимся пропускать вступительное испытание"
+msgstr "Разрешить пропустить вступительное испытание"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid ""
