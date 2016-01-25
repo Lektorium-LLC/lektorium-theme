@@ -15376,7 +15376,7 @@ msgstr "Обзор курса"
 
 #: lms/templates/courseware/course_navigation.html
 msgid "Specific student"
-msgstr "определенного студента"
+msgstr "определённый студент"
 
 #: lms/templates/courseware/course_navigation.html
 msgid "Student in {content_group}"
