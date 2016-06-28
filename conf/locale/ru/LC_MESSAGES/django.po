@@ -805,6 +805,13 @@ msgstr[3] "Открыто %s тем форума"
 msgid "Discussion - {course_number}"
 msgstr "Форум - {course_number}"
 
+# ### Feedbadk form ####
+#: lms/templates/help_modal.html
+msgid "Include error messages, steps which lead to the issue, etc"
+msgstr ""
+"Пожалуйста, приведите сообщения об ошибках, шаги, которые привели к "
+"проблеме, и т.п."
+
 # #### TMP: entrance exam #####
 #: cms/djangoapps/contentstore/views/entrance_exam.py
 msgid "Entrance Exam - Subsection"
@@ -1162,8 +1169,51 @@ msgstr "Курс начался {start_date}"
 msgid "Estimated Effort Per Week"
 msgstr "Еженедельная нагрузка"
 
+#: common/djangoapps/util/views.py
+msgid "Please provide a subject."
+msgstr "Пожалуйста, заполните тему."
+
+msgid "Please provide details."
+msgstr "Пожалуйста, заполните описание."
+
+msgid "Please provide your name."
+msgstr "Пожалуйста, заполните ваше имя."
+
+msgid "Please provide a valid e-mail."
+msgstr "Пожалуйста, введите корректный адрес электронной почты."
+
 msgid "Truly yours, Lektorium educational project team."
 msgstr "С уважением, команда просветительского проекта Лекториум."
+
+#: templates/help-modal.html
+msgid "Subject"
+msgstr "Тема"
+
+msgid ""
+"Have a <strong>question about something specific</strong>? You can contact "
+"Lektorium general support team directly:"
+msgstr ""
+"Если ваш вопрос касается <strong>чего-то специфического</strong>, вы можете "
+"напрямую связаться с технической поддержкой Лекториума:"
+
+msgid "Submit Feedback"
+msgstr "Отправить заявку"
+
+msgid ""
+"Thank you for your feedback.  We typically respond to a request within one "
+"business day (Monday to Friday, {open_time} to {close_time} Moscow time.)"
+msgstr ""
+"Спасибо за вопрос! Как правило, мы отвечаем в течение одного рабочего дня (с "
+"понедельника по пятницу, с {open_time} до {close_time} по московскому "
+"времени)."
+
+msgid ""
+"For <strong>questions on course lectures, assignments, tools, or materials "
+"for this course</strong>, post in the {link_start}course discussion "
+"forum{link_end}."
+msgstr ""
+"Если у вас есть <strong>вопросы по лекциям курса, заданиям, инструментам или "
+"материалам</strong>, напишите об этом на {link_start}форумe курса{link_end}."
 
 #: cms/djangoapps/course_creators/models.py:34 edx_proctoring/models.py:170
 msgid "pending"
@@ -13433,11 +13483,6 @@ msgstr "Кратко опишите проблему"
 msgid "Tell us the details"
 msgstr "Сообщите нам детали "
 
-#: lms/templates/help_modal.html
-msgid "Include error messages, steps which lead to the issue, etc"
-msgstr ""
-"Упомяните сообщения об ошибках, шаги, которые привели к этой проблеме и т.д."
-
 #: lms/templates/help_modal.html lms/templates/manage_user_standing.html
 #: lms/templates/register-shib.html
 #: lms/templates/combinedopenended/openended/open_ended.html
@@ -15154,11 +15199,6 @@ msgstr "Частично неверно"
 #: lms/templates/combinedopenended/openended/open_ended_evaluation.html
 msgid "Additional comments:"
 msgstr "Дополнительные комментарии:"
-
-#: lms/templates/combinedopenended/open_ended_result_table.html
-#: lms/templates/combinedopenended/openended/open_ended_evaluation.html
-msgid "Submit Feedback"
-msgstr "Отправить отзыв"
 
 #. #-#-#-#-#  mako.po (0.1a)  #-#-#-#-#
 #. Translators: "Response" labels an area that contains the user's

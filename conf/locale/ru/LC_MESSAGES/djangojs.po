@@ -139,8 +139,7 @@ msgstr "Ограниченное по времени"
 
 #: common/djangoapps/edx_proctoring/static/proctoring/js/views/proctored_exam_attempt_view.js:187
 msgid "Are you sure you want to remove this student's exam attempt?"
-msgstr ""
-"Вы действительно хотите удалить сбросить попытку сдачи для этого слушателя?"
+msgstr "Вы действительно хотите сбросить попытку сдачи для этого слушателя?"
 
 #: common/djangoapps/edx_proctoring/static/proctoring/js/views/proctored_exam_view.js:133
 msgid ""

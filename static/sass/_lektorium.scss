@@ -384,3 +384,8 @@ You also need to include this conditional style in the <head> of your HTML file 
     padding-top: 60px;
     clear: both;
 }
+
+/* Feedback modal form */
+.feedback_form .tip {
+    line-height: 1.5;
+}

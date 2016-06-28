@@ -1,0 +1,193 @@
+<%namespace name='static' file='static_content.html'/>
+
+<%!
+from datetime import datetime
+import pytz
+from django.conf import settings
+from django.utils.translation import ugettext as _
+from django.core.urlresolvers import reverse
+from xmodule.tabs import CourseTabList
+from microsite_configuration import microsite
+from microsite_configuration.templatetags.microsite import platform_name
+%>
+
+% if settings.FEATURES.get('ENABLE_FEEDBACK_SUBMISSION', False):
+
+<div class="help-tab">
+  <a href="#help-modal" rel="leanModal" role="button">${_("Help")}</a>
+</div>
+
+<section id="help-modal" class="modal" aria-hidden="true" role="dialog" aria-label="${_("{platform_name} Help").format(platform_name=platform_name())}">
+  <div class="inner-wrapper" id="help_wrapper">
+    <button class="close-modal "tabindex="0">
+      <i class="icon fa fa-remove"></i>
+      <span class="sr">
+        ## Translators: this is a control to allow users to exit out of this modal interface (a menu or piece of UI that takes the full focus of the screen)
+        ${_('Close')}
+      </span>
+    </button>
+
+    <header>
+      <h2>${_('Help')}</h2>
+      <hr>
+    </header>
+
+<%
+  discussion_tab = CourseTabList.get_discussion(course) if course else None
+  discussion_link = discussion_tab.link_func(course, reverse) if (discussion_tab and discussion_tab.is_enabled(course, user=user)) else None
+%>
+
+% if discussion_link:
+    <p>${_('For <strong>questions on course lectures, assignments, tools, or materials for this course</strong>, post in the {link_start}course discussion forum{link_end}.').format(
+      link_start=u'<a href="{url}" target="_blank">'.format(url=discussion_link),
+      link_end='</a>',
+      )}
+    </p>
+
+    <p>${_('Have a <strong>question about something specific</strong>? You can contact Lektorium general support team directly:')}</p>
+    <hr>
+% endif
+
+    <form id="feedback_form" class="feedback_form" method="post" data-remote="true" action="${ reverse('submit_feedback') }">
+      <div id="feedback_error" class="modal-form-error" tabindex="-1"></div>
+% if not user.is_authenticated():
+      <label data-field="name" for="feedback_form_name">${_('Name')}*</label>
+      <input name="name" type="text" id="feedback_form_name" aria-required="true">
+      <label data-field="email" for="feedback_form_email">${_('E-mail')}*</label>
+      <input name="email" type="text" id="feedback_form_email" aria-required="true">
+% endif
+      <label data-field="subject" for="feedback_form_subject">${_('Subject')}*</label>
+      <input name="subject" type="text" id="feedback_form_subject" aria-required="true">
+      <label data-field="details" for="feedback_form_details">${_('Description')}*
+      <span class="tip">${_('Include error messages, steps which lead to the issue, etc')}</span></label>
+      <textarea name="details" id="feedback_form_details" aria-required="true"></textarea>
+      <input name="issue_type" type="hidden">
+% if course:
+      <input name="course_id" type="hidden" value="${course.id.to_deprecated_string() | h}">
+% endif
+      <div class="submit">
+        <input name="submit" type="submit" value="${_('Submit Feedback')}" id="feedback_submit">
+      </div>
+    </form>
+  </div>
+
+  <div class="inner-wrapper" id="feedback_success_wrapper" tabindex="0">
+    <button class="close-modal" tabindex="0">
+      <i class="icon fa fa-remove"></i>
+      <span class="sr">
+        ## Translators: this is a control to allow users to exit out of this modal interface (a menu or piece of UI that takes the full focus of the screen) ${_('Close')}
+      </span>
+    </button>
+
+    <header>
+      <h2>${_('Thank You!')}</h2>
+      <hr>
+    </header>
+
+    <p>
+    ${_(
+        'Thank you for your feedback.  We typically respond to a request '
+        'within one business day (Monday to Friday, {open_time} to {close_time} Moscow time.)'
+    ).format(
+        open_time="11:00",
+        close_time="19:00"
+    )}
+    </p>
+  </div>
+</section>
+
+<script type="text/javascript">
+(function() {
+    var onModalClose = function() {
+            $("#help-modal .close-modal").off("click");
+            $("#lean_overlay").off("click");
+            $("#help-modal").attr("aria-hidden", "true");
+            $('area,input,select,textarea,button').removeAttr('tabindex');
+            $(".help-tab a").focus();
+        },
+        cycle_modal_tab = function(from_element_name, to_element_name) {
+            $(from_element_name).on('keydown', function(e) {
+                var keyCode = e.keyCode || e.which;
+                if (keyCode === 9) {
+                    e.preventDefault();
+                    $(to_element_name).focus();
+                }
+            });
+        };
+
+    $(".help-tab").click(function() {
+        $(".field-error").removeClass("field-error");
+        $("#feedback_form")[0].reset();
+        $("#feedback_form input[type='submit']").removeAttr("disabled");
+        $("#feedback_error").css("display", "none");
+        $("#feedback_success_wrapper").css("display", "none");
+        $("#help_wrapper").css("display", "block");
+        $("#help-modal").attr("aria-hidden", "false");
+        $("#help-modal .close-modal").click(onModalClose);
+        $("#lean_overlay").click(onModalClose);
+        $("#help_wrapper .close-modal").focus();
+    });
+    cycle_modal_tab("#feedback_link_question", "#help_wrapper .close-modal");
+    cycle_modal_tab("#feedback_submit", "#help-modal .close-modal");
+    cycle_modal_tab("#feedback-faq-link", "#feedback_success_wrapper .close-modal");
+    $("#help-modal").on("keydown", function(e) {
+        var keyCode = e.keyCode || e.which;
+        if (keyCode === 27) {
+            e.preventDefault();
+            $("#help_wrapper .close-modal").click();
+        }
+    });
+    $("#feedback_form").submit(function() {
+        $("input[type='submit']", this).attr("disabled", "disabled");
+        $('area,input,select,textarea,button').attr('tabindex', -1);
+        $("#help-modal .close-modal").focus();
+    });
+    $("#feedback_form").on("ajax:complete", function() {
+        $("input[type='submit']", this).removeAttr("disabled");
+    });
+    $("#feedback_form").on("ajax:success", function(event, data, status, xhr) {
+        $("#help_wrapper").css("display", "none");
+        $("#feedback_success_wrapper").css("display", "block");
+        $("#feedback_success_wrapper").focus();
+    });
+    $("#feedback_form").on("ajax:error", function(event, xhr, status, error) {
+        $(".field-error").removeClass("field-error").removeAttr("aria-invalid");
+        var responseData;
+        try {
+            responseData = jQuery.parseJSON(xhr.responseText);
+        } catch(err) {
+        }
+        if (responseData) {
+            $("[data-field='"+responseData.field+"']").addClass("field-error").attr("aria-invalid", "true");
+            $("#feedback_error").html(responseData.error).stop().css("display", "block");
+        } else {
+            // If no data (or malformed data) is returned, a server error occurred
+            htmlStr = "${_('An error has occurred.')}";
+% if settings.FEEDBACK_SUBMISSION_EMAIL:
+            htmlStr += " " + _.template(
+              "${_('Please {link_start}send us e-mail{link_end}.')}",
+              {link_start: '<a href="#" id="feedback_email">', link_end: '</a>'},
+              {interpolate: /\{(.+?)\}/g})
+% else:
+            // If no email is configured, we can't do much other than
+            // ask the user to try again later
+            htmlStr += " " + "${_('Please try again later.')}";
+% endif
+            $("#feedback_error").html(htmlStr).stop().css("display", "block");
+% if settings.FEEDBACK_SUBMISSION_EMAIL:
+            $("#feedback_email").click(function(e) {
+                mailto = "mailto:" + "${settings.FEEDBACK_SUBMISSION_EMAIL}" +
+                    "?subject=" + $("#feedback_form input[name='subject']").val() +
+                    "&body=" + $("#feedback_form textarea[name='details']").val();
+                window.open(mailto);
+                e.preventDefault();
+            });
+%endif
+        }
+        // Make change explicit to assistive technology
+        $("#feedback_error").focus();
+    });
+})(this)
+</script>
+
+%endif
