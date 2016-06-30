@@ -1200,10 +1200,10 @@ msgid "Submit Feedback"
 msgstr "Отправить заявку"
 
 msgid ""
-"Thank you for your feedback.  We typically respond to a request within one "
+"Your feedback has been submitted. We typically respond to a request within one "
 "business day (Monday to Friday, {open_time} to {close_time} Moscow time.)"
 msgstr ""
-"Спасибо за вопрос! Как правило, мы отвечаем в течение одного рабочего дня (с "
+"Ваша заявка отправлена. Как правило, мы отвечаем в течение одного рабочего дня (с "
 "понедельника по пятницу, с {open_time} до {close_time} по московскому "
 "времени)."
 
