@@ -57,6 +57,251 @@ msgstr ""
 "Проверьте правильность написания и уникальность идентификатора обучающегося "
 "или используйте адрес электронной почты."
 
+#: cms/templates/js/signatory-details.underscore
+#: cms/templates/js/signatory-editor.underscore
+msgid "Signatory %(number)s"
+msgstr "Подписант %(number)s"
+
+#: cms/templates/js/certificate-details.underscore
+#: cms/templates/js/certificate-editor.underscore
+msgid "Honor Code Disclaimer"
+msgstr "Уведомление об отсутствии подтверждения личности"
+
+# #### Certificates #####
+# tmp #
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid "Errors!"
+msgstr "Ошибки"
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " learners are successfully added to exception list"
+msgstr " слушателей успешно добавлены в список исключений"
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " learner is successfully added to the exception list"
+msgstr " слушатель успешно добавлен в список исключений"
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " records are not in correct format"
+msgstr " записей в неверном формате"
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " record is not in correct format"
+msgstr " запись в неверном формате"
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " learners do not exist in LMS"
+msgstr " слушателей не зарегистрированы в LMS."
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " learner does not exist in LMS"
+msgstr " слушатель не зарегистрирован в LMS."
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " learners are already white listed"
+msgstr " слушателей уже добавлены в список исключений"
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " learner is already white listed"
+msgstr " слушатель уже добавлен в список исключений"
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " learners are not enrolled in course"
+msgstr " слушателей не записаны на курс"
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " learner is not enrolled in course"
+msgstr " слушатель не записан на курс"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
+msgid "Bulk Exceptions"
+msgstr "Массовые ислючения"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
+msgid ""
+"You can upload a CSV file of usernames or email addresses to be added to the "
+"certificate exceptions white list."
+msgstr ""
+"Вы можете загрузить файл в формате CSV с имёнами пользователей или адресами "
+"электронной почты слушателей, которых необходимо добавить в список "
+"исключений."
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
+msgid "Browse"
+msgstr "Выбрать файл"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
+msgid "Upload CSV"
+msgstr "Загрузить CSV"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
+msgid "Individual Exceptions"
+msgstr "Индивидуальные исключения"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
+msgid ""
+"You can add a username or email address to be added to the certificate "
+"exceptions white list."
+msgstr ""
+"Вы можете добавить слушателя в список исключений, задав его имя пользователя "
+"или адрес электронной почты."
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "Action"
+msgstr "Действие"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "Remove from List"
+msgstr "Удалить из списка"
+
+#: cms/templates/js/certificate-web-preview.underscore
+msgid "Activate"
+msgstr "Утвердить"
+
+#: cms/templates/js/certificate-web-preview.underscore
+msgid "Deactivate"
+msgstr "Отозвать"
+
+#: cms/static/js/certificates/views/certificate_details.js
+msgid ""
+"This certificate has already been activated and is live. Are you sure you "
+"want to continue editing?"
+msgstr ""
+"Этот сертификат уже утверждён и доступен слушателям. Вы уверены, что хотите "
+"продолжать редактирование?"
+
+# /tmp #
+#: cms/static/js/views/settings/grading.js
+msgid "A,B,C,D,F"
+msgstr "A,B,C,D,Н/З"
+
+#: cms/static/js/views/settings/grading.js
+msgid "Pass"
+msgstr "Зачёт"
+
+#: cms/static/js/views/settings/grading.js
+msgid "Fail"
+msgstr "Незачёт"
+
+#: lms/djangoapps/support/static/support/templates/certificates_results.underscore
+msgid "Certificate could not be regenerated"
+msgstr "Сертификат нельзя создать повторно"
+
+#: cms/templates/js/certificate-details.underscore
+#: cms/templates/js/certificate-editor.underscore
+msgid "Additional Course Description"
+msgstr "Дополнительное описание курса"
+
+#: cms/templates/js/certificate-details.underscore
+#: cms/templates/js/certificate-editor.underscore
+msgid "Additional certificate information"
+msgstr "Дополнительная информация для сертификата"
+
+#: cms/templates/js/certificate-details.underscore
+#: cms/templates/js/certificate-editor.underscore
+msgid "Show learner's grade on certificate"
+msgstr "Показывать оценку слушателя на сертификате"
+
+#: cms/templates/js/certificate-details.underscore
+msgid "Yes"
+msgstr "Да"
+
+#: cms/templates/js/certificate-details.underscore
+msgid "No"
+msgstr "Нет"
+
+#: cms/templates/js/certificate-details.underscore
+#: cms/templates/js/certificate-editor.underscore
+msgid "Certificate Organizations"
+msgstr "Организации"
+
+#: cms/templates/js/certificate-editor.underscore
+msgid "Course description"
+msgstr "Описание курса"
+
+#: cms/templates/js/certificate-editor.underscore
+msgid ""
+"Specify an additional course description that would be shown next to course "
+"title. Leave blank to show only course title on certificates."
+msgstr ""
+"Введите дополнительное описание курса; оно будет отображаться под названием "
+"курса. Чтобы показывалось только название курса, оставьте поле пустым."
+
+#: cms/templates/js/certificate-editor.underscore
+msgid "Additional Certificate Information"
+msgstr "Дополнительная информация для сертификата"
+
+#: cms/templates/js/certificate-editor.underscore
+msgid ""
+"Specify whether student's grade (in percent) would be shown on certificate. "
+"The grade would be shown for every student including whitelisted."
+msgstr ""
+"Укажите, будет ли отображаться на сертификате оценка слушателя (в "
+"процентах). Оценка будет отображаться для всех слушателей, в том числе для "
+"исключений."
+
+#: cms/templates/js/certificate-editor.underscore
+msgid ""
+"Specify an informational message about missing verification. This message is "
+"displayed only on Honor Code certificates. Leave blank to show no Honor Code "
+"disclaimer."
+msgstr ""
+"Введите текст сообщения об отсутствии подтверждения личности. Это сообщение "
+"отображается только на обычных сертификатах, не требующих подтверждения "
+"личности. Чтобы не показывать сообщение ни на каких сертификатах, оставьте "
+"поле пустым."
+
+#: cms/templates/js/certificate-editor.underscore
+msgid "Certificate Organizations Information"
+msgstr "Информация об организациях курса"
+
+#: cms/templates/js/organization-details.underscore
+msgid "No logo"
+msgstr "Нет логотипа"
+
+#: cms/templates/js/organization-details.underscore
+msgid "Organization Logo"
+msgstr "Логотип организации"
+
+msgid "Organization name"
+msgstr "Название организации"
+
+#: cms/templates/js/organizations-editor.underscore
+msgid "Organization short name"
+msgstr "Краткое наименование"
+
+msgid ""
+"Search for organization by its abbreviation or full name, only existing "
+"organizations allowed."
+msgstr ""
+"Для поиска начните вводить сокращённое наименование или полное название "
+"организации. Использовать можно только зарегистрированные в системе "
+"организации."
+
+msgid "Add Organization"
+msgstr "Добавить организацию"
+
+#: cms/sttic/js/certificates/models/organization.js
+msgid ""
+"No organization found. Please contact your manager to add the organization "
+"to the system."
+msgstr ""
+"Организация не найдена. Для добавление организации в систему свяжитесь с "
+"представителем платформы."
+
+msgid "Organization already added."
+msgstr "Данная организация уже добавлена."
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid "Student email or username"
+msgstr "Электронная почта или имя пользователя слушателя"
+
+msgid "Free text notes"
+msgstr "Заметки"
+
+msgid "Add Exception"
+msgstr "Добавить исключение"
+
 # #### proctoring: djangojs #####
 #: common/djangoapps/edx_proctoring/static/proctoring/js/views/proctored_exam_attempt_view.js:21
 msgid "Error"
@@ -4975,6 +5220,19 @@ msgstr[3] "%(num_questions)s вопросов"
 msgid "Number of Students"
 msgstr "Количество Студентов"
 
+#: lms/templates/commerce/receipt.underscore
+#: lms/templates/verify_student/payment_confirmation_step.underscore
+#: test_root/staticfiles/cms/templates/commerce/receipt.90d0f0fb7c4d.underscore
+#: test_root/staticfiles/cms/templates/commerce/receipt.underscore
+#: test_root/staticfiles/cms/templates/verify_student/payment_confirmation_step.8fc0db850d5a.underscore
+#: test_root/staticfiles/cms/templates/verify_student/payment_confirmation_step.underscore
+#: test_root/staticfiles/lms/templates/commerce/receipt.90d0f0fb7c4d.underscore
+#: test_root/staticfiles/lms/templates/commerce/receipt.underscore
+#: test_root/staticfiles/lms/templates/verify_student/payment_confirmation_step.8fc0db850d5a.underscore
+#: test_root/staticfiles/lms/templates/verify_student/payment_confirmation_step.underscore
+msgid "Total"
+msgstr "Итого"
+
 #: cms/static/coffee/src/main.js
 msgid ""
 "This may be happening because of an error with our server or your internet "
@@ -5036,14 +5294,6 @@ msgstr "Неверные данные в поле (полях) для подпи
 #: cms/static/js/certificates/views/certificate_details.js
 msgid "Edit this certificate?"
 msgstr "Редактировать данный сертификат?"
-
-#: cms/static/js/certificates/views/certificate_details.js
-msgid ""
-"This certificate has already been activated and is live. Are you sure you "
-"want to continue editing?"
-msgstr ""
-"Этот сертификат уже активен и доступен студенту.  Вы уверены, что хотите "
-"продолжать редактирование?"
 
 #: cms/static/js/certificates/views/certificate_details.js
 msgid "Yes, allow edits to the active Certificate"
@@ -5293,14 +5543,6 @@ msgstr "У всех групп должны быть не повторяющие
 #: cms/static/js/models/settings/course_details.js
 msgid "The course must have an assigned start date."
 msgstr "Для курса должна быть указана дата начала."
-
-#: cms/static/js/models/settings/course_details.js
-msgid ""
-"The course must have at least one active certificate configuration before it "
-"can be started."
-msgstr ""
-"Необходимо ввести настройки по крайней мере одного вида активного "
-"сертификата, прежде чем начать курс."
 
 #: cms/static/js/models/settings/course_details.js
 msgid "The course end date must be later than the course start date."
@@ -6923,19 +7165,6 @@ msgstr "Сумма"
 #: test_root/staticfiles/lms/templates/commerce/receipt.underscore
 #: test_root/staticfiles/lms/templates/verify_student/payment_confirmation_step.8fc0db850d5a.underscore
 #: test_root/staticfiles/lms/templates/verify_student/payment_confirmation_step.underscore
-msgid "Total"
-msgstr "Итого"
-
-#: lms/templates/commerce/receipt.underscore
-#: lms/templates/verify_student/payment_confirmation_step.underscore
-#: test_root/staticfiles/cms/templates/commerce/receipt.90d0f0fb7c4d.underscore
-#: test_root/staticfiles/cms/templates/commerce/receipt.underscore
-#: test_root/staticfiles/cms/templates/verify_student/payment_confirmation_step.8fc0db850d5a.underscore
-#: test_root/staticfiles/cms/templates/verify_student/payment_confirmation_step.underscore
-#: test_root/staticfiles/lms/templates/commerce/receipt.90d0f0fb7c4d.underscore
-#: test_root/staticfiles/lms/templates/commerce/receipt.underscore
-#: test_root/staticfiles/lms/templates/verify_student/payment_confirmation_step.8fc0db850d5a.underscore
-#: test_root/staticfiles/lms/templates/verify_student/payment_confirmation_step.underscore
 msgid "Please Note"
 msgstr "Обратите внимание!"
 
@@ -7127,18 +7356,21 @@ msgstr "Нажмите, чтобы редактировать"
 msgid "title"
 msgstr "заголовок"
 
-#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
-msgid ""
-"Specify either Student's username or email for whom to create certificate "
-"exception"
-msgstr ""
-"Укажите имя пользователя или адрес электронной почты слушателя, которому "
-"необходимо выдать сертификат в исключительном порядке."
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "New"
+msgstr "Новый"
 
-#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
-msgid "Enter Notes associated with this certificate exception"
-msgstr ""
-"Введите примечание к случаю выдачи сертификата в исключительном порядке"
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "additions to the Exception list"
+msgstr "добавленных в список исключений"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "Generate a Certificate for all users on the Exception list"
+msgstr "Создать сертификаты для всех пользователей в списке исключений"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "Generate Exception Certificates"
+msgstr "Создать сертификаты для исключительных случаев"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "User ID"
@@ -7155,22 +7387,6 @@ msgstr "Дата добавления исключения"
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Notes"
 msgstr "Примечания"
-
-#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
-msgid "New"
-msgstr "Новый"
-
-#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
-msgid "additions to the Exception list"
-msgstr "добавленных в список исключений"
-
-#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
-msgid "Generate a Certificate for all users on the Exception list"
-msgstr "Создать сертификаты для всех пользователей в списке исключений"
-
-#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
-msgid "Generate Exception Certificates"
-msgstr "Создать сертификаты для исключительных случаев"
 
 #: lms/templates/instructor/instructor_dashboard_2/cohort-discussions-course-wide.underscore
 #: lms/templates/instructor/instructor_dashboard_2/cohorts.underscore
@@ -9275,22 +9491,6 @@ msgstr "Выберите режим"
 msgid "Preview Certificate"
 msgstr "Просмотреть сертификат"
 
-#: cms/templates/js/certificate-web-preview.underscore
-#: test_root/staticfiles/cms/coffee/fixtures/certificate-web-preview.7f1a4d99de65.underscore
-#: test_root/staticfiles/cms/coffee/fixtures/certificate-web-preview.underscore
-#: test_root/staticfiles/cms/templates/certificate-web-preview.7f1a4d99de65.underscore
-#: test_root/staticfiles/cms/templates/certificate-web-preview.underscore
-msgid "Activate"
-msgstr "Активировать"
-
-#: cms/templates/js/certificate-web-preview.underscore
-#: test_root/staticfiles/cms/coffee/fixtures/certificate-web-preview.7f1a4d99de65.underscore
-#: test_root/staticfiles/cms/coffee/fixtures/certificate-web-preview.underscore
-#: test_root/staticfiles/cms/templates/certificate-web-preview.7f1a4d99de65.underscore
-#: test_root/staticfiles/cms/templates/certificate-web-preview.underscore
-msgid "Deactivate"
-msgstr "Деактивировать"
-
 #: cms/templates/js/checklist.underscore
 #: test_root/staticfiles/cms/coffee/fixtures/checklist.ccf05a0c32e4.underscore
 #: test_root/staticfiles/cms/coffee/fixtures/checklist.underscore
@@ -11161,9 +11361,30 @@ msgstr ""
 msgid "Unable to retrieve data, please try again later."
 msgstr "Не удалось получить данные.  Пожалуйста, попробуйте повторить позже."
 
+#: cms/static/js/models/settings/course_details.js
+msgid ""
+"The course must have at least one active certificate configuration before it "
+"can be started."
+msgstr ""
+"Необходимо ввести настройки по крайней мере одного вида активного "
+"сертификата, прежде чем начать курс."
+
 #: common/static/common/templates/discussion/topic.underscore
 msgid "Discussion topics; current selection is:"
 msgstr "Темы обсуждения; отобранные:"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
+msgid ""
+"Specify either Student's username or email for whom to create certificate "
+"exception"
+msgstr ""
+"Укажите имя пользователя или адрес электронной почты слушателя, которому "
+"необходимо выдать сертификат в исключительном порядке."
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list-editor.underscore
+msgid "Enter Notes associated with this certificate exception"
+msgstr ""
+"Введите примечание к случаю выдачи сертификата в исключительном порядке"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Generate a Certificate for all"
@@ -11182,13 +11403,6 @@ msgstr "Распространённые проблемы с подсказка�
 #: test_root/staticfiles/cms/templates/certificate-editor.underscore
 msgid "Title of the course"
 msgstr "Заголовок курса"
-
-#: test_root/staticfiles/cms/coffee/fixtures/certificate-editor.93e592c413af.underscore
-#: test_root/staticfiles/cms/coffee/fixtures/certificate-editor.underscore
-#: test_root/staticfiles/cms/templates/certificate-editor.93e592c413af.underscore
-#: test_root/staticfiles/cms/templates/certificate-editor.underscore
-msgid "Organization Logo"
-msgstr "Логотип организации"
 
 #: test_root/staticfiles/cms/coffee/fixtures/certificate-editor.93e592c413af.underscore
 #: test_root/staticfiles/cms/coffee/fixtures/certificate-editor.underscore

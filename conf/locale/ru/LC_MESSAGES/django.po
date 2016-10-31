@@ -1182,6 +1182,112 @@ msgstr "Пожалуйста, заполните ваше имя."
 msgid "Please provide a valid e-mail."
 msgstr "Пожалуйста, введите корректный адрес электронной почты."
 
+# #### Certificates #####
+# tmp #
+#: lms/djangoapps/instructor/views/api.py
+msgid "Student (username/email={user}) already in certificate exception list."
+msgstr "Обучающийся (username/email={user}) уже добавлен в список исключений."
+
+#: lms/djangoapps/instructor/views/api.py
+msgid ""
+"Certificate exception [user={}] does not exist in certificate white list."
+msgstr "Исключения [user={user}] нет в списке исключений."
+
+#: lms/djangoapps/instructor/views/api.py
+msgid "Invalid data, user_id must be present for all certificate exceptions."
+msgstr "Неверные данные, user_id должен быть в списке исключений."
+
+#: lms/djangoapps/instructor/views/api.py
+msgid "Certificate generation started for white listed students."
+msgstr "Запущен выпуск сертификатов для обучающихся в списке исключений."
+
+#: lms/djangoapps/instructor/views/api.py
+msgid "user \"{user}\" in row#    {row}"
+msgstr "пользователь \"{user}\" в строке#    {row}"
+
+#: lms/djangoapps/instructor/views/api.py
+msgid "user \"{username}\" in row# {row}"
+msgstr "пользователь \"{username}\" в строке#    {row}"
+
+#: cms/djangoapps/contentstore/views/course.py
+msgid ""
+"You must link this course to an organization in order to continue. "
+"Organization you selected does not exist in the system, you will need to add "
+"it to the system"
+msgstr ""
+"Для создания курса вам необходимо выбрать организацию. Организации, которую "
+"вы задали, не существует в системе, вам нужно будет добавить её."
+
+#. Translators: This message appears to users when the users have not
+#. completed
+#. identity verification.
+#: lms/templates/courseware/progress.html
+msgid "Certificate unavailable"
+msgstr "Сертификат недоступен"
+
+#: lms/templates/courseware/progress.html
+msgid ""
+"You have not received a certificate because you do not have a current "
+"{platform_name} verified identity. "
+msgstr ""
+"Вы не получили сертификат, поскольку не подтвердили свою личность на "
+"{platform_name}."
+
+#: lms/templates/courseware/progress.html
+msgid "Verify your identity now."
+msgstr "Подтвердить личность прямо сейчас."
+
+#: lms/templates/dashboard/_dashboard_certificate_information.html
+msgid "Grade required to pass this course:"
+msgstr "Проходной балл по курсу:"
+
+# overrides #
+#. Translators: This line leads the reader to understand more about the
+#. certificate that a student has been awarded
+#: lms/djangoapps/certificates/views/webview.py
+#, python-brace-format
+msgid "More about {fullname}'s accomplishment"
+msgstr "Дополнительная информация о достижениях слушателя {fullname}"
+
+#: lms/templates/certificates/server-error.html
+msgid "The institution&#39;s logo."
+msgstr "Логотип образовательной организациию."
+
+#: common/lib/xmodule/xmodule/course_module.py
+msgid "Certificate Web/HTML View Enabled"
+msgstr "Разрешить выпуск HTML-сертификатов"
+
+#: lms/templates/courseware/progress.html
+msgid ""
+"You can keep working for a higher grade, or request your certificate now."
+msgstr ""
+"Вы можете продолжить обучение для получения более высокой оценки или "
+"запросить сертификат прямо сейчас."
+
+#: lms/templates/courseware/progress.html
+msgid "Request Certificate"
+msgstr "Запросить сертификат"
+
+# /tmp #
+#: cms/djangoapps/contentstore/views/certificates.py
+msgid "This field should not contain any spaces."
+msgstr "Поле не должно содержать пробельных символов."
+
+msgid ""
+"This field should not contain any non-latin letters, special characters or "
+"spaces."
+msgstr ""
+"Поле не должно содержать буквы, помимо латинского алфавита, специальные или "
+"пробельные символы."
+
+#: lms/djangoapps/certificates/views/webview.py
+msgid ""
+"successfully completed, received final grade {grade}, and was awarded a "
+"{platform_name} {certificate_type} Certificate of Completion in "
+msgstr ""
+"успешно окончил(а), получил(а) итоговую оценку {grade} и удостоен(а) "
+"{certificate_type} сертификата {platform_name} по курсу "
+
 msgid "Truly yours, Lektorium educational project team."
 msgstr "С уважением, команда просветительского проекта Лекториум."
 
@@ -1200,10 +1306,10 @@ msgid "Submit Feedback"
 msgstr "Отправить заявку"
 
 msgid ""
-"Your feedback has been submitted. We typically respond to a request within one "
+"Thank you for your feedback.  We typically respond to a request within one "
 "business day (Monday to Friday, {open_time} to {close_time} Moscow time.)"
 msgstr ""
-"Ваша заявка отправлена. Как правило, мы отвечаем в течение одного рабочего дня (с "
+"Спасибо за вопрос! Как правило, мы отвечаем в течение одного рабочего дня (с "
 "понедельника по пятницу, с {open_time} до {close_time} по московскому "
 "времени)."
 
@@ -1214,6 +1320,29 @@ msgid ""
 msgstr ""
 "Если у вас есть <strong>вопросы по лекциям курса, заданиям, инструментам или "
 "материалам</strong>, напишите об этом на {link_start}форумe курса{link_end}."
+
+# #### Certificates #####
+#: templates/certificates/_accomplishment-rendering.html
+msgid "confirms that"
+msgstr "подтверждает, что"
+
+msgid "completed with distinction and received grade {grade} in online course"
+msgstr "с отличием окончил(a) с итоговой оценкой {grade} курс"
+
+msgid "successfully completed and received grade {grade} in online course"
+msgstr "успешно окончил(a) с итоговой оценкой {grade} курс"
+
+msgid "completed with distinction online course"
+msgstr "с отличием окончил(a) курс"
+
+msgid "successfully completed online course"
+msgstr "успешно окончил(a) курс"
+
+msgid "About Lektorium"
+msgstr "О Лекториуме"
+
+msgid "Lektorium acknowledges the following student accomplishment"
+msgstr "Лекториум признаёт следующие достижения слушателя"
 
 #: cms/djangoapps/course_creators/models.py:34 edx_proctoring/models.py:170
 msgid "pending"
@@ -2642,9 +2771,21 @@ msgstr "Идентификатор видео"
 msgid "Status"
 msgstr "Статус"
 
-#: common/djangoapps/student/views.py
-msgid "Could not enroll"
-msgstr "Не удалось зарегистрироваться на курс"
+#: common/djangoapps/api/views.py
+msgid "No course '{}' found"
+msgstr ""
+
+#: common/djangoapps/api/views.py
+msgid "Could not auto enroll"
+msgstr ""
+
+#: common/djangoapps/api/views.py
+msgid "Enrollment failed"
+msgstr ""
+
+#: common/djangoapps/api/views.py
+msgid "No user with uid '{}' found"
+msgstr ""
 
 #: common/djangoapps/config_models/admin.py
 msgid "Revert to the selected configuration"
@@ -2714,6 +2855,49 @@ msgstr ""
 "ИСКЛЮЧИТЕЛЬНО к режимам, требующим подтверждения личности."
 
 #: common/djangoapps/course_modes/models.py
+msgid "Your verification is pending"
+msgstr "Подтверждение ожидает проверки"
+
+#: common/djangoapps/course_modes/models.py
+msgid "Verified: Pending Verification"
+msgstr "Подтверждение: ожидание проверки"
+
+#: common/djangoapps/course_modes/models.py
+msgid "ID verification pending"
+msgstr "Идентификатор ожидает проверки"
+
+#: common/djangoapps/course_modes/models.py
+msgid "You're enrolled as a verified student"
+msgstr "Вы официально зарегистрированы как учащийся"
+
+#: common/djangoapps/course_modes/models.py lms/envs/devstack.py
+#: lms/templates/instructor/instructor_dashboard_2/course_info.html
+msgid "Verified"
+msgstr "Подтверждённые"
+
+#: common/djangoapps/course_modes/models.py
+msgid "ID Verified Ribbon/Badge"
+msgstr "Ленточка/значок подтверждённого статуса"
+
+#: common/djangoapps/course_modes/models.py
+msgid "You're enrolled as an honor code student"
+msgstr "Вы зарегистрированы как учащийся по программе \"Кодекс чести\""
+
+#: common/djangoapps/course_modes/models.py lms/djangoapps/branding/api.py
+#: openedx/core/djangoapps/user_api/views.py
+#: lms/templates/static_templates/honor.html
+msgid "Honor Code"
+msgstr "Кодекс чести"
+
+#: common/djangoapps/course_modes/models.py
+msgid "You're enrolled as a professional education student"
+msgstr "Вы проходите курс профессиональной подготовки"
+
+#: common/djangoapps/course_modes/models.py
+msgid "Professional Ed"
+msgstr "Профессиональная подготовка"
+
+#: common/djangoapps/course_modes/models.py
 #: lms/djangoapps/shoppingcart/reports.py cms/templates/widgets/header.html
 #: lms/templates/courseware/courseware.html
 msgid "Course"
@@ -2775,57 +2959,6 @@ msgid ""
 msgstr ""
 "В режимах профессионального образования не разрешается иметь установленным "
 "expiration_datetime."
-
-#: common/djangoapps/course_modes/models.py
-msgid "Your verification is pending"
-msgstr "Подтверждение ожидает проверки"
-
-#: common/djangoapps/course_modes/models.py
-msgid "Verified: Pending Verification"
-msgstr "Подтверждение: ожидание проверки"
-
-#: common/djangoapps/course_modes/models.py
-msgid "ID verification pending"
-msgstr "Идентификатор ожидает проверки"
-
-#: common/djangoapps/course_modes/models.py
-msgid "You're enrolled as a verified student"
-msgstr "Вы официально зарегистрированы как учащийся"
-
-#: common/djangoapps/course_modes/models.py lms/envs/devstack.py
-#: lms/templates/instructor/instructor_dashboard_2/course_info.html
-msgid "Verified"
-msgstr "Подтверждённые"
-
-#: common/djangoapps/course_modes/models.py
-msgid "ID Verified Ribbon/Badge"
-msgstr "Ленточка/значок подтверждённого статуса"
-
-#: common/djangoapps/course_modes/models.py
-msgid "You're enrolled as an honor code student"
-msgstr "Вы зарегистрированы как учащийся по программе \"Кодекс чести\""
-
-#: common/djangoapps/course_modes/models.py lms/djangoapps/branding/api.py
-#: openedx/core/djangoapps/user_api/views.py
-#: lms/templates/static_templates/honor.html
-msgid "Honor Code"
-msgstr "Кодекс чести"
-
-#: common/djangoapps/course_modes/models.py
-msgid "You're auditing this course"
-msgstr "Вы проходите этот курс в качестве слушателя"
-
-#: common/djangoapps/course_modes/models.py
-msgid "Auditing"
-msgstr "Прослушивание курса"
-
-#: common/djangoapps/course_modes/models.py
-msgid "You're enrolled as a professional education student"
-msgstr "Вы проходите курс профессиональной подготовки"
-
-#: common/djangoapps/course_modes/models.py
-msgid "Professional Ed"
-msgstr "Профессиональная подготовка"
 
 #: common/djangoapps/course_modes/views.py
 msgid "Enrollment is closed"
@@ -3140,6 +3273,10 @@ msgid "Course id is invalid"
 msgstr "Недопустимый идентификатор курса"
 
 #: common/djangoapps/student/views.py
+msgid "Could not enroll"
+msgstr "Не удалось зарегистрироваться на курс"
+
+#: common/djangoapps/student/views.py
 msgid "You are not enrolled in this course"
 msgstr "Вы не зарегистрированы на этот курс"
 
@@ -3240,6 +3377,10 @@ msgstr "Указанный access_token уже связан с другим по
 #: common/djangoapps/student/views.py
 msgid "The provided access_token is not valid."
 msgstr "Указанный access_token не действителен."
+
+#: common/djangoapps/student/views.py
+msgid "An account with the username '{username}' already exists."
+msgstr ""
 
 #: common/djangoapps/student/views.py
 msgid "Unknown error. Please e-mail us to let us know how it happened."
@@ -3712,6 +3853,10 @@ msgstr[3] "Файл должен иметь одно из следующих р�
 #: common/djangoapps/util/file.py
 msgid "Maximum upload file size is {file_size} bytes."
 msgstr "Максимальный объём загружаемого файла – {file_size} байт."
+
+#: common/djangoapps/util/helpdeskeddy.py
+msgid "Anonymous"
+msgstr ""
 
 #: common/djangoapps/util/milestones_helpers.py
 msgid "Course {course_id} requires {prerequisite_course_id}"
@@ -5377,10 +5522,6 @@ msgstr ""
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "Certificate Name (Long)"
 msgstr "Название для сертификата (полное)"
-
-#: common/lib/xmodule/xmodule/course_module.py
-msgid "Certificate Web/HTML View Enabled"
-msgstr "Разрешить просмотр HTML-версии сертификата"
 
 #: common/lib/xmodule/xmodule/course_module.py
 msgid "If true, certificate Web/HTML views are enabled for the course."
@@ -7451,6 +7592,29 @@ msgstr "Окончен курс \"{course_name}\" ({course_mode})"
 msgid "created"
 msgstr "создано"
 
+#. Translators: This is a past-tense verb that is used for task action
+#. messages.
+#: lms/djangoapps/certificates/models.py
+msgid "regenerated"
+msgstr ""
+
+#. Translators: This is a past-tense verb that is inserted into task progress
+#. messages as {action}.
+#: lms/djangoapps/instructor_task/tasks.py
+msgid "generated"
+msgstr "создано"
+
+#. Translators: This string represents task was executed for all learners.
+#: lms/djangoapps/certificates/models.py
+msgid "All learners"
+msgstr ""
+
+#. Translators: This string represents task was executed for students having
+#. exceptions.
+#: lms/djangoapps/certificates/models.py
+msgid "For exceptions"
+msgstr ""
+
 #: lms/djangoapps/certificates/models.py
 msgid ""
 "A human-readable description of the example certificate.  For example, "
@@ -7626,57 +7790,37 @@ msgstr ""
 "{cert_type} сертификат демонстрирует высокий уровень достижений по программе "
 "обучения, и включает в себя проверку личности студента."
 
-#: lms/djangoapps/certificates/views/webview.py
-msgid "I completed the {course_title} course on {platform_name}."
-msgstr "Мной пройден курс \"{course_title}\" в {platform_name}."
-
-#: lms/djangoapps/certificates/views/webview.py
-msgid "I completed a course on {platform_name}. Take a look at my certificate."
-msgstr "Мной пройден курс в {platform_name}. Взгляните на мой сертификат!"
-
 #. Translators:  The format of the date includes the full name of the month
 #: lms/djangoapps/certificates/views/webview.py
 msgid "{month} {day}, {year}"
 msgstr "{day} {month}, {year}"
 
+#. Translators:  This text represents the verification of the certificate
 #: lms/djangoapps/certificates/views/webview.py
 msgid ""
-"a course of study offered by {partner_short_name}, an online learning "
-"initiative of {partner_long_name} through {platform_name}."
+"This is a valid {platform_name} certificate for {user_name}, who "
+"participated in {partner_short_name} {course_number}"
 msgstr ""
-"курс представлен {partner_short_name}, образовательная инициатива "
-"{partner_long_name} посредством {platform_name}."
+"Это действительный сертификат {platform_name} для {user_name}, который "
+"принимал участие в {partner_short_name} {course_number}"
 
+#. Translators:  This text is bound to the HTML 'title' element of the page
+#. and appears in the browser title bar
+#: lms/djangoapps/certificates/views/webview.py
+msgid "{partner_short_name} {course_number} Certificate | {platform_name}"
+msgstr "{partner_short_name} {course_number} сертификат | {platform_name}"
+
+#. Translators:  This text fragment appears after the student's name
+#. (displayed in a large font) on the certificate
+#. screen.  The text describes the accomplishment represented by the
+#. certificate information displayed to the user
 #: lms/djangoapps/certificates/views/webview.py
 msgid ""
-"a course of study offered by {partner_short_name}, through {platform_name}."
-msgstr "курс представлен {partner_short_name}, посредством {platform_name}."
-
-#. Translators: Accomplishments describe the awards/certifications obtained by
-#. students on this platform
-#: lms/djangoapps/certificates/views/webview.py
-msgid "About {platform_name} Accomplishments"
-msgstr "О достижениях на {platform_name}"
-
-#: lms/djangoapps/certificates/views/webview.py
-msgid "More Information About {user_name}'s Certificate:"
-msgstr "Дополнительная информация о сертификате {user_name}:"
-
-#. Translators:  This line appears on the page just before the generation date
-#. for the certificate
-#: lms/djangoapps/certificates/views/webview.py
-msgid "Issued On:"
-msgstr "Выдан:"
-
-#. Translators:  The Certificate ID Number is an alphanumeric value unique to
-#. each individual certificate
-#: lms/djangoapps/certificates/views/webview.py
-msgid "Certificate ID Number"
-msgstr "Номер сертификата"
-
-#: lms/djangoapps/certificates/views/webview.py
-msgid "About {platform_name} Certificates"
-msgstr "О сертификатах {platform_name}"
+"successfully completed, received a passing grade, and was awarded a "
+"{platform_name} {certificate_type} Certificate of Completion in "
+msgstr ""
+"успешно завершил, получил проходной балл, и был удостоен {platform_name} "
+"{certificate_type} Сертификатом окончания "
 
 #. Translators: This text describes the purpose (and therefore, value) of a
 #. course certificate
@@ -7695,6 +7839,54 @@ msgstr ""
 "с <a href='{tos_url}'>{platform_name} Кодексом чести</a>.  Для получения "
 "некоторых сертификатов вам потребуется совершить дополнительные действия, "
 "такие как <a href='{verified_cert_url}'> пройти проверку личности</a>."
+
+#. Translators:  'All rights reserved' is a legal term used in copyrighting to
+#. protect published content
+#: lms/djangoapps/certificates/views/webview.py
+msgid "All rights reserved"
+msgstr "Все права защищены"
+
+#. Translators:  This text is bound to the HTML 'title' element of the page
+#. and appears
+#. in the browser title bar when a requested certificate is not found or
+#. recognized
+#: lms/djangoapps/certificates/views/webview.py
+msgid "Invalid Certificate"
+msgstr "Неверный сертификат"
+
+#. Translators: The &amp; characters represent an ampersand character and can
+#. be ignored
+#: lms/djangoapps/certificates/views/webview.py
+msgid "Terms of Service &amp; Honor Code"
+msgstr "Условия предоставления услуг и Кодекс чести"
+
+#. Translators: This line appears as a byline to a header image and describes
+#. the purpose of the page
+#: lms/djangoapps/certificates/views/webview.py
+msgid "Certificate Validation"
+msgstr "Проверка сертификата"
+
+#. Translators: Accomplishments describe the awards/certifications obtained by
+#. students on this platform
+#: lms/djangoapps/certificates/views/webview.py
+msgid "About {platform_name} Accomplishments"
+msgstr "О достижениях на {platform_name}"
+
+#. Translators:  This line appears on the page just before the generation date
+#. for the certificate
+#: lms/djangoapps/certificates/views/webview.py
+msgid "Issued On:"
+msgstr "Выдан:"
+
+#. Translators:  The Certificate ID Number is an alphanumeric value unique to
+#. each individual certificate
+#: lms/djangoapps/certificates/views/webview.py
+msgid "Certificate ID Number"
+msgstr "Номер сертификата"
+
+#: lms/djangoapps/certificates/views/webview.py
+msgid "About {platform_name} Certificates"
+msgstr "О сертификатах {platform_name}"
 
 #: lms/djangoapps/certificates/views/webview.py
 msgid "How {platform_name} Validates Student Certificates"
@@ -7758,32 +7950,30 @@ msgstr "Контакты {platform_name}"
 msgid "{platform_name} acknowledges the following student accomplishment"
 msgstr "{platform_name} признает следующие достижения студента"
 
-#. Translators:  This text represents the verification of the certificate
 #: lms/djangoapps/certificates/views/webview.py
 msgid ""
-"This is a valid {platform_name} certificate for {user_name}, who "
-"participated in {partner_short_name} {course_number}"
+"a course of study offered by {partner_short_name}, an online learning "
+"initiative of {partner_long_name} through {platform_name}."
 msgstr ""
-"Это действительный сертификат {platform_name} для {user_name}, который "
-"принимал участие в {partner_short_name} {course_number}"
+"курс представлен {partner_short_name}, образовательная инициатива "
+"{partner_long_name} посредством {platform_name}."
 
-#. Translators:  This text is bound to the HTML 'title' element of the page
-#. and appears in the browser title bar
-#: lms/djangoapps/certificates/views/webview.py
-msgid "{partner_short_name} {course_number} Certificate | {platform_name}"
-msgstr "{partner_short_name} {course_number} сертификат | {platform_name}"
-
-#. Translators:  This text fragment appears after the student's name
-#. (displayed in a large font) on the certificate
-#. screen.  The text describes the accomplishment represented by the
-#. certificate information displayed to the user
 #: lms/djangoapps/certificates/views/webview.py
 msgid ""
-"successfully completed, received a passing grade, and was awarded a "
-"{platform_name} {certificate_type} Certificate of Completion in "
-msgstr ""
-"успешно завершил, получил проходной балл, и был удостоен {platform_name} "
-"{certificate_type} Сертификатом окончания "
+"a course of study offered by {partner_short_name}, through {platform_name}."
+msgstr "курс представлен {partner_short_name}, посредством {platform_name}."
+
+#: lms/djangoapps/certificates/views/webview.py
+msgid "I completed the {course_title} course on {platform_name}."
+msgstr "Мной пройден курс \"{course_title}\" в {platform_name}."
+
+#: lms/djangoapps/certificates/views/webview.py
+msgid "I completed a course on {platform_name}. Take a look at my certificate."
+msgstr "Мной пройден курс в {platform_name}. Взгляните на мой сертификат!"
+
+#: lms/djangoapps/certificates/views/webview.py
+msgid "More Information About {user_name}'s Certificate:"
+msgstr "Дополнительная информация о сертификате {user_name}:"
 
 #. Translators: This line is displayed to a user who has completed a course
 #. and achieved a certification
@@ -7802,38 +7992,6 @@ msgstr ""
 "Поздравляем!  Эта страница содержит все подробности о ваших достижениях.  "
 "Поделитесь ею с семьёй, друзьями и коллегами в своих социальных и "
 "профессиональных сетях."
-
-#. Translators: This line leads the reader to understand more about the
-#. certificate that a student has been awarded
-#: lms/djangoapps/certificates/views/webview.py
-msgid "More about {fullname}'s accomplishment"
-msgstr "Дальнейшая информация о достижениях {fullname}"
-
-#. Translators:  'All rights reserved' is a legal term used in copyrighting to
-#. protect published content
-#: lms/djangoapps/certificates/views/webview.py
-msgid "All rights reserved"
-msgstr "Все права защищены"
-
-#. Translators:  This text is bound to the HTML 'title' element of the page
-#. and appears
-#. in the browser title bar when a requested certificate is not found or
-#. recognized
-#: lms/djangoapps/certificates/views/webview.py
-msgid "Invalid Certificate"
-msgstr "Неверный сертификат"
-
-#. Translators: The &amp; characters represent an ampersand character and can
-#. be ignored
-#: lms/djangoapps/certificates/views/webview.py
-msgid "Terms of Service &amp; Honor Code"
-msgstr "Условия предоставления услуг и Кодекс чести"
-
-#. Translators: This line appears as a byline to a header image and describes
-#. the purpose of the page
-#: lms/djangoapps/certificates/views/webview.py
-msgid "Certificate Validation"
-msgstr "Проверка сертификата"
 
 #: lms/djangoapps/class_dashboard/dashboard_data.py
 #: lms/djangoapps/instructor/views/api.py
@@ -8961,36 +9119,14 @@ msgid "Invalid Json data"
 msgstr "Ошибка в формате данных JSON"
 
 #: lms/djangoapps/instructor/views/api.py
-msgid "Students added to Certificate white list successfully"
-msgstr ""
-"Слушатели успешно добавлены в список исключений для получения сертификатов"
-
-#: lms/djangoapps/instructor/views/api.py
 msgid "Student username/email is required."
 msgstr "Требуется ввести имя пользователя и адрес электронной почты."
-
-#: lms/djangoapps/instructor/views/api.py
-msgid "Duplicate Student Username/password."
-msgstr "Повторное имя пользователя или адрес электронно почты слушателя."
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Student (username/email={user}) does not exist"
 msgstr ""
 "Слушатель (с именем пользователя или адресом электронной почты {user}) не "
 "найден."
-
-#: lms/djangoapps/instructor/views/api.py
-msgid "Multiple Students found with username/email={user}"
-msgstr ""
-"Найдено несколько слушателей с именем пользователя или адресом электронной "
-"почты {user}."
-
-#: lms/djangoapps/instructor/views/api.py
-msgid ""
-"Student (username/email={user_id} already in certificate exception  list)"
-msgstr ""
-"Слушатель (с именем пользователя или адресом электронной почты {user_id}) "
-"уже добавлен в список исключений."
 
 #: lms/djangoapps/instructor/views/coupons.py
 msgid "coupon id is None"
@@ -9363,12 +9499,6 @@ msgstr "удалено"
 #: lms/djangoapps/instructor_task/tasks.py
 msgid "emailed"
 msgstr "отправлено по электронной почте"
-
-#. Translators: This is a past-tense verb that is inserted into task progress
-#. messages as {action}.
-#: lms/djangoapps/instructor_task/tasks.py
-msgid "generated"
-msgstr "создано"
 
 #. Translators: This is a past-tense verb that is inserted into task progress
 #. messages as {action}.
@@ -12438,14 +12568,6 @@ msgid "Upload completed"
 msgstr "Загрузка завершена"
 
 #: cms/djangoapps/contentstore/views/certificates.py
-msgid "must have name of the certificate"
-msgstr "должно быть указано название сертификата"
-
-#: cms/djangoapps/contentstore/views/certificates.py
-msgid "Certificate dict {0} missing value key '{1}'"
-msgstr "В словаре для сертификата {0} не хватает значения с ключом '{1}'."
-
-#: cms/djangoapps/contentstore/views/certificates.py
 msgid "PermissionDenied: Failed in authenticating {user}"
 msgstr "PermissionDenied: ошибка аутентификации пользователя {user}"
 
@@ -13156,20 +13278,37 @@ msgstr ""
 "финансировать свободное образование для всех, глобально"
 
 #: common/templates/course_modes/choose.html
-msgid "Audit This Course"
-msgstr "Просмотреть этот курс"
+msgid "Earn an Honor Certificate"
+msgstr ""
 
 #: common/templates/course_modes/choose.html
 msgid ""
-"Audit this course for free and have complete access to all the course "
-"material, activities, tests, and forums. If your work is satisfactory and "
-"you abide by the Honor Code, you'll receive a personalized Honor Code "
-"Certificate to showcase your achievement."
+"Take this course for free and have complete access to all the course "
+"material, activities, tests, and forums. Please note that learners who earn "
+"a passing grade will earn a certificate in this course."
 msgstr ""
-"Бесплатно запишитесь на этот курс в качестве слушателя и получите полный "
-"доступ ко всем материалам, заданиям, тестам и форумам. Если вы будете "
-"выполнять все задания и следовать Кодексу Чести, мы вручим вам именной "
-"сертификат об окончании курса."
+
+#: common/templates/course_modes/choose.html
+msgid "Pursue an Honor Certificate"
+msgstr ""
+
+#: common/templates/course_modes/choose.html
+msgid "Audit This Course (No Certificate)"
+msgstr ""
+
+#. Translators: b_start notes the beginning of a section of text bolded for
+#. emphasis, and b_end marks the end of the bolded text.
+#: common/templates/course_modes/choose.html
+msgid ""
+"Audit this course for free and have complete access to all the course "
+"material, activities, tests, and forums.  {b_start}Please note that this "
+"track does not offer a certificate for learners who earn a passing grade."
+"{b_end}"
+msgstr ""
+
+#: common/templates/course_modes/choose.html
+msgid "Audit This Course"
+msgstr "Просмотреть этот курс"
 
 #: lms/templates/emails/enroll_email_enrolledmessage.txt
 #: lms/templates/emails/unenroll_email_enrolledmessage.txt
@@ -15079,10 +15218,6 @@ msgstr ""
 "следующая информация корректна."
 
 #: lms/templates/certificates/server-error.html
-msgid "The institution&#39;s logo."
-msgstr "Логотип&#39;s образовательной организации."
-
-#: lms/templates/certificates/server-error.html
 msgid "The institution that is linked to the course."
 msgstr "Название организации, связанной с курсом."
 
@@ -15289,6 +15424,10 @@ msgstr "{chapter} текущая глава"
 #: lms/templates/courseware/progress.html
 msgid "due {date}"
 msgstr "до {date}"
+
+#: lms/templates/courseware/accordion.html
+msgid "proctoring"
+msgstr ""
 
 #: lms/templates/courseware/accordion.html
 msgid "This content is graded"
@@ -15807,13 +15946,6 @@ msgid "Your certificate is available"
 msgstr "Ваш сертификат доступен"
 
 #: lms/templates/courseware/progress.html
-msgid ""
-"You can keep working for a higher grade, or request your certificate now."
-msgstr ""
-"Вы можете продолжать заниматься для лучшей оценки или запросить свой "
-"сертификат сразу."
-
-#: lms/templates/courseware/progress.html
 msgid "View certificate in a new browser window or tab."
 msgstr "Открыть сертификат для просмотра в новом окне или вкладке браузера."
 
@@ -15846,10 +15978,6 @@ msgstr ""
 #: lms/templates/courseware/progress.html
 msgid "Congratulations, you qualified for a certificate!"
 msgstr "Поздравляем, вы аттестованы для получения сертификата!"
-
-#: lms/templates/courseware/progress.html
-msgid "Request Certificate"
-msgstr "Запросить Сертификат"
 
 #: lms/templates/courseware/progress.html
 msgid "Requirements for Course Credit"
@@ -17165,6 +17293,14 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Generate Certificates"
 msgstr "Создать сертификаты"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificates.html
+msgid ""
+"Course certificate generation requires an activated web certificate "
+"configuration."
+msgstr ""
+"Для создания сертификатов об окончании курса необходимо активировать "
+"настройки сертификатов."
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
@@ -23847,6 +23983,14 @@ msgid ""
 "%(r2)d"
 msgstr "Создана новая версия: слияние версий #%(r1)d и #%(r2)d"
 
+#: common/djangoapps/course_modes/models.py
+msgid "You're auditing this course"
+msgstr "Вы проходите этот курс в качестве слушателя"
+
+#: common/djangoapps/course_modes/models.py
+msgid "Auditing"
+msgstr "Прослушивание курса"
+
 #: common/djangoapps/student/forms.py
 msgid "Username must be minimum of two characters long"
 msgstr "Имя пользователя должно состоять минимум из двух знаков"
@@ -23905,6 +24049,28 @@ msgstr ""
 "Повторное создание сертификатов запущено. Статус этого процесса можно "
 "посмотреть в разделе «Текущие задачи»."
 
+#: lms/djangoapps/instructor/views/api.py
+msgid "Students added to Certificate white list successfully"
+msgstr ""
+"Слушатели успешно добавлены в список исключений для получения сертификатов"
+
+#: lms/djangoapps/instructor/views/api.py
+msgid "Duplicate Student Username/password."
+msgstr "Повторное имя пользователя или адрес электронно почты слушателя."
+
+#: lms/djangoapps/instructor/views/api.py
+msgid "Multiple Students found with username/email={user}"
+msgstr ""
+"Найдено несколько слушателей с именем пользователя или адресом электронной "
+"почты {user}."
+
+#: lms/djangoapps/instructor/views/api.py
+msgid ""
+"Student (username/email={user_id} already in certificate exception  list)"
+msgstr ""
+"Слушатель (с именем пользователя или адресом электронной почты {user_id}) "
+"уже добавлен в список исключений."
+
 #: openedx/core/djangoapps/programs/models.py
 msgid "Cache Time To Live"
 msgstr "Период обновления кэша"
@@ -23915,6 +24081,26 @@ msgid ""
 "0."
 msgstr ""
 "Задаётся в секундах. Для включения кэширования укажите значение больше 0."
+
+#: cms/djangoapps/contentstore/views/certificates.py
+msgid "must have name of the certificate"
+msgstr "должно быть указано название сертификата"
+
+#: cms/djangoapps/contentstore/views/certificates.py
+msgid "Certificate dict {0} missing value key '{1}'"
+msgstr "В словаре для сертификата {0} не хватает значения с ключом '{1}'."
+
+#: common/templates/course_modes/choose.html
+msgid ""
+"Audit this course for free and have complete access to all the course "
+"material, activities, tests, and forums. If your work is satisfactory and "
+"you abide by the Honor Code, you'll receive a personalized Honor Code "
+"Certificate to showcase your achievement."
+msgstr ""
+"Бесплатно запишитесь на этот курс в качестве слушателя и получите полный "
+"доступ ко всем материалам, заданиям, тестам и форумам. Если вы будете "
+"выполнять все задания и следовать Кодексу Чести, мы вручим вам именной "
+"сертификат об окончании курса."
 
 #: lms/templates/staff_problem_info.html
 msgid "User:"
@@ -23943,14 +24129,6 @@ msgstr "из"
 #: lms/templates/courseware/gradebook.html
 msgid "next page"
 msgstr "следующая страница"
-
-#: lms/templates/instructor/instructor_dashboard_2/certificates.html
-msgid ""
-"Course certificate generation requires an activated web certificate "
-"configuration."
-msgstr ""
-"Для создания сертификатов об окончании курса необходимо активировать "
-"настройки сертификатов."
 
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html
 msgid "Regenerate Certificates"
