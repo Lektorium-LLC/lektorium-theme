@@ -1,7 +1,9 @@
 <%! from django.utils.translation import ugettext as _ %>
+<%! from django.utils.translation import pgettext %>
 <%namespace name='static' file='../static_content.html'/>
 <%
 course_mode_class = course_mode if course_mode else ''
+gender_marker = {'f': 'female', 'm': 'male'}.get(accomplishment_copy_gender, 'None')
 %>
 
 <main class="accomplishment accomplishment-main">
@@ -40,15 +42,15 @@ course_mode_class = course_mode if course_mode else ''
                         <span class="accomplishment-summary copy copy-lead">
                             % if certificate_data.get('show_grade', False) and grade:
                                 % if distinction:
-                                    ${_('completed with distinction and received grade {grade} in online course').format(grade=grade)}
+                                    ${pgettext(gender_marker, 'completed with distinction and received grade {grade} in online course').format(grade=grade)}
                                 % else:
-                                    ${_('successfully completed and received grade {grade} in online course').format(grade=grade)}
+                                    ${pgettext(gender_marker, 'successfully completed and received grade {grade} in online course').format(grade=grade)}
                                 % endif
                             % else:
                                 % if distinction:
-                                    ${_('completed with distinction online course')}
+                                    ${pgettext(gender_marker, 'completed with distinction online course')}
                                 % else:
-                                    ${_('successfully completed online course')}
+                                    ${pgettext(gender_marker, 'successfully completed online course')}
                                 % endif
                             % endif
                         </span>
