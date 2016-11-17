@@ -20,8 +20,12 @@ $black: black;
 .accomplishment-rendering {
     padding: 1.25rem;
 }
+.accomplishment-main {
+    margin-top: 5rem;
+}
 
 .layout-accomplishment.certificate-honor .accomplishment-main,
+.layout-accomplishment.certificate-no-id-professional .accomplishment-main,
 .layout-accomplishment.certificate-verified .accomplishment-main {
     background: $certificate_light_background;
 }
@@ -107,6 +111,7 @@ $black: black;
 
 
     &.certificate-verified .accomplishment-rendering,
+    &.certificate-no-id-professional .accomplishment-rendering,
     &.certificate-honor .accomplishment-rendering {
         background-image: none;
         border: 0.25rem solid $certificate_border;
@@ -261,7 +266,8 @@ $black: black;
   }
 
   .accomplishment-main {
-    background-color: transparent !important;
+      background-color: transparent !important;
+      margin-top: 0;
   }
 
   .layout-accomplishment .wrapper-accomplishment-rendering {

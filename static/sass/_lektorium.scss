@@ -389,3 +389,13 @@ You also need to include this conditional style in the <head> of your HTML file 
 .feedback_form .tip {
     line-height: 1.5;
 }
+/* Progress page warning message */
+.wrapper-msg.wrapper-auto-cert .auto-cert-message{
+    .warning {
+        color: rgb(178, 6, 16);
+    }
+
+    p+p {
+        margin-top: ($baseline/2);
+    }
+}
