@@ -27,6 +27,28 @@ msgstr "Новая тема"
 msgid "End My Exam"
 msgstr "Завершить выполнение задания"
 
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
+msgid "User ID"
+msgstr "ID пользователя"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore:31
+msgid "Generate a Certificate for all "
+msgstr "Выдать сертификаты всем пользователям, "
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore:31
+msgid "New"
+msgstr "недавно"
+
+#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore:31
+msgid "additions to the Exception list"
+msgstr "добаленным в список исключений"
+
+msgid "Generate a Certificate for all users on the Exception list"
+msgstr "Выдать сертификаты всем пользователям в списке исключений"
+
+msgid "Generate Exception Certificates"
+msgstr "Выдать сертификаты для исключительных случаев"
+
 # Custom studio date input format
 #: cms/templates/js/release-date-editor.underscore
 msgid "MM/DD/YYYY"
@@ -60,7 +82,7 @@ msgstr ""
 #: cms/templates/js/signatory-details.underscore
 #: cms/templates/js/signatory-editor.underscore
 msgid "Signatory %(number)s"
-msgstr "Подписант %(number)s"
+msgstr "Представитель %(number)s"
 
 #: cms/templates/js/certificate-details.underscore
 #: cms/templates/js/certificate-editor.underscore
@@ -75,11 +97,11 @@ msgstr "Ошибки"
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
 msgid " learners are successfully added to exception list"
-msgstr " слушателей успешно добавлены в список исключений"
+msgstr " слушателей добавлены в список исключений"
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
 msgid " learner is successfully added to the exception list"
-msgstr " слушатель успешно добавлен в список исключений"
+msgstr " слушатель добавлен в список исключений"
 
 #: lms/static/js/certificates/views/certificate_bulk_whitelist.js
 msgid " records are not in correct format"
@@ -115,14 +137,14 @@ msgstr " слушатель не записан на курс"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
 msgid "Bulk Exceptions"
-msgstr "Массовые ислючения"
+msgstr "Массовые исключения"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-bulk-white-list.underscore
 msgid ""
 "You can upload a CSV file of usernames or email addresses to be added to the "
 "certificate exceptions white list."
 msgstr ""
-"Вы можете загрузить файл в формате CSV с имёнами пользователей или адресами "
+"Вы можете загрузить файл в формате CSV с именами пользователей или адресами "
 "электронной почты слушателей, которых необходимо добавить в список "
 "исключений."
 
@@ -143,8 +165,8 @@ msgid ""
 "You can add a username or email address to be added to the certificate "
 "exceptions white list."
 msgstr ""
-"Вы можете добавить слушателя в список исключений, задав его имя пользователя "
-"или адрес электронной почты."
+"Вы можете добавить слушателя в список исключений, указав его имя "
+"пользователя или адрес электронной почты."
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "Action"
@@ -224,7 +246,7 @@ msgid ""
 "Specify an additional course description that would be shown next to course "
 "title. Leave blank to show only course title on certificates."
 msgstr ""
-"Введите дополнительное описание курса; оно будет отображаться под названием "
+"Введите краткое описание курса, которое будет отображаться под названием "
 "курса. Чтобы показывалось только название курса, оставьте поле пустым."
 
 #: cms/templates/js/certificate-editor.underscore
@@ -237,8 +259,8 @@ msgid ""
 "The grade would be shown for every student including whitelisted."
 msgstr ""
 "Укажите, будет ли отображаться на сертификате оценка слушателя (в "
-"процентах). Оценка будет отображаться для всех слушателей, в том числе для "
-"исключений."
+"процентах). Оценка будет отображаться на всех сертификатах, в том числе у "
+"слушателей из списка исключений."
 
 #: cms/templates/js/certificate-editor.underscore
 msgid ""
@@ -254,6 +276,16 @@ msgstr ""
 #: cms/templates/js/certificate-editor.underscore
 msgid "Certificate Organizations Information"
 msgstr "Информация об организациях курса"
+
+#: cms/templates/js/signatory-editor.underscore
+msgctxt "person's title"
+msgid "Title"
+msgstr "Звание"
+
+# TODO: remove when updated
+#: cms/static/js/certificates/views/signatory_editor.js
+msgid "Upload Signature Image"
+msgstr "Загрузить изображение подписи"
 
 #: cms/templates/js/organization-details.underscore
 msgid "No logo"
@@ -286,7 +318,7 @@ msgid ""
 "No organization found. Please contact your manager to add the organization "
 "to the system."
 msgstr ""
-"Организация не найдена. Для добавление организации в систему свяжитесь с "
+"Организация не найдена. Для добавления организации в систему свяжитесь с "
 "представителем платформы."
 
 msgid "Organization already added."
@@ -536,10 +568,6 @@ msgstr ""
 #: common/static/common/templates/discussion/topic.underscore
 msgid "Discussion topics; current selection is: "
 msgstr "Темы обсуждения; текущий выбор:"
-
-#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
-msgid "Generate a Certificate for all "
-msgstr "Создать сертификаты для всех "
 
 #: cms/templates/js/signatory-editor.underscore
 msgid "Name "
@@ -5318,7 +5346,7 @@ msgstr "Вы еще не создали ни одного сертификата
 
 #: cms/static/js/certificates/views/signatory_editor.js
 msgid "Delete \"<%= signatoryName %>\" from the list of signatories?"
-msgstr "Удалить \"<%= signatoryName %>\" из списка подписей?"
+msgstr "Удалить \"<%= signatoryName %>\" из списка представителей?"
 
 #: cms/static/js/certificates/views/signatory_editor.js
 #: cms/static/js/views/course_info_update.js
@@ -7357,26 +7385,6 @@ msgid "title"
 msgstr "заголовок"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
-msgid "New"
-msgstr "Новый"
-
-#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
-msgid "additions to the Exception list"
-msgstr "добавленных в список исключений"
-
-#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
-msgid "Generate a Certificate for all users on the Exception list"
-msgstr "Создать сертификаты для всех пользователей в списке исключений"
-
-#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
-msgid "Generate Exception Certificates"
-msgstr "Создать сертификаты для исключительных случаев"
-
-#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
-msgid "User ID"
-msgstr "Идентификатор пользователя"
-
-#: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore
 msgid "User Email"
 msgstr "Адрес электронной почты пользователя"
 
@@ -9372,7 +9380,7 @@ msgstr "Название курса"
 #: test_root/staticfiles/cms/templates/certificate-editor.93e592c413af.underscore
 #: test_root/staticfiles/cms/templates/certificate-editor.underscore
 msgid "Course Title Override"
-msgstr "Замещение названия курса"
+msgstr "Замена названия курса"
 
 #: cms/templates/js/certificate-details.underscore
 msgid "Course Number"
@@ -9463,13 +9471,13 @@ msgid ""
 "Specify an alternative to the official course title to display on "
 "certificates. Leave blank to use the official course title."
 msgstr ""
-"Укажите альтернативный вариант официального названия курса, который будет "
-"отображаться на сертификатах.  Оставьте поле пустым, чтобы на сертификатах "
-"отображалось официальное название курса."
+"Укажите альтернативный вариант названия курса, который будет отображаться на "
+"сертификатах.  Оставьте поле пустым, чтобы на сертификатах отображалось "
+"официальное название курса."
 
 #: cms/templates/js/certificate-editor.underscore
 msgid "Add Additional Signatory"
-msgstr "Добавить подписавшего представителя"
+msgstr "Добавить представителя, подписавшего сертификат"
 
 #: cms/templates/js/certificate-editor.underscore
 msgid "(Add signatories for a certificate)"
@@ -10637,7 +10645,8 @@ msgstr "Имя представителя, подписывающего доку
 
 #: cms/templates/js/signatory-editor.underscore
 msgid "The name of this signatory as it should appear on certificates."
-msgstr "Имя представителя в форме, которая должна отображаться на сертификате"
+msgstr ""
+"Имя представителя в том виде, как оно должно отображаться на сертификате"
 
 #: cms/templates/js/signatory-editor.underscore
 #: test_root/staticfiles/cms/coffee/fixtures/signatory-editor.3009878ee0a5.underscore
@@ -10652,8 +10661,8 @@ msgid ""
 "Titles more than 100 characters may prevent students from printing their "
 "certificate on a single page."
 msgstr ""
-"Заголовок длиной более 100 символов может привести к невозможности "
-"распечатывания сертификата на одной странице."
+"Если длина звания превысит 100 символов, печатная версия сертификата может "
+"выйти за пределы одной страницы."
 
 #: cms/templates/js/signatory-editor.underscore
 #: test_root/staticfiles/cms/coffee/fixtures/signatory-editor.3009878ee0a5.underscore
@@ -10687,7 +10696,7 @@ msgstr "Путь к изображению подписи"
 
 #: cms/templates/js/signatory-editor.underscore
 msgid "Image must be in PNG format"
-msgstr "Изображение должно иметь формат PNG"
+msgstr "Загружаемое изображение должно иметь формат PNG"
 
 #: cms/templates/js/staff-lock-editor.underscore
 #: test_root/staticfiles/cms/coffee/fixtures/staff-lock-editor.5c244c0a0c57.underscore
