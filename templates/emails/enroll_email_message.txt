@@ -1,11 +1,10 @@
 <%! from django.utils.translation import ugettext as _ %>
-<%! site_name = 'lektorium.tv' %>
 
   ${_("Dear {full_name},").format(full_name=full_name)}
 
   ${_("You have enrolled in {course_name} at {site_name}.").format(
     course_name=course.display_name_with_default,
-    site_name=site_name
+    site_name=mktg_site_name
   )}\
 % if course.has_started():
  ${_("The course should now appear on your dashboard.")}
@@ -16,7 +15,7 @@
 
   ${_("When the course starts, you'll get an email with a reminder and a link to the courseware. "
   "Also, you'll be able to access the courseware from your {site_name} dashboard.").format(
-    site_name=site_name
+    site_name=mktg_site_name
   )}
 % endif
 
