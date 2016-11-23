@@ -1,0 +1,36 @@
+<%inherit file="accomplishment-base.html" />
+<%!
+import urllib
+from django.utils.encoding import smart_str
+from django.utils.translation import ugettext as _
+%>
+
+<%
+##### Overrides #####
+# add beta-stamp to logos
+organizations_with_logos.insert(1, {
+    'name': '',
+    'logo_url': '/static/themes/lektorium/images/beta-testing.png'
+})
+
+# custom texts for social networks
+facebook_share_text = _('TODO')
+twitter_share_text = _('TODO')
+twitter_url = 'https://twitter.com/intent/tweet?text={twitter_share_text}&url={share_url}'.format(
+    twitter_share_text=smart_str(twitter_share_text),
+    share_url=urllib.quote_plus(smart_str(share_url))
+)
+%>
+
+
+% if user.is_authenticated() and user.id == int(accomplishment_user_id):
+<%include file="_accomplishment-banner.html" />
+% endif
+
+<%include file="_beta-rendering.html" />
+<div class="wrapper-about">
+    <aside role="complementary" class="about" aria-label="${_('About Lektorium Certificates')}">
+        <%include file="_about-lektorium.html" />
+        <%include file="_about-accomplishments.html" />
+    </aside>
+</div>

@@ -1,0 +1,37 @@
+<%inherit file="_accomplishment-rendering.html" />
+<%! from django.utils.translation import ugettext as _ %>
+<%namespace name='static' file='../static_content.html'/>
+
+<%block name="main_class"> beta</%block>
+<%block name="statement">
+                <div class="accomplishment-statement">
+                    <div class="accomplishment-type">
+                        <span class="accomplishment-type-label hd-4">${_('Professional Beta Tester')}</span>
+                    </div>
+
+                    <p class="accomplishment-statement-lead">
+                        <strong class="accomplishment-recipient hd-1 emphasized">${accomplishment_copy_name }</strong>
+
+                        <span class="accomplishment-summary copy copy-lead">
+                            ${_('We appreciate your contribution to the development and testing of online course "{course_name}". We admire you knowledge and attentiveness that has helped our course to get better.').format(
+                                course_name = accomplishment_copy_course_name
+                            )}
+                        </span>
+
+                    </p>
+                </div>
+</%block>
+<%block name="signatories">
+                <div class="accomplishment-signatories">
+                    <h3 class="accomplishment-signatories-title sr-only">${_("Noted by")}</h3>
+
+                    <div class="wrapper-signatories">
+                        <div class="list-signatories">
+                                <div class="signatory">
+                                    <h4 class="signatory-name hd-5">${_("Kind regards,")}<br>${_("Course Team")}</h4>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+</%block>
+<%block name="honor_code_disclaimer" />

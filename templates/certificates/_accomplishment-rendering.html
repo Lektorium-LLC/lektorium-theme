@@ -1,12 +1,7 @@
-<%! from django.utils.translation import ugettext as _ %>
-<%! from django.utils.translation import pgettext %>
+<%! from django.utils.translation import pgettext, ugettext as _ %>
 <%namespace name='static' file='../static_content.html'/>
-<%
-course_mode_class = course_mode if course_mode else ''
-gender_marker = {'f': 'female', 'm': 'male'}.get(accomplishment_copy_gender, 'None')
-%>
 
-<main class="accomplishment accomplishment-main">
+<main class="accomplishment accomplishment-main<%block name="main_class" />">
 
     <div class="wrapper-accomplishment-rendering">
         <div class="accomplishment-rendering">
@@ -27,6 +22,7 @@ gender_marker = {'f': 'female', 'm': 'male'}.get(accomplishment_copy_gender, 'No
 
             <div class="wrapper-statement-and-signatories">
 
+                <%block name="statement">
                 <div class="accomplishment-statement">
                     <div class="accomplishment-type">
                         <span class="accomplishment-type-symbol">
@@ -40,6 +36,9 @@ gender_marker = {'f': 'female', 'm': 'male'}.get(accomplishment_copy_gender, 'No
                         <strong class="accomplishment-recipient hd-1 emphasized">${accomplishment_copy_name | h}</strong>
 
                         <span class="accomplishment-summary copy copy-lead">
+                            <%
+                            gender_marker = {'f': 'female', 'm': 'male'}.get(accomplishment_copy_gender, 'None')
+                            %>
                             % if certificate_data.get('show_grade', False) and grade:
                                 % if distinction:
                                     ${pgettext(gender_marker, 'completed with distinction and received grade {grade} in online course').format(grade=grade)}
@@ -56,14 +55,16 @@ gender_marker = {'f': 'female', 'm': 'male'}.get(accomplishment_copy_gender, 'No
                         </span>
 
                         <span class="accomplishment-course hd-1 emphasized">
-                            <span class="accomplishment-course-name">${accomplishment_copy_course_name | h}</span>
+                            <span class="accomplishment-course-name">${accomplishment_copy_course_name}</span>
                             % if additional_course_description:
-                            <span class="additional-course-description">${additional_course_description | h}</span>
+                            <span class="additional-course-description">${additional_course_description}</span>
                             % endif
                         </span>
                     </p>
                 </div>
+                </%block>
 
+                <%block name="signatories">
                 % if mode != 'base':
                 <%
                 signatories = certificate_data.get('signatories', []);
@@ -76,7 +77,9 @@ gender_marker = {'f': 'female', 'm': 'male'}.get(accomplishment_copy_gender, 'No
                             % if certificate_data:
                                 % for signatory in certificate_data.get('signatories', []):
                                 <div class="signatory">
+                                    % if signatory['signature_image_path']:
                                     <img class="signatory-signature" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}">
+                                    % endif
                                     <h4 class="signatory-name hd-5">${signatory['name']}</h4>
                                     <p class="signatory-credentials copy copy-micro">
                                         <span class="role">${signatory['title']}</span>
@@ -89,6 +92,7 @@ gender_marker = {'f': 'female', 'm': 'male'}.get(accomplishment_copy_gender, 'No
                     </div>
                 </div>
                 % endif
+                </%block>
             </div>
         </div>
     </div>
@@ -97,6 +101,7 @@ gender_marker = {'f': 'female', 'm': 'male'}.get(accomplishment_copy_gender, 'No
         <div class="accomplishment-metadata">
             <h2 class="accomplishment-metadata-title hd-6">${accomplishment_copy_more_about | h}</h2>
 
+            <%block name="honor_code_disclaimer">
             % if show_honor_code_disclaimer:
             <div class="wrapper-metadata">
                 <dl class="metadata honor-code-disclaimer">
@@ -104,6 +109,7 @@ gender_marker = {'f': 'female', 'm': 'male'}.get(accomplishment_copy_gender, 'No
                 </dl>
             </div>
             % endif
+            </%block>
             <div class="wrapper-metadata">
                 <dl class="metadata accomplishment-course">
                     <dt class="label copy copy-meta">${_('Course Number')}:</dt>

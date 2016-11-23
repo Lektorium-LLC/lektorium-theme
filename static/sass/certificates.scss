@@ -97,6 +97,7 @@ $black: black;
 
 .organization-logo {
     max-height: 8rem;
+    opacity: 0.7;
 }
 
 /* Statement */
@@ -255,6 +256,32 @@ $black: black;
     line-height: 1.2;
 }
 
+/* Beta-certificate styling */
+.beta {
+    .organization-logo {
+        opacity: 0.7;
+    }
+
+    .accomplishment-rendering .accomplishment-orgs .wrapper-organization:nth-child(2) .organization-logo {
+        height: 13rem;
+        max-height: 13rem;
+        max-width: 18rem;
+    }
+    .accomplishment-rendering .accomplishment-type {
+        margin-bottom: 3rem;
+    }
+
+    .accomplishment-rendering .accomplishment-type-label {
+        text-transform: none;
+    }
+
+    .accomplishment-summary {
+        padding: 1rem 0;
+    }
+}
+
+/* Print version */
+
 @media print {
 
   html {
@@ -305,6 +332,12 @@ $black: black;
       margin-bottom: -1.5rem;
   }
 
+  .beta .accomplishment-orgs {
+      min-height: 11rem !important;
+  }
+  .beta .accomplishment-rendering .wrapper-statement-and-signatories {
+      border-bottom-width: 0;
+  }
 }
 
 @media (max-width: 600px) {
