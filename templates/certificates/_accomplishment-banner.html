@@ -42,13 +42,19 @@ from django.template.defaultfilters import escapejs
         <div class="message message-block message-notice">
             <h2 class="message-title hd-5 emphasized">${accomplishment_banner_opening | h}</h2>
             <div class="wrapper-copy-and-actions">
-                <p class="message-copy copy copy-base emphasized">${accomplishment_banner_congrats | h}</p>
+                <p class="message-copy copy copy-base emphasized">${pageargs['accomplishment_banner_instructions']}</p>
                 <div class="message-actions">
                     <h3 class="sr-only">${_("Print or share your certificate:")}</h3>
+                    <button class="action action-print btn btn-overlay btn-small" id="action-print-view">
+                        <i class="icon fa fa-print" aria-hidden="true"></i>
+                        ${_("Print")}
+                    </button>
+
                     % if facebook_share_enabled:
-                      <button class="action action-share-facebook btn btn-overlay btn-small icon-only" id="action-share-facebook"
+                      <button class="action action-share-facebook btn btn-overlay btn-small" id="action-share-facebook"
+                         title="${_("Post on Facebook")}"
                          onclick="FaceBook.share({
-                          share_text: '${facebook_share_text | escapejs}',
+                          share_text: '${pageargs['facebook_share_text'] | escapejs}',
                           share_link: '${share_url}',
                           picture_link: '${full_course_image_url}',
                           description: '${_('Click the link to see my certificate.') | escapejs}'
@@ -59,25 +65,20 @@ from django.template.defaultfilters import escapejs
                     %endif
                     % if twitter_share_enabled:
                       <button data-tooltip="${_('Share on Twitter')}"
-                        class="action action-share-twitter btn btn-overlay btn-small icon-only"
+                        class="action action-share-twitter btn btn-overlay btn-small"
                         title="${_('Share on Twitter')}"
-                        onclick="popupWindow('${twitter_url}', 'tweetWindow', 640, 480); return false;">
+                        onclick="popupWindow('${pageargs['twitter_url']}', 'tweetWindow', 640, 480); return false;">
                           <i class="icon fa fa-twitter" aria-hidden="true"></i>
-                          <span class="action-label">${_("Tweet this Accomplishment. Pop up window.")}</span>
+                          <span class="action-label">${_("Share on Twitter")}</span>
                       </button>
                     %endif
 
                     %if linked_in_url:
-                    <button class="action action-linkedin-profile btn btn-overlay btn-small icon-only" id="action-share-linkedin" title="${_('Add to LinkedIn Profile')}" data-course-id="${course_id}" data-certificate-mode="${course_mode}">
+                    <button class="action action-linkedin-profile btn btn-overlay btn-small" id="action-share-linkedin" title="${_('Add to LinkedIn Profile')}" data-course-id="${course_id}" data-certificate-mode="${course_mode}">
                         <i class="icon fa fa-linkedin" aria-hidden="true"></i>
                         <span class="action-label">${_("Add to LinkedIn Profile")}</span>
                     </button>
                     %endif
-
-                    <button class="action action-print btn btn-overlay btn-small" id="action-print-view">
-                        <i class="icon fa fa-print" aria-hidden="true"></i>
-                        ${_("Print Certificate")}
-                    </button>
                 </div>
             </div>
         </div>

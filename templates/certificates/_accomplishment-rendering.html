@@ -37,7 +37,7 @@
 
                         <span class="accomplishment-summary copy copy-lead">
                             <%
-                            gender_marker = {'f': 'female', 'm': 'male'}.get(accomplishment_copy_gender, 'None')
+                            gender_marker = pageargs['gender_marker']
                             %>
                             % if certificate_data.get('show_grade', False) and grade:
                                 % if distinction:

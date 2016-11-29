@@ -1,8 +1,12 @@
 <%inherit file="accomplishment-base.html" />
 <%!
 import urllib
+import bleach
 from django.utils.encoding import smart_str
-from django.utils.translation import ugettext as _
+from django.utils.translation import pgettext, ugettext as _
+%>
+<%
+gender_marker = {'f': 'female', 'm': 'male'}.get(accomplishment_copy_gender, 'None')
 %>
 
 <%
@@ -14,23 +18,28 @@ organizations_with_logos.insert(1, {
 })
 
 # custom texts for social networks
-facebook_share_text = _('TODO')
-twitter_share_text = _('TODO')
-twitter_url = 'https://twitter.com/intent/tweet?text={twitter_share_text}&url={share_url}'.format(
-    twitter_share_text=smart_str(twitter_share_text),
-    share_url=urllib.quote_plus(smart_str(share_url))
-)
+twitter_share_text = pgettext(gender_marker, "I tested a course on Lektorium. My certificate:")
+
+banner_args = {
+    'accomplishment_banner_instructions': _("Show it off to family, friends, and colleagues in your social and professional networks, {link_start}download{link_end} or print it out.").format(
+        link_start='<a href="https://www.lektorium.tv/kak-sohranit-pdf-sertifikat">',
+        link_end='</a>'),
+    'twitter_url': 'https://twitter.com/intent/tweet?text={twitter_share_text}&url={share_url}'.format(
+        twitter_share_text=smart_str(twitter_share_text),
+        share_url=urllib.quote_plus(smart_str(share_url))),
+    'facebook_share_text': pgettext(gender_marker, "I tested the {course_title} course on Lektorium. My certificate:").format(
+        course_title=bleach.clean(accomplishment_copy_course_name, strip=True))
+}
 %>
 
 
 % if user.is_authenticated() and user.id == int(accomplishment_user_id):
-<%include file="_accomplishment-banner.html" />
+<%include file="_accomplishment-banner.html" args="**banner_args" />
 % endif
 
-<%include file="_beta-rendering.html" />
+<%include file="_beta-rendering.html" args="gender_marker=gender_marker"/>
 <div class="wrapper-about">
-    <aside role="complementary" class="about" aria-label="${_('About Lektorium Certificates')}">
+    <aside role="complementary" class="about" aria-label="${_('About Lektorium')}">
         <%include file="_about-lektorium.html" />
-        <%include file="_about-accomplishments.html" />
     </aside>
 </div>

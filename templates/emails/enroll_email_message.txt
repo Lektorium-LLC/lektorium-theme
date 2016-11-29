@@ -19,4 +19,4 @@
   )}
 % endif
 
-  ${_("Truly yours, Lektorium educational project team.")}
+  ${_("Truly yours, Lektorium team.")}

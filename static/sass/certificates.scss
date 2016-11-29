@@ -2,6 +2,10 @@ $certificate_light_background: #d3e4d4;
 $certificate_border: #7ab37b;
 $black: black;
 
+$blue: rgb(0, 120, 176);
+$blue-l1: #0ea6ec;
+$blue-ll: #56c3f5;
+
 @font-face {
   font-family: "Arsenal Regular";
   src: url("/static/themes/lektorium/fonts/arsenal_regular/Arsenal-Regular.eot");
@@ -76,6 +80,16 @@ $black: black;
 .layout-accomplishment.certificate-verified .accomplishment-rendering .accomplishment-type-label,
 .accomplishment-statement .copy {
     color: $black;
+}
+
+/* Banner */
+.banner .message-copy a {
+    color: $blue-l1;
+
+    &:hover {
+        color: $blue-ll;
+        border-bottom-color: $blue-ll;
+    }
 }
 
 /* Organizations */
@@ -230,6 +244,7 @@ $black: black;
     .accomplishment-signatories .signatory {
         min-width: 400px;
         width: 49% !important;
+        vertical-align: top;
     }
 
     .accomplishment-signatories.long-list .signatory {
@@ -254,6 +269,15 @@ $black: black;
 
 .signatory-name {
     line-height: 1.2;
+}
+
+/* Footer */
+.about-lektorium .copy-meta {
+    font-size: 1rem;
+    font-weight: 600;
+}
+.layout-accomplishment .wrapper-about .about-lektorium {
+    width: auto;
 }
 
 /* Beta-certificate styling */
@@ -304,6 +328,10 @@ $black: black;
   .accomplishment-rendering .accomplishment-statement {
     width: auto;
     background-color: #d3e3d4;
+  }
+
+  .accomplishment-recipient:after {
+      margin-top: -.1rem;
   }
 
   .accomplishment-course {
