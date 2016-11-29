@@ -876,12 +876,6 @@ msgstr "Выпуск сертификатов по запросу обучающ
 msgid "Certificate Exceptions"
 msgstr "Добавление исключений"
 
-#. Translators: This line is displayed to a user who has completed a course
-#. and achieved a certification
-#: lms/djangoapps/certificates/views/webview.py:269
-msgid "{fullname}, you've earned a certificate!"
-msgstr "{fullname}, Вы получили сертификат!"
-
 # #### Custom additions for studio date input format #####
 #: cms/templates/settings.html
 msgid "MM/DD/YYYY"
@@ -1672,53 +1666,53 @@ msgstr ""
 
 #: templates/certificates/valid.html
 msgctxt "None"
-msgid "I completed the {course_title} course on Lektorium. My certificate:"
-msgstr "Я закончил(а) курс {course_title} на Лекториуме. Мой сертификат:"
+msgid "I completed the {course_title} course at Lektorium. My certificate"
+msgstr "Я закончил(а) курс «{course_title}» на Лекториуме. Мой сертификат"
 
 msgctxt "male"
-msgid "I completed the {course_title} course on Lektorium. My certificate:"
-msgstr "Я закончил курс {course_title} на Лекториуме. Мой сертификат:"
+msgid "I completed the {course_title} course at Lektorium. My certificate"
+msgstr "Я закончил курс «{course_title}» на Лекториуме. Мой сертификат"
 
 msgctxt "female"
-msgid "I completed the {course_title} course on Lektorium. My certificate:"
-msgstr "Я закончила курс {course_title} на Лекториуме. Мой сертификат:"
+msgid "I completed the {course_title} course at Lektorium. My certificate"
+msgstr "Я закончила курс «{course_title}» на Лекториуме. Мой сертификат"
 
 msgctxt "None"
-msgid "I completed a course on Lektorium. My certificate:"
-msgstr "Я закончил(а) курс на Лекториуме. Мой сертификат:"
+msgid "I completed a course at Lektorium. My certificate"
+msgstr "Я закончил(а) курс на Лекториуме. Мой сертификат"
 
 msgctxt "male"
-msgid "I completed a course on Lektorium. My certificate:"
-msgstr "Я закончил курс на Лекториуме. Мой сертификат:"
+msgid "I completed a course at Lektorium. My certificate"
+msgstr "Я закончил курс на Лекториуме. Мой сертификат"
 
 msgctxt "female"
-msgid "I completed a course on Lektorium. My certificate:"
-msgstr "Я закончила курс на Лекториуме. Мой сертификат:"
+msgid "I completed a course at Lektorium. My certificate"
+msgstr "Я закончила курс на Лекториуме. Мой сертификат"
 
 #: templates/certificates/beta.html
 msgctxt "None"
-msgid "I tested the {course_title} course on Lektorium. My certificate:"
-msgstr "Я протестировал(а) курс {course_title} на Лекториуме. Мой сертификат:"
+msgid "I tested the {course_title} course. My certificate"
+msgstr "Я протестировал(а) курс «{course_title}». Мой сертификат"
 
 msgctxt "male"
-msgid "I tested the {course_title} course on Lektorium. My certificate:"
-msgstr "Я протестировал курс {course_title} на Лекториуме. Мой сертификат:"
+msgid "I tested the {course_title} course. My certificate"
+msgstr "Я протестировал курс «{course_title}». Мой сертификат"
 
 msgctxt "female"
-msgid "I tested the {course_title} course on Lektorium. My certificate:"
-msgstr "Я протестировала курс {course_title} на Лекториуме. Мой сертификат:"
+msgid "I tested the {course_title} course. My certificate"
+msgstr "Я протестировала курс «{course_title}». Мой сертификат"
 
 msgctxt "None"
-msgid "I tested a course on Lektorium. My certificate:"
-msgstr "Я протестировал(а) курс на Лекториуме. Мой сертификат:"
+msgid "I tested a course at Lektorium. My certificate"
+msgstr "Я протестировал(а) курс на Лекториуме. Мой сертификат"
 
 msgctxt "male"
-msgid "I tested a course on Lektorium. My certificate:"
-msgstr "Я протестировал курс на Лекториуме. Мой сертификат:"
+msgid "I tested a course at Lektorium. My certificate"
+msgstr "Я протестировал курс на Лекториуме. Мой сертификат"
 
 msgctxt "female"
-msgid "I tested a course on Lektorium. My certificate:"
-msgstr "Я протестировала курс на Лекториуме. Мой сертификат:"
+msgid "I tested a course at Lektorium. My certificate"
+msgstr "Я протестировала курс на Лекториуме. Мой сертификат"
 
 #: templates/certificates/_beta-rendering.html
 msgid ""
@@ -8393,6 +8387,12 @@ msgstr "Мной пройден курс в {platform_name}. Взгляните 
 #: lms/djangoapps/certificates/views/webview.py
 msgid "More Information About {user_name}'s Certificate:"
 msgstr "Дополнительная информация о сертификате {user_name}:"
+
+#. Translators: This line is displayed to a user who has completed a course
+#. and achieved a certification
+#: lms/djangoapps/certificates/views/webview.py
+msgid "{fullname}, you've earned a certificate!"
+msgstr "{fullname}, вы получили сертификат!"
 
 #. Translators: This line congratulates the user and instructs them to share
 #. their accomplishment on social networks
