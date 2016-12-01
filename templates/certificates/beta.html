@@ -27,7 +27,7 @@ banner_args = {
     'twitter_url': 'https://twitter.com/intent/tweet?text={twitter_share_text}&url={share_url}'.format(
         twitter_share_text=smart_str(twitter_share_text),
         share_url=urllib.quote_plus(smart_str(share_url))),
-    'facebook_share_text': pgettext(gender_marker, "I tested the {course_title} course. My certificate").format(
+    'facebook_share_text': pgettext(gender_marker, "I tested the {course_title} course.").format(
         course_title=bleach.clean(accomplishment_copy_course_name, strip=True))
 }
 %>

@@ -1666,16 +1666,16 @@ msgstr ""
 
 #: templates/certificates/valid.html
 msgctxt "None"
-msgid "I completed the {course_title} course at Lektorium. My certificate"
-msgstr "Я закончил(а) курс «{course_title}» на Лекториуме. Мой сертификат"
+msgid "I completed the {course_title} course at Lektorium."
+msgstr "Я закончил(а) курс «{course_title}» на Лекториуме."
 
 msgctxt "male"
-msgid "I completed the {course_title} course at Lektorium. My certificate"
-msgstr "Я закончил курс «{course_title}» на Лекториуме. Мой сертификат"
+msgid "I completed the {course_title} course at Lektorium."
+msgstr "Я закончил курс «{course_title}» на Лекториуме."
 
 msgctxt "female"
-msgid "I completed the {course_title} course at Lektorium. My certificate"
-msgstr "Я закончила курс «{course_title}» на Лекториуме. Мой сертификат"
+msgid "I completed the {course_title} course at Lektorium."
+msgstr "Я закончила курс «{course_title}» на Лекториуме."
 
 msgctxt "None"
 msgid "I completed a course at Lektorium. My certificate"
@@ -1691,16 +1691,16 @@ msgstr "Я закончила курс на Лекториуме. Мой сер�
 
 #: templates/certificates/beta.html
 msgctxt "None"
-msgid "I tested the {course_title} course. My certificate"
-msgstr "Я протестировал(а) курс «{course_title}». Мой сертификат"
+msgid "I tested the {course_title} course."
+msgstr "Я протестировал(а) курс «{course_title}»."
 
 msgctxt "male"
-msgid "I tested the {course_title} course. My certificate"
-msgstr "Я протестировал курс «{course_title}». Мой сертификат"
+msgid "I tested the {course_title} course."
+msgstr "Я протестировал курс «{course_title}»."
 
 msgctxt "female"
-msgid "I tested the {course_title} course. My certificate"
-msgstr "Я протестировала курс «{course_title}». Мой сертификат"
+msgid "I tested the {course_title} course."
+msgstr "Я протестировала курс «{course_title}»."
 
 msgctxt "None"
 msgid "I tested a course at Lektorium. My certificate"
