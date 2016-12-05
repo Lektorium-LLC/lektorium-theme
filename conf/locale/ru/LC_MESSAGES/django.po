@@ -854,16 +854,14 @@ msgstr "Ваш сертификат готов"
 msgid "View Certificate"
 msgstr "Открыть сертификат"
 
-#: lms/templates/courseware/progress.html
 msgid ""
 "You can keep working for a higher grade, or request your certificate now."
 msgstr ""
-"Вы можете продолжать заниматься для лучшей оценки или запросить свой "
-"сертификат сразу."
+"Если вы выполнили не все задания, вы можете продолжить обучение и "
+"позднееполучить сертификат с более выокой оценкой."
 
-#: lms/templates/courseware/progress.html
 msgid "Request Certificate"
-msgstr "Запросить Сертификат"
+msgstr "Получить сертификат"
 
 #: lms/templates/instructor/instructor_dashboard_2/certificate-white-list.underscore:31
 msgid "additions to the Exception list"
@@ -875,6 +873,20 @@ msgstr "Выпуск сертификатов по запросу обучающ
 #: lms/templates/instructor/instructor_dashboard_2/certificates.html:121
 msgid "Certificate Exceptions"
 msgstr "Добавление исключений"
+
+# # TODO: fix tmp override for incorrect message
+#. Translators: This message appears to users when the system is processessing
+#. course certificates, which can take a few hours.
+#: lms/templates/courseware/progress.html:79
+msgid "We're working on it..."
+msgstr "Мы готовим сертификат к выпуску."
+
+# # TODO: fix tmp override for incorrect message
+#: lms/templates/courseware/progress.html:80
+msgid ""
+"We're creating your certificate. You can keep working in your courses and a "
+"link to it will appear here and on your Dashboard when it is ready."
+msgstr "В ближайшее время вы сможете получить сертификат на этой странице."
 
 # #### Custom additions for studio date input format #####
 #: cms/templates/settings.html
@@ -16360,20 +16372,6 @@ msgstr "PDF откроется в новом окне или в новой вк�
 #: lms/templates/courseware/progress.html
 msgid "Download Your Certificate"
 msgstr "Скачать свой сертификат"
-
-#. Translators: This message appears to users when the system is processessing
-#. course certificates, which can take a few hours.
-#: lms/templates/courseware/progress.html
-msgid "We're working on it..."
-msgstr "Мы работаем над этим..."
-
-#: lms/templates/courseware/progress.html
-msgid ""
-"We're creating your certificate. You can keep working in your courses and a "
-"link to it will appear here and on your Dashboard when it is ready."
-msgstr ""
-"Мы создали ваш сертификат. Продолжайте обучение, и ссылка на сертификат "
-"появится на панели управления, когда он будет готов."
 
 #: lms/templates/courseware/progress.html
 msgid "Congratulations, you qualified for a certificate!"
