@@ -874,6 +874,10 @@ msgstr "Выпуск сертификатов по запросу обучающ
 msgid "Certificate Exceptions"
 msgstr "Добавление исключений"
 
+#: lms/templates/courseware/progress.html:85
+msgid "Congratulations, you qualified for a certificate!"
+msgstr "Поздравляем, вам доступен сертификат!"
+
 # # TODO: fix tmp override for incorrect message
 #. Translators: This message appears to users when the system is processessing
 #. course certificates, which can take a few hours.
@@ -887,6 +891,10 @@ msgid ""
 "We're creating your certificate. You can keep working in your courses and a "
 "link to it will appear here and on your Dashboard when it is ready."
 msgstr "В ближайшее время вы сможете получить сертификат на этой странице."
+
+#: lms/templates/survey/survey.html:48
+msgid "Cancel and Return to Dashboard"
+msgstr "Отменить и вернуться к разделу «Мои курсы»"
 
 # #### Custom additions for studio date input format #####
 #: cms/templates/settings.html
@@ -3341,8 +3349,8 @@ msgstr "Курс"
 #: common/lib/xmodule/xmodule/split_test_module.py
 #: common/lib/xmodule/xmodule/textannotation_module.py
 #: common/lib/xmodule/xmodule/videoannotation_module.py
-#: common/lib/xmodule/xmodule/word_cloud_module.py
-#: cms/templates/container.html cms/templates/library.html
+#: common/lib/xmodule/xmodule/word_cloud_module.py cms/templates/container.html
+#: cms/templates/library.html
 msgid "Display Name"
 msgstr "Отображаемое название"
 
@@ -3504,11 +3512,13 @@ msgstr ""
 "подчёркивание (_) и дефисы (-)."
 
 #: common/djangoapps/student/forms.py
+#, python-format
 msgid "Username cannot be more than %(limit_value)s characters long"
 msgstr ""
 "Максимальное количество символов в имени пользователя – %(limit_value)s"
 
 #: common/djangoapps/student/forms.py
+#, python-format
 msgid "Email cannot be more than %(limit_value)s characters long"
 msgstr ""
 "Максимальное количество символов в электронном сообщении – %(limit_value)s"
@@ -3804,6 +3814,7 @@ msgid "The provided access_token is not valid."
 msgstr "Указанный access_token не действителен."
 
 #: common/djangoapps/student/views.py
+#, python-brace-format
 msgid "An account with the username '{username}' already exists."
 msgstr ""
 
@@ -9437,8 +9448,7 @@ msgstr ""
 "Не удалось генерировать компенсационные коды из-за неправильной конфигурации "
 "курса."
 
-#: lms/djangoapps/instructor/views/api.py
-#: lms/djangoapps/shoppingcart/models.py
+#: lms/djangoapps/instructor/views/api.py lms/djangoapps/shoppingcart/models.py
 msgid "pdf download unavailable right now, please contact support."
 msgstr ""
 "в настоящий момент скачивание pdf недоступно, пожалуйста, свяжитесь с "
@@ -9523,10 +9533,12 @@ msgid "Successfully reset due date for student {0} for {1} to {2}"
 msgstr "Срок сдачи {1} для студента {0} успешно сброшен на {2}"
 
 #: lms/djangoapps/instructor/views/api.py
+#, python-format
 msgid "This student (%s) will skip the entrance exam."
 msgstr "Этот студент (%s) может пропустить вступительное испытание."
 
 #: lms/djangoapps/instructor/views/api.py
+#, python-format
 msgid "This student (%s) is already allowed to skip the entrance exam."
 msgstr "Этому студенту (%s) уже разрешено пропустить вступительное испытание."
 
@@ -11901,6 +11913,7 @@ msgid "Your Password Reset is Complete"
 msgstr "Сброс пароля выполнен"
 
 #: lms/templates/registration/password_reset_complete.html
+#, python-format
 msgid ""
 "\n"
 "      Your password has been set.  You may go ahead and %(link_start)slog in"
@@ -11913,6 +11926,7 @@ msgstr ""
 "      "
 
 #: lms/templates/registration/password_reset_confirm.html
+#, python-format
 msgid ""
 "\n"
 "      Reset Your %(platform_name)s Password\n"
@@ -11923,6 +11937,7 @@ msgstr ""
 "  "
 
 #: lms/templates/registration/password_reset_confirm.html
+#, python-format
 msgid ""
 "\n"
 "          Reset Your %(platform_name)s Password\n"
@@ -11969,6 +11984,7 @@ msgstr ""
 "К сожалению, у нашей системы возникли сложности со сбросом вашего пароля"
 
 #: lms/templates/registration/password_reset_confirm.html
+#, python-format
 msgid ""
 "\n"
 "                Someone has been made aware of this issue. Please try again "
@@ -11992,6 +12008,7 @@ msgstr ""
 "что он набран правильно."
 
 #: lms/templates/registration/password_reset_confirm.html
+#, python-format
 msgid ""
 "\n"
 "        Required fields are noted by %(bold_start)sbold text and an asterisk "
@@ -12031,6 +12048,7 @@ msgid "Your Password Reset Was Unsuccessful"
 msgstr "Не удалось сбросить пароль"
 
 #: lms/templates/registration/password_reset_confirm.html
+#, python-format
 msgid ""
 "\n"
 "            The password reset link was invalid, possibly because the link "
@@ -12054,6 +12072,7 @@ msgid "Need Help?"
 msgstr "Нужна помощь?"
 
 #: lms/templates/registration/password_reset_confirm.html
+#, python-format
 msgid ""
 "\n"
 "              View our %(start_link)shelp section for contact information "
@@ -12066,6 +12085,7 @@ msgstr ""
 "          "
 
 #: lms/templates/registration/password_reset_email.html
+#, python-format
 msgid ""
 "You're receiving this e-mail because you requested a password reset for your "
 "user account at %(site_name)s."
@@ -12090,6 +12110,7 @@ msgid "Thanks for using our site!"
 msgstr "Спасибо за использование нашего сайта!"
 
 #: lms/templates/registration/password_reset_email.html
+#, python-format
 msgid "The %(platform_name)s Team"
 msgstr "Команда %(platform_name)s"
 
@@ -12331,6 +12352,7 @@ msgid "Create new merged version"
 msgstr "Создать новую объединенную версию"
 
 #: lms/templates/wiki/includes/anonymous_blocked.html
+#, python-format
 msgid ""
 "\n"
 "  You need to <a href=\"%(login_url)s\">log in</a> or <a href="
@@ -12387,6 +12409,7 @@ msgid "[Article Name](wiki:ArticleName)"
 msgstr "[Название Статьи](wiki:НазваниеСтатьи)"
 
 #: lms/templates/wiki/includes/cheatsheet.html
+#, python-format
 msgid "%(platform_name)s Additions:"
 msgstr "Дополнительная разметка %(platform_name)s:"
 
@@ -12403,6 +12426,7 @@ msgid "Wikipedia"
 msgstr "Википедия"
 
 #: lms/templates/wiki/includes/cheatsheet.html
+#, python-format
 msgid "%(platform_name)s Wiki"
 msgstr "%(platform_name)s Вики"
 
@@ -12449,6 +12473,7 @@ msgid "Quotes"
 msgstr "Цитаты"
 
 #: lms/templates/wiki/includes/editor_widget.html
+#, python-format
 msgid ""
 "\n"
 "        Markdown syntax is allowed. See the %(start_link)scheatsheet"
@@ -14530,6 +14555,7 @@ msgstr ""
 "собственными условиями предоставления услуг и политикой конфиденциальности."
 
 #: lms/templates/provider_login.html
+#, python-format
 msgid "Return To %s"
 msgstr "Вернуться к %s"
 
@@ -15355,8 +15381,7 @@ msgstr "Запись на курс"
 msgid "Schedule"
 msgstr "Расписание"
 
-#: lms/templates/ccx/coach_dashboard.html
-#: lms/templates/ccx/grading_policy.html
+#: lms/templates/ccx/coach_dashboard.html lms/templates/ccx/grading_policy.html
 msgid "Grading Policy"
 msgstr "Правила оценивания"
 
@@ -15432,8 +15457,7 @@ msgstr ""
 "Если эта опция <em>отмечена</em>, пользователи будут получать уведомления по "
 "электронной почте."
 
-#: lms/templates/ccx/enrollment.html
-#: lms/templates/courseware/course_about.html
+#: lms/templates/ccx/enrollment.html lms/templates/courseware/course_about.html
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Enroll"
 msgstr "Внести в список"
@@ -16374,10 +16398,6 @@ msgid "Download Your Certificate"
 msgstr "Скачать свой сертификат"
 
 #: lms/templates/courseware/progress.html
-msgid "Congratulations, you qualified for a certificate!"
-msgstr "Поздравляем, вы аттестованы для получения сертификата!"
-
-#: lms/templates/courseware/progress.html
 msgid "Requirements for Course Credit"
 msgstr "Требования для получения кредита"
 
@@ -16677,6 +16697,7 @@ msgid "Available Actions"
 msgstr "Доступные действия"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
+#, python-format
 msgid ""
 "Are you sure you want to unenroll from the purchased course %(course_name)s "
 "(%(course_number)s)?"
@@ -16693,6 +16714,7 @@ msgid "You will not be refunded the amount you paid."
 msgstr "Вам не будет возвращена сумма которую вы заплатили."
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
+#, python-format
 msgid ""
 "Are you sure you want to unenroll from %(course_name)s (%(course_number)s)?"
 msgstr ""
@@ -17044,6 +17066,7 @@ msgid "by most votes"
 msgstr "по количеству голосов"
 
 #: lms/templates/discussion/_user_profile.html
+#, python-format
 msgid "%s comment"
 msgid_plural "%s comments"
 msgstr[0] "%s комментарий"
@@ -20042,7 +20065,7 @@ msgstr "Опрос пользователей"
 
 #: lms/templates/survey/survey.html
 msgid "Pre-Course Survey"
-msgstr "Pre-курс обследования"
+msgstr "Опрос перед началом курса"
 
 #: lms/templates/survey/survey.html
 msgid ""
@@ -20059,10 +20082,6 @@ msgstr ""
 #: lms/templates/survey/survey.html
 msgid "You are missing the following required fields:"
 msgstr "Вы не заполнили следующие обязательные поля:"
-
-#: lms/templates/survey/survey.html
-msgid "Cancel and Return to Dashboard"
-msgstr "Отменить и вернуться к панели управления"
 
 #: lms/templates/survey/survey.html
 msgid "Why do I need to complete this information?"
@@ -21412,8 +21431,7 @@ msgstr "Ваш курс:"
 msgid "Course git url:"
 msgstr "Git url курса:"
 
-#: cms/templates/group_configurations.html
-#: cms/templates/visibility_editor.html
+#: cms/templates/group_configurations.html cms/templates/visibility_editor.html
 msgid "Content Groups"
 msgstr "Группы по изучаемому материалу"
 
@@ -22361,6 +22379,7 @@ msgstr ""
 "вопросами{link_end}."
 
 #: cms/templates/index.html
+#, python-format
 msgid "Thanks for signing up, %(name)s!"
 msgstr "Спасибо за регистрацию, %(name)s!"
 
@@ -22369,6 +22388,7 @@ msgid "We need to verify your email address"
 msgstr "Необходимо подтвердить ваш адрес электронной почты"
 
 #: cms/templates/index.html
+#, python-format
 msgid ""
 "Almost there! In order to complete your sign up we need you to verify your "
 "email address (%(email)s). An activation message and next steps should be "
@@ -22928,6 +22948,7 @@ msgid "your course summary page"
 msgstr "странице с кратким содержанием вашего курса"
 
 #: cms/templates/settings.html
+#, python-format
 msgid ""
 "Introductions, prerequisites, FAQs that are used on %s (formatted in HTML)"
 msgstr ""
@@ -23800,10 +23821,12 @@ msgid "A slug may not begin with an underscore."
 msgstr "Slug-строка не может начинаться с символа подчёркивания"
 
 #: wiki/forms.py
+#, python-format
 msgid "A deleted article with slug \"%s\" already exists."
 msgstr "Удалённая статья со slug-строкой «%s» уже существует."
 
 #: wiki/forms.py
+#, python-format
 msgid "A slug named \"%s\" already exists."
 msgstr "Статья со slug-строкой «%s» уже существует."
 
@@ -23826,8 +23849,7 @@ msgstr ""
 "краткое название, чтобы пользователи могли создавать новые статьи на "
 "соответствующем месте."
 
-#: wiki/forms.py wiki/plugins/attachments/forms.py
-#: wiki/plugins/images/forms.py
+#: wiki/forms.py wiki/plugins/attachments/forms.py wiki/plugins/images/forms.py
 msgid "You are not sure enough!"
 msgstr "Вы уверены?!"
 
@@ -23963,6 +23985,7 @@ msgid "others write access"
 msgstr "право на запись для других пользователей"
 
 #: wiki/models/article.py
+#, python-format
 msgid "Article without content (%(id)d)"
 msgstr "Статья без содержания (%(id)d)"
 
@@ -24068,6 +24091,7 @@ msgid "A non-root note must always have a slug."
 msgstr "Некорневая заметка должна всегда иметь краткое название."
 
 #: wiki/models/urlpath.py
+#, python-format
 msgid "There is already a root node on %s"
 msgstr "Уже существует корневой узел на %s"
 
@@ -24135,10 +24159,12 @@ msgid "attachment revisions"
 msgstr "версии вложений"
 
 #: wiki/plugins/attachments/views.py
+#, python-format
 msgid "%s was successfully added."
 msgstr "%s успешно добавлено."
 
 #: wiki/plugins/attachments/views.py
+#, python-format
 msgid "Your file could not be saved: %s"
 msgstr "Ваш файл не может быть сохранен: %s"
 
@@ -24151,6 +24177,7 @@ msgstr ""
 "на веб-сервере."
 
 #: wiki/plugins/attachments/views.py
+#, python-format
 msgid "%s uploaded and replaces old attachment."
 msgstr "%s загружено и заменило старую версию вложения"
 
@@ -24163,30 +24190,37 @@ msgstr ""
 "имеющимся файлом. Файлы с разными расширениями не допускаются."
 
 #: wiki/plugins/attachments/views.py
+#, python-format
 msgid "Current revision changed for %s."
 msgstr "Текущая версия изменена на %s."
 
 #: wiki/plugins/attachments/views.py
+#, python-format
 msgid "Added a reference to \"%(att)s\" from \"%(art)s\"."
 msgstr "Добавлена cсылка на «%(att)s» из «%(art)s»."
 
 #: wiki/plugins/attachments/views.py
+#, python-format
 msgid "The file %s was deleted."
 msgstr "Файл %s был удален."
 
 #: wiki/plugins/attachments/views.py
+#, python-format
 msgid "This article is no longer related to the file %s."
 msgstr "Эта статья больше не связана с файлом %s."
 
 #: wiki/plugins/attachments/wiki_plugin.py
+#, python-format
 msgid "A file was changed: %s"
 msgstr "Файл был изменен: %s"
 
 #: wiki/plugins/attachments/wiki_plugin.py
+#, python-format
 msgid "A file was deleted: %s"
 msgstr "Файл был удален: %s"
 
 #: wiki/plugins/images/forms.py
+#, python-format
 msgid ""
 "New image %s was successfully uploaded. You can use it by selecting it from "
 "the list of available images."
@@ -24207,6 +24241,7 @@ msgid "images"
 msgstr "изображения"
 
 #: wiki/plugins/images/models.py
+#, python-format
 msgid "Image: %s"
 msgstr "Изображение: %s"
 
@@ -24223,22 +24258,27 @@ msgid "image revisions"
 msgstr "версии изображения"
 
 #: wiki/plugins/images/models.py
+#, python-format
 msgid "Image Revsion: %d"
 msgstr "Версия изображения: %d"
 
 #: wiki/plugins/images/views.py
+#, python-format
 msgid "%s has been restored"
 msgstr "%s было восстановлено"
 
 #: wiki/plugins/images/views.py
+#, python-format
 msgid "%s has been marked as deleted"
 msgstr "%s было отмечено как удалённое"
 
 #: wiki/plugins/images/views.py
+#, python-format
 msgid "%(file)s has been changed to revision #%(revision)d"
 msgstr "%(file)s был изменён на версию #%(revision)d"
 
 #: wiki/plugins/images/views.py
+#, python-format
 msgid "%(file)s has been saved."
 msgstr "%(file)s был сохранен."
 
@@ -24247,6 +24287,7 @@ msgid "Images"
 msgstr "Изображения"
 
 #: wiki/plugins/images/wiki_plugin.py
+#, python-format
 msgid "An image was added: %s"
 msgstr "Было добавлено изображение: %s"
 
@@ -24275,18 +24316,22 @@ msgid "Your notification settings were unchanged, so nothing saved."
 msgstr "Ваши настройки уведомлений не были изменены, не сохранено."
 
 #: wiki/plugins/notifications/models.py
+#, python-format
 msgid "%(user)s subscribing to %(article)s (%(type)s)"
 msgstr "%(user)s подписывается на %(article)s (%(type)s)"
 
 #: wiki/plugins/notifications/models.py
+#, python-format
 msgid "Article deleted: %s"
 msgstr "Статья удалена: %s"
 
 #: wiki/plugins/notifications/models.py
+#, python-format
 msgid "Article modified: %s"
 msgstr "Статья изменена: %s"
 
 #: wiki/plugins/notifications/models.py
+#, python-format
 msgid "New article created: %s"
 msgstr "Создана новая статья: %s"
 
@@ -24303,10 +24348,12 @@ msgid "You are now logged in! Have fun!"
 msgstr "Вы вошли! Развлекайтесь!"
 
 #: wiki/views/article.py
+#, python-format
 msgid "New article '%s' created."
 msgstr "Новая статья '%s' создана."
 
 #: wiki/views/article.py
+#, python-format
 msgid "There was an error creating this article: %s"
 msgstr "При создании статьи %s произошла ошибка"
 
@@ -24327,6 +24374,7 @@ msgid ""
 msgstr "Эта статья вместе с её содержанием была полностью удалена! Спасибо!"
 
 #: wiki/views/article.py
+#, python-format
 msgid ""
 "The article \"%s\" is now marked as deleted! Thanks for keeping the site "
 "free from unwanted material!"
@@ -24347,6 +24395,7 @@ msgid "Restoring article"
 msgstr "Восстановление статьи"
 
 #: wiki/views/article.py
+#, python-format
 msgid "The article \"%s\" and its children are now restored."
 msgstr "Статья «%s» и её дочерние статьи были восстановлены."
 
@@ -24355,10 +24404,12 @@ msgid "New title"
 msgstr "Новый заголовок"
 
 #: wiki/views/article.py
+#, python-format
 msgid "Merge between Revision #%(r1)d and Revision #%(r2)d"
 msgstr "Слияние версий #%(r1)d и #%(r2)d"
 
 #: wiki/views/article.py
+#, python-format
 msgid ""
 "A new revision was created: Merge between Revision #%(r1)d and Revision #"
 "%(r2)d"
@@ -24547,8 +24598,9 @@ msgstr ""
 "тестеров'"
 
 #: wiki/views/article.py
+#, python-format
 msgid "The article %s is now set to display revision #%d"
-msgstr "Отображается версия #%d статьи %s  "
+msgstr "Отображается статья %s в версии #%d "
 
 #: openassessment/assessment/api/student_training.py
 msgid "Could not parse serialized rubric"
@@ -25025,6 +25077,7 @@ msgid "You have not completed all the steps of this problem."
 msgstr "Вы ещё не выполнили все шаги этого задания."
 
 #: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html
+#, python-format
 msgid ""
 "\n"
 "                            %(points_earned)s out of %(points_possible)s\n"
@@ -25061,6 +25114,7 @@ msgid "Assessor"
 msgstr "Оценивающий"
 
 #: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html
+#, python-format
 msgid "Peer %(peer_num)s"
 msgstr "Проверяющий %(peer_num)s"
 
@@ -25069,6 +25123,7 @@ msgid "Peer's Assessment"
 msgstr "Оценка однокурсника"
 
 #: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html
+#, python-format
 msgid "More information about %(name)s"
 msgstr "Дополнительная информация о %(name)s"
 
@@ -25237,6 +25292,7 @@ msgid "Top-Scoring Responses for This Assignment"
 msgstr "Лучшие ответы на это задание"
 
 #: openassessment/templates/openassessmentblock/leaderboard/oa_leaderboard_show.html
+#, python-format
 msgid "%(num_points)s points"
 msgstr "%(num_points)s баллы"
 
@@ -25306,6 +25362,7 @@ msgid "Review your grade and your assessment details."
 msgstr "Посмотреть свою оценку и подробности проверки."
 
 #: openassessment/templates/openassessmentblock/message/oa_message_open.html
+#, python-format
 msgid ""
 "\n"
 "                    Assignment submissions will close soon. To receive a "
@@ -25319,6 +25376,7 @@ msgstr ""
 "%(start_tag)sВаш ответ%(end_tag)s."
 
 #: openassessment/templates/openassessmentblock/message/oa_message_open.html
+#, python-format
 msgid ""
 "\n"
 "                    This assignment has several steps. In the first step, "
@@ -25362,6 +25420,7 @@ msgstr ""
 "ответы."
 
 #: openassessment/templates/openassessmentblock/message/oa_message_peer.html
+#, python-format
 msgid ""
 "\n"
 "                          You'll receive your grade after you complete the "
@@ -25377,6 +25436,7 @@ msgstr ""
 "                    "
 
 #: openassessment/templates/openassessmentblock/message/oa_message_peer.html
+#, python-format
 msgid ""
 "\n"
 "                        You'll receive your grade after you complete the "
@@ -25401,6 +25461,7 @@ msgid "Self evaluation of this assignment will close soon. "
 msgstr "Период самооценивания по данной форме контроля скоро истечёт."
 
 #: openassessment/templates/openassessmentblock/message/oa_message_self.html
+#, python-format
 msgid ""
 "\n"
 "                          You'll receive your grade after the required "
@@ -25415,6 +25476,7 @@ msgstr ""
 "  "
 
 #: openassessment/templates/openassessmentblock/message/oa_message_self.html
+#, python-format
 msgid ""
 "\n"
 "                          You'll receive your grade after you complete the "
@@ -25488,6 +25550,7 @@ msgstr "Оценивание работ однокурсников"
 #: openassessment/templates/openassessmentblock/response/oa_response.html
 #: openassessment/templates/openassessmentblock/self/oa_self_assessment.html
 #: openassessment/templates/openassessmentblock/student_training/student_training.html
+#, python-format
 msgid ""
 "available <span class=\"date\">%(start_date)s (in %(time_until)s)</span>"
 msgstr ""
@@ -25501,6 +25564,7 @@ msgstr ""
 #: openassessment/templates/openassessmentblock/response/oa_response.html
 #: openassessment/templates/openassessmentblock/self/oa_self_assessment.html
 #: openassessment/templates/openassessmentblock/student_training/student_training.html
+#, python-format
 msgid "due <span class=\"date\">%(due_date)s (in %(time_until)s)</span>"
 msgstr ""
 "срок сдачи <span class=\"date\">%(due_date)s (через %(time_until)s)</span>"
@@ -25533,6 +25597,7 @@ msgid "This step's status"
 msgstr "Статус этого шага"
 
 #: openassessment/templates/openassessmentblock/peer/oa_peer_assessment.html
+#, python-format
 msgid ""
 "\n"
 "                    In Progress (%(num_graded)s of %(num_must_grade)s)\n"
@@ -25549,6 +25614,7 @@ msgid "Read and assess the following response from one of your peers."
 msgstr "Прочитайте и оцените следующий ответ одного из ваших однокурсников."
 
 #: openassessment/templates/openassessmentblock/peer/oa_peer_assessment.html
+#, python-format
 msgid ""
 "\n"
 "                                            Assessment # %(review_number)s "
@@ -25574,6 +25640,7 @@ msgid "Cancelled"
 msgstr "Отменено"
 
 #: openassessment/templates/openassessmentblock/peer/oa_peer_closed.html
+#, python-format
 msgid ""
 "\n"
 "            Incomplete (%(num_graded)s of %(num_must_grade)s)\n"
@@ -25628,6 +25695,7 @@ msgstr "Продолжить оценку работ других слушате
 
 #: openassessment/templates/openassessmentblock/peer/oa_peer_turbo_mode.html
 #: openassessment/templates/openassessmentblock/peer/oa_peer_turbo_mode_waiting.html
+#, python-format
 msgid ""
 "\n"
 "        Complete (%(num_graded)s)\n"
@@ -25657,6 +25725,7 @@ msgid "Not Available"
 msgstr "Недоступно"
 
 #: openassessment/templates/openassessmentblock/peer/oa_peer_waiting.html
+#, python-format
 msgid ""
 "\n"
 "          In Progress (%(num_graded)s of %(num_must_grade)s)\n"
@@ -25768,6 +25837,7 @@ msgid "Submission Cancelled"
 msgstr "Ответ отменён"
 
 #: openassessment/templates/openassessmentblock/response/oa_response_cancelled.html
+#, python-format
 msgid ""
 "\n"
 "                        Your submission has been cancelled by "
@@ -25780,6 +25850,7 @@ msgstr ""
 "                    "
 
 #: openassessment/templates/openassessmentblock/response/oa_response_cancelled.html
+#, python-format
 msgid ""
 "\n"
 "                        Comments: %(comments)s\n"
@@ -25804,6 +25875,7 @@ msgid "Your Response Has Been Submitted"
 msgstr "Ваш ответ уже отправлен на проверку"
 
 #: openassessment/templates/openassessmentblock/response/oa_response_submitted.html
+#, python-format
 msgid ""
 "\n"
 "                        You'll receive your grade after some of your peers "
@@ -25818,6 +25890,7 @@ msgstr ""
 "и %(self_start_tag)sоценивания своей работы%(end_tag)s."
 
 #: openassessment/templates/openassessmentblock/response/oa_response_submitted.html
+#, python-format
 msgid ""
 "\n"
 "                        You'll receive your grade after some of your peers "
@@ -25830,6 +25903,7 @@ msgstr ""
 "ответ и вы завершите шаг %(start_tag)sвзаимного оценивания%(end_tag)s."
 
 #: openassessment/templates/openassessmentblock/response/oa_response_submitted.html
+#, python-format
 msgid ""
 "\n"
 "                        You'll receive your grade after you complete the "
@@ -25943,6 +26017,7 @@ msgid "Learner Response"
 msgstr "Ответ слушателя"
 
 #: openassessment/templates/openassessmentblock/staff_area/student_info.html
+#, python-format
 msgid ""
 "\n"
 "                            Learner submission removed by "
@@ -25956,6 +26031,7 @@ msgstr ""
 "                        "
 
 #: openassessment/templates/openassessmentblock/staff_area/student_info.html
+#, python-format
 msgid ""
 "\n"
 "                            Comments: %(comments)s\n"
@@ -26073,6 +26149,7 @@ msgstr ""
 "мог оценить его по-другому, а затем попробуйте оценить ответ снова."
 
 #: openassessment/templates/openassessmentblock/student_training/student_training.html
+#, python-format
 msgid ""
 "\n"
 "                                Training Assessment # "
