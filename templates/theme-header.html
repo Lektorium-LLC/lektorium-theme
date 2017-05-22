@@ -86,11 +86,10 @@ var yaParams = {/*Здесь параметры визита*/};
 
     % if user.is_authenticated():
     <ol class="nav-global authenticated">
-      <li><a href="https://www.lektorium.tv/mooc2/?field_type=school">Старшеклассникам<br>и абитуриентам</a></li>
-      <li><a href="https://www.lektorium.tv/mooc2/?field_type=student">Студентам<br>и специалистам</a></li>
-      <li><a href="https://www.lektorium.tv/mooc2/?field_type=qualification">Повышение<br>квалификации</a></li>
-      <li><a href="https://www.lektorium.tv/medialibrary">Архив<br>видеолекций</a></li>
-      <li><a href="https://www.lektorium.tv/offline">Очные<br>программы</a></li>
+      <li><a href="https://www.lektorium.tv/mooc/">Онлайн-курсы</a></li>
+      <li><a href="https://www.lektorium.tv/medialibrary">Медиатека</a></li>
+      <li><a href="https://www.lektorium.tv/project">Спецпроекты</a></li>
+      <li><a href="https://www.lektorium.tv/offline">Очные курсы</a></li>
 
       <li class="nav-user">
         <ol class="user">
@@ -117,11 +116,10 @@ var yaParams = {/*Здесь параметры визита*/};
     </ol>
     % else:
     <ol class="nav-global">
-      <li><a href="https://www.lektorium.tv/mooc2/?field_type=school">Старшеклассникам<br>и абитуриентам</a></li>
-      <li><a href="https://www.lektorium.tv/mooc2/?field_type=student">Студентам<br>и специалистам</a></li>
-      <li><a href="https://www.lektorium.tv/mooc2/?field_type=qualification">Повышение<br>квалификации</a></li>
-      <li><a href="https://www.lektorium.tv/medialibrary">Архив<br>видеолекций</a></li>
-      <li><a href="https://www.lektorium.tv/offline">Очные<br>программы</a></li>
+      <li><a href="https://www.lektorium.tv/mooc/">Онлайн-курсы</a></li>
+      <li><a href="https://www.lektorium.tv/medialibrary">Медиатека</a></li>
+      <li><a href="https://www.lektorium.tv/project">Спецпроекты</a></li>
+      <li><a href="https://www.lektorium.tv/offline">Очные курсы</a></li>
       <li class="nav-user">
         <a class="cta cta-login" href="${reverse('signin_user')}${login_query()}">${_("Log in")}</a>
       </li>
