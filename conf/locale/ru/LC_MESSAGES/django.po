@@ -1768,6 +1768,23 @@ msgstr "Открытые онлайн-курсы от ведущих вузов 
 msgid "Learn more"
 msgstr "Узнать больше"
 
+# #### Survey #####
+#: templates/survey/survey.html
+msgid ""
+"You can begin your course as soon as you complete the following form. "
+"Required fields are marked with an asterisk (*)."
+msgstr ""
+"Вы сможете перейти к курсу, как только пройдёте следующий опрос. "
+"Обязательные поля помечены звёздочкой (*)."
+
+msgid ""
+"This information is for the use of {platform_name} and course organization "
+"only. It will not be linked to your public profile in any way."
+msgstr ""
+"Предоставленная информация будет использована только платформой "
+"«{platform_name}» и организатором курса и не будет добавлена в ваш публичный "
+"профиль."
+
 #: cms/djangoapps/course_creators/models.py:34 edx_proctoring/models.py:170
 msgid "pending"
 msgstr "ожидание"
