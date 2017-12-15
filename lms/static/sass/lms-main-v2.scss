@@ -1,0 +1,6 @@
+// import original styles from edx-platform
+$static-path: '../..';
+@import 'lms/static/sass/lms-main-v2';
+
+// add overrides
+@import 'overrides';

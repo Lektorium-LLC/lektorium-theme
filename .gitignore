@@ -1,1 +1,3 @@
-static/css/
+### Static assets pipeline artifacts
+lms/static/css/
+cms/static/css/
