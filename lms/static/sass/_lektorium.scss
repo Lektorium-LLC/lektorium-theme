@@ -1,0 +1,367 @@
+/* variables */
+/* TODO: check if variables required */
+$sans-serif: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$serif: $sans-serif;
+$m-blue-d1: #6ea131;
+$m-blue-d3: #88C540;
+
+$header-bg: #24262F;
+$header-bg-hover: #1d1f26;
+$footer-bg: #24262F;
+$lektorium-header-link-color: white;
+$lektorium-footer-color: #bdbdbd;
+$lektorium-footer-link-color: #bdbdbd;
+$lektorium-footer-link-color-hover: #5e619b;
+$lektorium-footer-heading-color: white;
+$lektorium-wrapper-border-color: $border-color-3;
+$lektorium-link-color: $link-color;
+
+$lektorium-login-btn-color: #88c540;
+$lektorium-login-btn-color-hover: #6ea131;
+$lektorium-user-btn-color: #3a3b4c;
+
+$header-height: ($baseline*4);
+$header-slim-height: ($baseline*3);
+
+$font-intro-path: '/static/lektorium-theme/fonts/intro';
+
+@font-face {
+  font-family: "intro";
+  src: url("#{$font-intro-path}/intro.eot");
+  src: url("#{$font-intro-path}/intro.eot?#iefix") format("embedded-opentype"),
+  url("#{$font-intro-path}/intro.woff") format("woff"),
+  url("#{$font-intro-path}/intro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Header layout */
+.lek--header-global {
+    height: $header-height;
+    background-color: $header-bg;
+
+    a {
+        color: $lektorium-header-link-color;
+        text-decoration: none;
+        text-transform: none;
+
+        &:active, &:hover, &:focus, &:visited {
+            color: $lektorium-header-link-color;
+            text-decoration: none;
+        }
+    }
+
+    .lek--wrapper-header {
+        @include clearfix();
+        width: 100%;
+        max-width: $lms-max-width;
+        margin: 0 auto;
+    }
+
+    nav {
+        display: table;
+
+        h1, ol, ol>li {
+            display: table-cell;
+        }
+    }
+
+    .lek--logo-header {
+        @include padding-left($baseline);
+    }
+
+    .lek--logo, .lek--course-name {
+        display: table-cell;
+        height: $header-height;
+        vertical-align: middle;
+        @include text-align(left);
+        line-height: 1.2;
+    }
+
+    .lek--logo {
+        position: relative;
+        width: 105px;
+        @include padding-right($baseline/2);
+        font-family: intro;
+        font-weight: bold;
+        font-size: 1rem;
+
+        &:hover {
+            color: $lektorium-header-link-color;
+        }
+    }
+
+    .lek--course-name {
+        @include padding-left($baseline/2);
+        color: $lektorium-header-link-color;
+        font-size: 0.9rem;
+        font-weight: bold;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .lek--nav-global {
+        vertical-align: middle;
+        @include text-align(right);
+        white-space: nowrap;
+
+        &>li {
+            display: inline-block;
+            padding: 0 ($baseline/4);
+            font-size: 0.75rem;
+            vertical-align: top;
+            line-height: $header-height;
+
+        }
+
+        .lek--nav-global-link {
+            display: table-cell;
+            height: $header-height;
+            vertical-align: middle;
+            padding: 0 ($baseline/2);
+            letter-spacing: 0.075rem;
+
+            &:hover {
+                background-color: $header-bg-hover;
+                color: $lektorium-header-link-color;
+            }
+        }
+
+        /* Login button and user menu */
+        .lek--btn-login {
+            display: inline-block;
+            height: auto;
+            padding: ($baseline*0.4);
+            border-radius: 3px;
+            line-height: 1.2;
+            background-color: $lektorium-login-btn-color;
+            text-shadow: rgba(26, 30, 34, 0.6) 0px 1px 3px;
+
+            &:hover, &:active {
+                background-color: $lektorium-login-btn-color-hover;
+            }
+        }
+
+        .lek--nav-user {
+            @include padding-right(0);
+            line-height: $header-height;
+            font-size: 0; /* collapse inline-blocks */
+            position: relative;
+
+            .lek--user-link, .lek-user-dropdown, .lek--user-dropdown-menu {
+                font-size: 0.75rem;
+            }
+
+            .lek--user-link {
+                display: inline-block;
+                vertical-align: middle;
+                line-height: 1rem;
+                padding: ($baseline*0.4);
+                @include padding-left($baseline*0.8);
+                @include padding-right($baseline*0.2);
+                @include border-radius(3px 0 0 3px);
+                background-color: $lektorium-user-btn-color;
+
+                &:hover, &:active, &:visited {
+                    color: $lektorium-header-link-color;
+                }
+            }
+
+            .lek--user-dropdown {
+                display: inline-block;
+                vertical-align: middle;
+                line-height: 1rem;
+                padding: ($baseline*0.4);
+                font-size: 0.75rem;
+                @include border-radius(0 3px 3px 0);
+                background-color: $lektorium-user-btn-color;
+                background-image: none;
+                border-width: 0;
+                border-image-width: 0;
+                box-shadow: none;
+                text-shadow: none;
+
+                .fa {
+                    color: $white;
+                }
+            }
+
+            .lek--user-dropdown-menu {
+                position: absolute;
+                top: 65px;
+                right: 0;
+                display: none;
+                z-index: 3;
+                padding: 0 ($baseline/2);
+                background: $white;
+                color: $black;
+                border-radius: 3px;
+                border: solid 1px $lektorium-wrapper-border-color;
+                font-size: 0.75rem;
+
+                &.expanded {
+                    display: block;
+                }
+
+                li {
+                    line-height: normal;
+                    border-top: dotted 1px $lektorium-wrapper-border-color;
+
+                    &.lek--user-nickname {
+                        border-top-width: 0;
+                    }
+                }
+
+                a {
+                    color: $lektorium-link-color;
+
+                    &:hover, &:active {
+                        color: $black;
+                    }
+                }
+
+                &::before {
+                    content: "";
+                    display: block;
+                    height: 0;
+                    position: absolute;
+                    right: ($baseline/4);
+                    top: -($baseline/4);
+                    transform: rotate(-45deg);
+
+                    background-color: $white;
+                    border: {
+                        top: solid 6px $white;
+                        right: solid 6px $white;
+                        bottom: solid 6px transparent;
+                        left: solid 6px transparent;
+                    }
+                    box-shadow: 1px -1px 0 0 $lektorium-wrapper-border-color;
+                }
+            }
+
+            .lek--user-dropdown-menu {
+                li {
+                    padding: ($baseline/5) 0;
+                    margin-bottom: 0;
+
+                    a, &.lek--user-nickname {
+                        display: block;
+                        @include text-align(left);
+                    }
+
+                    a {
+                        padding: ($baseline/5) ($baseline/5);
+                    }
+
+                    &.lek--user-nickname {
+                        padding: ($baseline/2.5) ($baseline/5);
+                    }
+                }
+
+            }
+        }
+    }
+
+    /* Styles for reduced header in a course */
+    &.slim {
+        height: $header-slim-height;
+
+        .lek--logo, .lek--course-name {
+            height: $header-slim-height;
+        }
+
+        .lek--nav-global {
+            &>li {
+                line-height: $header-slim-height;
+            }
+
+            .lek--nav-global-link {
+                height: $header-slim-height;
+                padding: 0 ($baseline/4);
+                letter-spacing: 0.0625rem;
+            }
+
+            .lek--logo:before {
+                content: "";
+                display: block;
+                height: ($header-slim-height*.7);
+                width: 1px;
+                position: absolute;
+                top: 9px;
+                top: ($header-slim-height*.15);
+                right: 3px;
+                @include background-image(linear-gradient(180deg, rgba(200,200,200,0) 0%, #c8c8c8 50%, rgba(200,200,200,0)));
+            }
+
+            .lek--nav-user {
+                line-height: $header-slim-height;
+
+                .lek--user-dropdown-menu {
+                    position: absolute;
+                    top: 50px;
+                }
+            }
+        }
+    }
+}
+
+
+/* Footer layout */
+html, body, .window-wrap {
+    min-height: 100%;
+    height: 100%;
+}
+.window-wrap {
+    display: flex;
+    flex-direction: column;
+
+    .sticky-footer-wrapper {
+        height: 100%;
+        flex: 1;
+    }
+}
+
+.lek--footer {
+    padding: $baseline 2%;
+    margin-top: ($baseline*2);
+    background-color: $footer-bg;
+    font-size: 0.8rem;
+    color: $lektorium-footer-color;
+
+    .lek--footer-column {
+        display: inline-block;
+        width: 24.5%;
+        vertical-align: top;
+    }
+
+    h3 {
+        font-family: intro;
+        font-size: .875rem;
+        margin-bottom: 1rem;
+        color: $lektorium-footer-heading-color;
+    }
+
+    li {
+        text-rendering: optimizelegibility;
+        margin-bottom: 1rem;
+    }
+
+    a, a:visited {
+        color: $lektorium-footer-link-color;
+    }
+
+    a:hover, a:focus, a:active {
+        color: $lektorium-footer-link-color-hover;
+    }
+
+    .lek--footer-logo, .lek--copyright {
+        display: inline-block;
+    }
+
+    .lek--footer-about-openedx {
+        @include text-align(right);
+        margin-top: -1rem;
+        margin-bottom: 0;
+    }
+}

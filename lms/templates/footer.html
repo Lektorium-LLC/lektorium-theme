@@ -1,0 +1,71 @@
+## mako
+<%page expression_filter="h"/>
+
+<%!
+  from django.core.urlresolvers import reverse
+  from django.utils.translation import ugettext as _
+  from branding.api import get_footer
+  from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_enabled
+%>
+<% footer = get_footer(is_secure=is_secure) %>
+<%namespace name='static' file='static_content.html'/>
+
+<footer class="lek--footer">
+  <nav class="lek--wrapper-footer">
+    <div class="lek--footer-column">
+      <h3>Разделы</h3>
+      <ul>
+        <li><a href="https://lektorium.tv/mooc">Онлайн-курсы</a></li>
+        <li><a href="https://www.lektorium.tv/medialibrary">Медиатека</a></li>
+        <li><a href="http://project.lektorium.tv">Спецпроекты</a></li>
+        <li><a href="https://www.lektorium.tv/forum">Форум</a></li>
+        <li><a href="http://parsec.lektorium.tv/">Конференция Парсек 2017</a></li>
+        <li><a href="http://eduardo.studio/">Конструктор курсов Эдуардо</a></li>
+      </ul>
+    </div>
+    <div class="lek--footer-column">
+      <h3>Партнёрам</h3>
+      <ul>
+        <li><a href="https://www.lektorium.tv/publish">Публикация</a></li>
+        <li><a href="http://offline.lektorium.tv/publishing">Издательство онлайн-курсов</a></li>
+        <li><a href="https://www.lektorium.tv/offline">Очные курсы</a></li>
+        <li><a href="https://www.lektorium.tv/video">Видеосъёмка и трансляции</a></li>
+        <li><a href="https://www.lektorium.tv/mediagrants">Медиагранты</a></li>
+        <li><a href="https://www.lektorium.tv/adv">Реклама</a></li>
+      </ul>
+    </div>
+    <div class="lek--footer-column">
+      <h3>Пользователям</h3>
+      <ul>
+        <li><a href="https://www.lektorium.tv/help">Служба поддержки</a></li>
+        <li><a href="https://vk.com/openlektorium">Умный паблик ВКонтакте</a></li>
+        <li><a href="https://www.facebook.com/groups/Lektorium">Умная группа в Facebook</a></li>
+        <li><a href="https://ok.ru/lektorium">Умная группа в Одноклассниках</a></li>
+        <li><a href="https://www.youtube.com/user/OpenLektorium">Умный канал на Youtube</a></li>
+      </ul>
+    </div>
+    <div class="lek--footer-column">
+      <h3>Инфо</h3>
+      <ul>
+        <li><a href="https://www.lektorium.tv/rules">Правовая информация</a></li>
+        <li><a href="https://www.lektorium.tv/about">О Лекториуме</a></li>
+        <li><a href="https://www.lektorium.tv/team">Команда</a></li>
+        <li><a href="https://www.lektorium.tv/donate">Поддержать проект</a></li>
+        <li><a href="https://www.lektorium.tv/promo-logo">Логотипы</a></li>
+        <li><a href="https://www.lektorium.tv/contacts">Контактная информация</a></li>
+      </ul>
+    </div>
+    <p class="lek--footer-logo">
+      <a href="/">
+        <img alt="organization logo" src="${footer['logo_image']}">
+      </a>
+    </p>
+    <p class="lek--copyright">© 2009-2018 Лекториум</p>
+    <p class="lek--footer-about-openedx">
+      <a href="${footer['openedx_link']['url']}">${footer['openedx_link']['title']}</a>
+    </p>
+  </nav>
+</footer>
+% if settings.FEATURES.get('ENABLE_COOKIE_CONSENT', False):
+  <%include file="widgets/cookie-consent.html" />
+% endif
