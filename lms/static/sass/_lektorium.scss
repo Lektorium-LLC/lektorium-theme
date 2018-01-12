@@ -23,7 +23,7 @@ $lektorium-user-btn-color: #3a3b4c;
 $header-height: ($baseline*4);
 $header-slim-height: ($baseline*3);
 
-$font-intro-path: '/static/lektorium-theme/fonts/intro';
+$font-intro-path: '#{$static-path}/fonts/intro';
 
 @font-face {
   font-family: "intro";

@@ -1,3 +1,5 @@
+$static-path: '..';
+
 $certificate_light_background: #d3e4d4;
 $certificate_border: #7ab37b;
 $black: black;
@@ -6,12 +8,14 @@ $blue: rgb(0, 120, 176);
 $blue-l1: #0ea6ec;
 $blue-ll: #56c3f5;
 
+$font-arsenal-path: "#{$static-path}/fonts/arsenal_regular";
+
 @font-face {
   font-family: "Arsenal Regular";
-  src: url("/static/themes/lektorium/fonts/arsenal_regular/Arsenal-Regular.eot");
-  src: url("/static/themes/lektorium/fonts/arsenal_regular/Arsenal-Regular.eot?#iefix") format("embedded-opentype"),
-  url("/static/themes/lektorium/fonts/arsenal_regular/Arsenal-Regular.woff") format("woff"),
-  url("/static/themes/lektorium/fonts/arsenal_regular/Arsenal-Regular.ttf") format("truetype");
+  src: url("#{$font-arsenal-path}/Arsenal-Regular.eot");
+  src: url("#{$font-arsenal-path}/Arsenal-Regular.eot?#iefix") format("embedded-opentype"),
+  url("#{$font-arsenal-path}/Arsenal-Regular.woff") format("woff"),
+  url("#{$font-arsenal-path}/Arsenal-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -46,7 +50,7 @@ $blue-ll: #56c3f5;
 .accomplishment-rendering .hd-4,
 .accomplishment-rendering .hd-5,
 .accomplishment-rendering .hd-6,
-.copy,
+.accomplishment-main .copy,
 .accomplishment-rendering .accomplishment-statement-lead,
 .certificate .accomplishment-rendering .accomplishment-recipient,
 .certificate .accomplishment-rendering .accomplishment-course {
@@ -83,12 +87,16 @@ $blue-ll: #56c3f5;
 }
 
 /* Banner */
-.banner .message-copy a {
-    color: $blue-l1;
+.banner .message-copy {
+    width: 100%;
 
-    &:hover {
-        color: $blue-ll;
-        border-bottom-color: $blue-ll;
+    a {
+        color: $blue-l1;
+
+        &:hover {
+            color: $blue-ll;
+            border-bottom-color: $blue-ll;
+        }
     }
 }
 
@@ -118,7 +126,7 @@ $blue-ll: #56c3f5;
 .layout-accomplishment {
     .accomplishment-statement,
     &.certificate-verified .accomplishment-statement {
-        background: url("/static/themes/lektorium/images/top-certificate.jpg") center no-repeat $certificate_light_background;
+        background: url("#{$static-path}/images/top-certificate.jpg") center no-repeat $certificate_light_background;
         background-size: cover;
         margin: 1.25rem -1.25rem 0;
         padding: 1rem 5rem 0;
