@@ -361,5 +361,9 @@ html, body, .window-wrap {
         @include text-align(right);
         margin-top: -1rem;
         margin-bottom: 0;
+
+        a, a:visited, a:active, a:focus {
+            color: $black;
+        }
     }
 }
