@@ -108,7 +108,6 @@ site_status_msg = get_site_status_msg(course_id)
       <li><a class="lek--nav-global-link" href="https://www.lektorium.tv/offline">${_("Offline courses")}</a></li>
 
     % if user.is_authenticated():
-      ## TODO: class name
       <li class="lek--nav-user">
         <a href="${reverse('dashboard')}" class="lek--user-link">
             <%
