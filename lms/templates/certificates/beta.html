@@ -4,6 +4,7 @@ import urllib
 import bleach
 from django.utils.encoding import smart_str
 from django.utils.translation import pgettext, ugettext as _
+from django.contrib.staticfiles.storage import staticfiles_storage
 %>
 <%
 gender_marker = {'f': 'female', 'm': 'male'}.get(accomplishment_copy_gender, 'None')
@@ -14,7 +15,7 @@ gender_marker = {'f': 'female', 'm': 'male'}.get(accomplishment_copy_gender, 'No
 # add beta-stamp to logos
 organizations_with_logos.insert(1, {
     'name': '',
-    'logo_url': '/static/themes/lektorium/images/beta-testing.png'
+    'logo_url': staticfiles_storage.url('images/beta-testing.png')
 })
 
 # custom texts for social networks
