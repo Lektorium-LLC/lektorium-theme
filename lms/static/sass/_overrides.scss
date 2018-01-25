@@ -13,18 +13,6 @@ $lektorium-footer-heading-color: white;
 $header-height: 80px;
 $header-slim-height: 60px;
 
-$font-intro-path: '../themes/lektorium/fonts/intro';
-
-@font-face {
-  font-family: "intro";
-  src: url("#{$font-intro-path}/intro.eot");
-  src: url("#{$font-intro-path}/intro.eot?#iefix") format("embedded-opentype"),
-  url("#{$font-intro-path}/intro.woff") format("woff"),
-  url("#{$font-intro-path}/intro.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 /***** misc *****/
 /* from _base.sass */
 .sr {

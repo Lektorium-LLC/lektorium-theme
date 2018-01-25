@@ -1,10 +1,4 @@
 /* variables */
-/* TODO: check if variables required */
-$sans-serif: Arial, "Helvetica Neue", Helvetica, sans-serif;
-$serif: $sans-serif;
-$m-blue-d1: #6ea131;
-$m-blue-d3: #88C540;
-
 $header-bg: #24262F;
 $header-bg-hover: #1d1f26;
 $footer-bg: #24262F;
@@ -23,7 +17,7 @@ $lektorium-user-btn-color: #3a3b4c;
 $header-height: ($baseline*4);
 $header-slim-height: ($baseline*3);
 
-$font-intro-path: '#{$static-path}/fonts/intro';
+$font-intro-path: '#{$static-path}/lektorium-theme/fonts/intro';
 
 @font-face {
   font-family: "intro";
@@ -357,6 +351,10 @@ html, body, .window-wrap {
 
     .lek--footer-logo, .lek--copyright {
         display: inline-block;
+    }
+
+    .lek--footer-logo img {
+        max-width: ($baseline*6);
     }
 
     .lek--footer-about-openedx {
