@@ -1,0 +1,1 @@
+../../../../../common/static/js/i18n/ru/djangojs.js
