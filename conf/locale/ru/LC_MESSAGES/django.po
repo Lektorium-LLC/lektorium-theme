@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: info@lektorium.tv\n"
 "POT-Creation-Date: 2018-01-31 13:56+0000\n"
-"PO-Revision-Date: 2018-02-09 11:33:24.261293\n"
+"PO-Revision-Date: 2018-02-12 18:10:47.424456\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: ru\n"
@@ -29393,6 +29393,44 @@ msgstr "Количество лучших ответов задано невер
 #: openassessment/xblock/validation.py:375
 msgid "The submission format is invalid."
 msgstr "Неправильный формат ответа."
+
+# ORA missing translations
+#: openassessment/xblock/openassessmentblock.py:55
+msgid "Learn to Assess"
+msgstr "Обучение оцениванию ответов"
+
+#: openassessment/xblock/openassessmentblock.py:61
+msgid "Assess Peers' Responses"
+msgstr "Оценивание ответов однокурсников"
+
+#: openassessment/xblock/openassessmentblock.py:73
+msgid "Your Grade:"
+msgstr "Ваша оценка:"
+
+#: openassessment/xblock/openassessmentblock.py:79
+msgid "Leaderboard"
+msgstr "Лучшие ответы"
+
+#: openassessment/xblock/openassessmentblock.py:511
+msgid "Submission"
+msgstr "Отправка ответов"
+
+#: openassessment/xblock/openassessmentblock.py:513
+msgid "Example-based Assessment"
+msgstr "Автоматизированное оценивание"
+
+#: openassessment/workflow/models.py:88
+#: openassessment/xblock/openassessmentblock.py:512
+msgid "Student Training"
+msgstr "Обучение оцениванию"
+
+#: openassessment/workflow/models.py:89
+msgid "AI Assessment"
+msgstr "Автоматизированное оценивание"
+
+#: openassessment/workflow/models.py:90
+msgid "Waiting"
+msgstr "Ожидание"
 
 msgid "Truly yours, Lektorium team."
 msgstr "С уважением, команда Лекториума."

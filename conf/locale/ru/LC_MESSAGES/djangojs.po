@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: info@lektorium.tv\n"
 "POT-Creation-Date: 2018-01-30 14:41+0000\n"
-"PO-Revision-Date: 2018-02-09 11:33:24.255317\n"
+"PO-Revision-Date: 2018-02-12 18:10:47.419874\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: ru\n"
@@ -4745,14 +4745,14 @@ msgstr ""
 
 #: lms/static/js/student_profile/views/learner_profile_fields.js
 msgid "Account Settings page."
-msgstr "Настройки учётной записи."
+msgstr "настройках учётной записи."
 
 #: lms/static/js/student_profile/views/learner_profile_fields.js
 msgid ""
 "You must specify your birth year before you can share your full profile. To "
 "specify your birth year, go to the {account_settings_page_link}"
 msgstr ""
-"Для публикации полного профиля вам необходимо указать год вашего рождения на "
+"Для публикации полного профиля вам необходимо указать год вашего рождения в "
 "{account_settings_page_link}"
 
 #: lms/static/js/student_profile/views/learner_profile_fields.js
@@ -4761,7 +4761,7 @@ msgid ""
 "that you have specified a birth year on the {account_settings_page_link}"
 msgstr ""
 "Для публикации полного профиля вам должно быть больше 13 лет. Если вы старше "
-"13 лет, удостоверьтесь, что вы указали год рождения на "
+"13 лет, удостоверьтесь, что вы указали год рождения в "
 "{account_settings_page_link}"
 
 #: lms/static/js/student_profile/views/learner_profile_fields.js

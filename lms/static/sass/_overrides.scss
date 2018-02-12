@@ -4,6 +4,8 @@ $serif: $sans-serif;
 $m-blue-d1: #6ea131;
 $m-blue-d3: #88C540;
 
+$baseline-h: 40px;
+
 $header-bg: #24262F;
 $footer-bg: #24262F;
 $lektorium-header-link-color: white;
@@ -71,4 +73,47 @@ $header-slim-height: 60px;
     p+p {
         margin-top: ($baseline/2);
     }
+}
+/* ORA - from edx-ora2 repo */
+.openassessment {
+    .openassessment__steps .openassessment__steps__step .step__header {
+        .step__title {
+            .step__counter, .wrapper--copy {
+                display: table-cell;
+            }
+            .step__counter {
+                vertical-align: top;
+            }
+        }
+    }
+
+
+   .step__title {
+        .step__counter, .wrapper--copy {
+            display: table-cell;
+        }
+
+        .wrapper--copy {
+            vertical-align: middle;
+        }
+
+        .step__counter {
+            vertical-align: top;
+          @include padding-right(($baseline-h/2));
+        }
+    }
+}
+
+#openassessment-editor {
+  #oa_editor_window_title{
+    margin: 0;
+    width: 55%;
+  }
+
+  #openassessment_editor_header {
+    .editor_tabs {
+      width: 45%;
+      font-size: 75%;
+    }
+  }
 }
