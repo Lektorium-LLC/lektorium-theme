@@ -2,6 +2,8 @@
 <%page expression_filter="h"/>
 
 <%!
+  import datetime
+  import pytz
   from django.core.urlresolvers import reverse
   from django.utils.translation import ugettext as _
   from branding.api import get_footer
@@ -61,7 +63,7 @@
         <img alt="organization logo" src="${static.url('images/lektorium-logo.png')}">
       </a>
     </p>
-    <p class="lek--copyright">© 2009-2018 Лекториум</p>
+    <p class="lek--copyright">© 2009–${ datetime.datetime.now(pytz.timezone(settings.TIME_ZONE)).year } Лекториум</p>
     <p class="lek--footer-about-openedx">
       <a href="https://github.com/lektorium-llc/edx-platform/tree/lektorium">${_('Powered by Open edX')}</a>
     </p>
