@@ -231,7 +231,7 @@ $(document).ready(function() {
         $("input[type='submit']", this).removeAttr("disabled");
     });
     $feedbackForm.on("ajax:success", function(event, data, status, xhr) {
-        $("#feedback_form_wrapper").css("display", "none");
+        $("#help_wrapper").css("display", "none");
         $("#feedback_success_wrapper").css("display", "block");
         DialogTabControls.initializeTabKeyValues("#feedback_success_wrapper", $closeButton);
         $closeButton.focus();
