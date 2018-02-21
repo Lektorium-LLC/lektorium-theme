@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: info@lektorium.tv\n"
 "POT-Creation-Date: 2018-01-30 14:41+0000\n"
-"PO-Revision-Date: 2018-02-12 18:10:47.419874\n"
+"PO-Revision-Date: 2018-02-21 19:41:09.421348\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: ru\n"
@@ -1958,11 +1958,11 @@ msgstr ""
 
 #: common/static/common/js/components/views/paging_header.js
 msgid "Showing {firstIndex} out of {numItems} total"
-msgstr "Показывать совокупность {firstIndex} к {numItems} "
+msgstr "Показано: {firstIndex} из {numItems} "
 
 #: common/static/common/js/components/views/paging_header.js
 msgid "Showing {firstIndex}-{lastIndex} out of {numItems} total"
-msgstr "Показывать совокупность {firstIndex}-{lastIndex} к {numItems} "
+msgstr "Показано: {firstIndex}–{lastIndex} из {numItems} "
 
 #: common/static/common/js/discussion/utils.js
 msgid "Loading content"
@@ -6803,7 +6803,7 @@ msgstr "Начало курса"
 
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
 msgid "Course End"
-msgstr "Курс завершится"
+msgstr "Окончание курса"
 
 #: lms/djangoapps/support/static/support/templates/enrollment.underscore
 msgid "Upgrade Deadline"
@@ -8528,7 +8528,7 @@ msgstr "Сделать фото"
 
 #: openedx/features/course_bookmarks/static/course_bookmarks/templates/bookmarks-list.underscore
 msgid "Bookmarked on"
-msgstr "Закладка на"
+msgstr "Закладка от"
 
 #: openedx/features/course_bookmarks/static/course_bookmarks/templates/bookmarks-list.underscore
 msgid "You have not bookmarked any courseware pages yet"
@@ -9257,6 +9257,10 @@ msgstr "Срок сдачи:"
 #: cms/templates/js/due-date-editor.underscore
 #: cms/templates/js/release-date-editor.underscore
 msgid "MM/DD/YYYY"
+msgstr "ДД.ММ.ГГГГ"
+
+#: cms/static/js/views/course_info_update.js
+msgid "YYYY-MM-DD"
 msgstr "ДД.ММ.ГГГГ"
 
 #: cms/templates/js/due-date-editor.underscore
@@ -12477,3 +12481,69 @@ msgstr "Необходимо заполнить список типов файл
 #: openassessment/xblock/static/js/src/studio/oa_edit_settings.js:76
 msgid "The following file types are not allowed: "
 msgstr "Следующие типы файлов недопустимы:"
+
+#: edx_sga/static/js/src/edx_sga.js:24
+msgid "Started preparing student submissions zip file. This may take a while."
+msgstr ""
+"Собирается zip-архив с работами слушателей. Это может занять некоторое время."
+
+#: edx_sga/static/js/src/edx_sga.js:43
+msgid "Submission failed. Please contact your course instructor."
+msgstr "Ошибка при отправке файла. Пожалуйста, свяжитесь с командой курса."
+
+#: edx_sga/static/js/src/edx_sga.js:55
+msgid "Uploading..."
+msgstr "Файл загружается..."
+
+#: edx_sga/static/js/src/edx_sga.js:62 edx_sga/static/js/src/edx_sga.js:90
+msgid "The file you are trying to upload is too large."
+msgstr "Файл, который вы пытаетесь загрузить, слишком велик."
+
+#: edx_sga/static/js/src/edx_sga.js:72
+msgid "Uploading... %(percent)s%"
+msgstr "Файл загружается... %(percent)s%"
+
+#: edx_sga/static/js/src/edx_sga.js:93
+msgid "There was an error uploading your file."
+msgstr "Ошибка при загрузке файла."
+
+#: edx_sga/static/js/src/edx_sga.js:165
+msgid "Uploading... %(percent)s %"
+msgstr "Файл загружается... %(percent)s %"
+
+#: edx_sga/static/js/src/edx_sga.js:199
+msgid "yes"
+msgstr "да"
+
+#: edx_sga/static/js/src/edx_sga.js:245
+msgid "Grade must be a number."
+msgstr "Оценка должна быть числом."
+
+#: edx_sga/static/js/src/edx_sga.js:247
+msgid "Grade must be an integer."
+msgstr "Оценка должна быть целым числом."
+
+#: edx_sga/static/js/src/edx_sga.js:249
+msgid "Grade must be positive."
+msgstr "Оценка должна быть положительной."
+
+#: edx_sga/static/js/src/edx_sga.js:251
+msgid "Maximum score is %(max_score)s"
+msgstr "Максимальная оценка — %(max_score)s"
+
+#: edx_sga/static/js/src/edx_sga.js:267
+msgid "No grade to remove."
+msgstr "Нет оценки для удаления."
+
+#: edx_sga/static/js/src/edx_sga.js:354
+msgid "An error occurred while trying to prepare your submission file"
+msgstr "Ошибка при сборке файла с работами слушателей"
+
+#: edx_sga/static/js/src/edx_sga.js:368
+msgid "Student submission file ready for download"
+msgstr "Файл с работами слушателей готов к скачиванию"
+
+#: edx_sga/static/js/src/edx_sga.js:376
+msgid ""
+"An error occurred while trying to get the status of your submission file."
+msgstr "Ошибка при получении статуса сборки файла с работами слушателей."

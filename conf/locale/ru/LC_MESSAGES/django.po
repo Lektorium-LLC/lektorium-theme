@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: info@lektorium.tv\n"
 "POT-Creation-Date: 2018-01-31 13:56+0000\n"
-"PO-Revision-Date: 2018-02-12 18:10:47.424456\n"
+"PO-Revision-Date: 2018-02-21 19:41:09.430517\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: ru\n"
@@ -849,7 +849,7 @@ msgstr "Пожалуйста, введите имя пользователя"
 
 #: common/djangoapps/student/views.py
 msgid "Please choose an option"
-msgstr "Выберите опцию"
+msgstr "Выберите вариант"
 
 #: common/djangoapps/student/views.py
 msgid "User with username {} does not exist"
@@ -2178,7 +2178,7 @@ msgstr "Выполнено"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Correct or Past Due"
-msgstr "Верные или просроченные"
+msgstr "Ответ верен или прошёл срок сдачи"
 
 #: common/lib/xmodule/xmodule/capa_base.py
 msgid "Whether to force the save button to appear on the page"
@@ -5672,7 +5672,7 @@ msgstr ""
 #: lms/djangoapps/certificates/views/webview.py
 #, python-brace-format
 msgid "{month} {day}, {year}"
-msgstr "{day} {month}, {year}"
+msgstr "{day} {month} {year} года"
 
 #. Translators:  This text represents the verification of the certificate
 #: lms/djangoapps/certificates/views/webview.py
@@ -6092,7 +6092,7 @@ msgstr "Этот курс недоступен вам из мобильного 
 #: lms/djangoapps/courseware/date_summary.py
 #, python-brace-format
 msgid "{relative} ago - {absolute}"
-msgstr "{relative} - {absolute}"
+msgstr "{relative} назад — {absolute}"
 
 #: lms/djangoapps/courseware/date_summary.py
 #, python-brace-format
@@ -6105,7 +6105,7 @@ msgstr "Курс начнётся"
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid "Course End"
-msgstr "Курс завершится"
+msgstr "Окончание курса"
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid ""
@@ -6123,8 +6123,8 @@ msgid ""
 "This course is archived, which means you can review course content but it is "
 "no longer active."
 msgstr ""
-"Курс находится в архиве, то есть у вас есть доступ к материалам курса, но "
-"фактически курс завершён."
+"Курс завершён и находится в архиве, но у вас останется доступ к материалам "
+"курса."
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid "Verification Upgrade Deadline"
@@ -13108,7 +13108,7 @@ msgstr "Слушатель"
 
 #: lms/templates/preview_menu.html
 msgid "Specific learner"
-msgstr "определённого слушателя"
+msgstr "Определённый слушатель"
 
 #: lms/templates/preview_menu.html
 msgid "Learner in {content_group}"
@@ -27729,7 +27729,7 @@ msgstr "Ваш ответ"
 
 #: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html:35
 msgid "Your Upload"
-msgstr "Загруженное вами"
+msgstr "Загруженный вами файл"
 
 #: openassessment/templates/openassessmentblock/grade/oa_grade_complete.html:40
 msgid "Assessments of Your Response"
@@ -27862,7 +27862,7 @@ msgstr ""
 #: openassessment/templates/openassessmentblock/leaderboard/oa_leaderboard_show.html:20
 #, python-format
 msgid "%(num_points)s points"
-msgstr "%(num_points)s баллы"
+msgstr "%(num_points)s баллов"
 
 #: openassessment/templates/openassessmentblock/leaderboard/oa_leaderboard_show.html:24
 #: openassessment/templates/openassessmentblock/peer/oa_peer_assessment.html:68
@@ -28278,7 +28278,7 @@ msgid ""
 "your response."
 msgstr ""
 "Все работы однокурсников, сданные на проверку, уже оценены.  Вернитесь "
-"позже; возможно, другие слушатели сдадут к этому времени свои работы.  Вы "
+"позже; возможно, другие слушатели к этому времени сдадут свои работы.  Вы "
 "получите оценку по завершении выполнения всех шагов этого задания, когда "
 "ваши однокурсники проверят вашу работу."
 
@@ -29431,6 +29431,10 @@ msgstr "Автоматизированное оценивание"
 #: openassessment/workflow/models.py:90
 msgid "Waiting"
 msgstr "Ожидание"
+
+#: SGA
+msgid "Staff Graded Assignment"
+msgstr "Оценивание персоналом"
 
 msgid "Truly yours, Lektorium team."
 msgstr "С уважением, команда Лекториума."
