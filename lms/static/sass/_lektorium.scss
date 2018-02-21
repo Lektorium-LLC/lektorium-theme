@@ -95,7 +95,7 @@ $font-intro-path: '#{$static-path}/lektorium-theme/fonts/intro';
     }
 
     .lek--nav-global {
-        vertical-align: middle;
+        vertical-align: top;
         @include text-align(right);
         white-space: nowrap;
 
