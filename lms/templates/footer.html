@@ -58,11 +58,13 @@
         <li><a href="https://ok.ru/lektorium">Одноклассники</a></li>
       </ul>
     </div>
+    <%doc>
     <p class="lek--footer-logo">
       <a href="/">
         <img alt="organization logo" src="${static.url('images/lektorium-logo.png')}">
       </a>
     </p>
+    </%doc>
     <p class="lek--copyright">© 2009–${ datetime.datetime.now(pytz.timezone(settings.TIME_ZONE)).year } Лекториум</p>
     <p class="lek--footer-about-openedx">
       <a href="https://github.com/lektorium-llc/edx-platform/tree/lektorium">${_('Powered by Open edX')}</a>
