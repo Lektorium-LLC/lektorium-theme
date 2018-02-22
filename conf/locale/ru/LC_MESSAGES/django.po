@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: 0.1a\n"
 "Report-Msgid-Bugs-To: info@lektorium.tv\n"
 "POT-Creation-Date: 2018-01-31 13:56+0000\n"
-"PO-Revision-Date: 2018-02-21 19:41:09.430517\n"
+"PO-Revision-Date: 2018-02-22 12:21:06.245034\n"
 "Last-Translator: \n"
 "Language-Team: openedx-translation <openedx-translation@googlegroups.com>\n"
 "Language: ru\n"
@@ -6111,8 +6111,8 @@ msgstr "Окончание курса"
 msgid ""
 "To earn a certificate, you must complete all requirements before this date."
 msgstr ""
-"Для получения сертификата вам необходимо выполнить все требования к "
-"указанному сроку."
+"Для получения сертификата вам необходимо выполнить задания в установленные "
+"сроки."
 
 #: lms/djangoapps/courseware/date_summary.py
 msgid "After this date, course content will be archived."
@@ -15661,7 +15661,7 @@ msgstr "Вы записаны на этот курс"
 #: lms/templates/dashboard/_dashboard_course_listing.html
 #: lms/templates/shoppingcart/registration_code_receipt.html
 msgid "View Course"
-msgstr "Посмотр курса"
+msgstr "Просмотр курса"
 
 #: lms/templates/courseware/course_about.html
 msgid "This course is in your <a href=\"{cart_link}\">cart</a>."
@@ -16415,7 +16415,7 @@ msgstr "Начало курса: {date}"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "View Archived Course"
-msgstr "Посмотреть курс из архива"
+msgstr "Просмотр курса из архива"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "I'm taking {course_name} online with edX.org. Check it out!"
@@ -29435,6 +29435,10 @@ msgstr "Ожидание"
 #: SGA
 msgid "Staff Graded Assignment"
 msgstr "Оценивание персоналом"
+
+#: lms/templates/problem.html
+msgid "Answers are displayed within the problem"
+msgstr "Ответ показан в тексте задачи"
 
 msgid "Truly yours, Lektorium team."
 msgstr "С уважением, команда Лекториума."
