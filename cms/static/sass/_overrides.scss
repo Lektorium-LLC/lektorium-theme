@@ -1,3 +1,8 @@
+/* Dropdown menu fix */
 .nav-dd .nav-item .wrapper-nav-sub {
     z-index: 1;
+}
+/* Problem weird formatting */
+.xmodule_display.xmodule_CapaModule div.problem div p.answer:before {
+    content: "Ответ: " !important;
 }

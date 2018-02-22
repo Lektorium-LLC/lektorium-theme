@@ -117,3 +117,8 @@ $header-slim-height: 60px;
     }
   }
 }
+
+/* Problem weird formatting */
+.xmodule_display.xmodule_CapaModule div.problem div p.answer:before {
+    content: "Ответ: " !important;
+}
