@@ -3684,6 +3684,10 @@ msgid "Username"
 msgstr "Имя пользователя"
 
 #: lms/static/js/instructor_dashboard/membership.js
+msgid "Nickname"
+msgstr "Никнейм"
+
+#: lms/static/js/instructor_dashboard/membership.js
 msgid "Email"
 msgstr "Электронная почта"
 
