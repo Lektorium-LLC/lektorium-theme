@@ -83,6 +83,17 @@ from openedx.core.djangolib.markup import HTML, Text
     </p>
   %endif
 
+ %if settings.FEATURES.get('ALLOW_PSY_REPORT_DOWNLOADS') or section_data['access']['admin']:
+ <div class="psychometrics">
+  <hr>
+  <h3 class="hd hd-3">Psychometrics</h3>
+    <p>${_("Click to generate an archive with psychometrics data.")}</p>
+    <p>
+      <input type="button" name="get-psychometrics-data" class="async-report-btn" value="${_("Generate psychometrics data")}" data-endpoint="${ section_data['get_psychometrics_data_url'] }"/>
+    </p>
+  </div>
+ %endif
+
     <div class="request-response msg msg-confirm copy" id="report-request-response"></div>
     <div class="request-response-error msg msg-error copy" id="report-request-response-error"></div>
     <br>
@@ -105,19 +116,6 @@ from openedx.core.djangolib.markup import HTML, Text
             strong_end=HTML("</strong>"),
         )}
     </p><br>
-
-
- %if settings.FEATURES.get('ALLOW_PSY_REPORT_DOWNLOADS') or section_data['access']['admin']:
- <div class="psychometrics">
-  <hr>
-  <h3 class="hd hd-3">Psychometrics</h3>
-    <p>${_("Click to generate an archive with psychometrics data.")}</p>
-    <p>
-      <input type="button" name="get-psychometrics-data" class="async-report-btn" value="${_("Generate psychometrics data")}" data-endpoint="${ section_data['get_psychometrics_data_url'] }"/>
-    </p>
-  </div>
-%endif
-
 
     <div class="report-downloads-table" id="report-downloads-table" data-endpoint="${ section_data['list_report_downloads_url'] }" ></div>
   </div>
