@@ -18019,6 +18019,18 @@ msgid "Generate ORA Data Report"
 msgstr "Создать отчёт по заданиям с ответами в свободной форме"
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
+msgid "Psychometrics"
+msgstr "Психометрика"
+
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html
+msgid "Click to generate an archive with psychometrics data."
+msgstr "Нажмите, чтобы сгенерировать архив, содержащий психометрические данные"
+
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html
+msgid "Generate psychometrics data"
+msgstr "Создать архив с психометрическими данные"
+
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid "Reports Available for Download"
 msgstr "Оценочные листы, доступные для скачивания"
 
