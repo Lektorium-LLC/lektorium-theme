@@ -18024,11 +18024,11 @@ msgstr "Психометрика"
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid "Click to generate an archive with psychometrics data."
-msgstr "Нажмите, чтобы сгенерировать архив, содержащий психометрические данные"
+msgstr "Нажмите, чтобы сгенерировать архив содержащий психометрические данные"
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid "Generate psychometrics data"
-msgstr "Создать архив с психометрическими данные"
+msgstr "Создать архив с психометрическими данными"
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid "Reports Available for Download"
