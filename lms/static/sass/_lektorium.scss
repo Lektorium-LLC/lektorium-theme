@@ -326,6 +326,14 @@ html, body, .window-wrap {
         display: inline-block;
         width: 24.5%;
         vertical-align: top;
+
+        ul {
+            margin-left: 0;
+        }
+
+        li {
+            list-style-type: none;
+        }
     }
 
     h3 {
