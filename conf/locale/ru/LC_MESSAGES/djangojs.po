@@ -3684,6 +3684,10 @@ msgid "Username"
 msgstr "Имя пользователя"
 
 #: lms/static/js/instructor_dashboard/membership.js
+msgid "Nickname"
+msgstr "Никнейм"
+
+#: lms/static/js/instructor_dashboard/membership.js
 msgid "Email"
 msgstr "Электронная почта"
 
@@ -10250,7 +10254,7 @@ msgstr ""
 #: default_data.py
 #, python-brace-format
 msgid "Correct! This one belongs to {zone}."
-msgstr "Верно! Этот ответ подходит к {зоне}."
+msgstr "Верно! Этот ответ подходит к {zone}."
 
 #: default_data.py
 msgid "No, this item does not belong here. Try again."
@@ -12342,14 +12346,12 @@ msgstr "(обязательно):"
 msgid "Thumbnail view of "
 msgstr "Миниатюра"
 
-#: openassessment/xblock/static/js/openassessment-lms.min.js:1
 #: openassessment/xblock/static/js/src/lms/oa_self.js:124
-msgid ""
-"If you leave this page without submitting your self assessment, you will "
-"lose any work you have done."
-msgstr ""
-"Если вы покинете страницу, не сохранив или не отправив свой ответ, введённые "
-"вами ответ будет потерян."
+#: openassessment/xblock/static/js/openassessment-lms.min.js:1
+msgid "\n"
+"If you leave this page without submitting your self assessment, you will lose any work you have done."
+msgstr "\n"
+"Если вы покинете страницу, не сохранив или не отправив свой ответ, введённые вами ответ будет потерян."
 
 #: openassessment/xblock/static/js/openassessment-lms.min.js:1
 #: openassessment/xblock/static/js/src/lms/oa_staff_area.js:129

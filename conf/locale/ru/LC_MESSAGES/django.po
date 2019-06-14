@@ -1623,11 +1623,11 @@ msgstr "Не удалось скорректировать оценки за з�
 
 #: common/lib/capa/capa/capa_problem.py common/lib/xmodule/xmodule/capa_base.py
 msgid "Incorrect"
-msgstr "Неверных"
+msgstr "Неверно"
 
 #: common/lib/capa/capa/capa_problem.py common/lib/xmodule/xmodule/capa_base.py
 msgid "Correct"
-msgstr "Верных"
+msgstr "Верно"
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "correct"
@@ -12338,7 +12338,7 @@ msgstr "Курс должен появиться в разделе «Мои ку
 #: common/templates/emails/enroll_email_message.txt
 msgid "To start accessing courseware, please visit {course_url} and login."
 msgstr ""
-"Для доступа к содержимому курса перейдите по ссылке {course_url} и войдите."
+"Вы можете перейти к материалам курса по ссылке: {course_url} или из раздела «Мои курсы» в вашем личном кабинете."
 
 #: common/templates/emails/enroll_email_message.txt
 msgid ""
@@ -12346,9 +12346,7 @@ msgid ""
 "the courseware. Also, you'll be able to access the courseware from your "
 "{site_name} dashboard."
 msgstr ""
-"В день запуска курса вам придёт письмо с напоминанием о начале обучения и "
-"ссылкой на материалы курса. Также вам будет открыт доступ к курсу из раздела "
-"«Мои курсы» в вашем личном кабинете."
+"Когда курс начнется, вы получите письмо о начале обучения и сможете перейти к курсу из раздела «Мои курсы» в вашем личном кабинете.""
 
 #: common/templates/emails/enroll_email_message.txt
 msgid "For the description of the course, please visit {course_about_url}."
@@ -15330,6 +15328,7 @@ msgstr ""
 "Вы были отчислены с курса «{course_name}» на {site_name} одним из "
 "сотрудников курса. Курс больше не будет отображаться в вашей панели "
 "управления {site_name}."
+"Если это произошло по ошибке, напишите нам в техподдержку на support@lektorium.tv."
 
 #: lms/templates/ccx/unenroll_email_enrolledmessage.txt
 #: lms/templates/emails/remove_beta_tester_email_message.txt
@@ -18017,6 +18016,18 @@ msgstr "Создать оценочный лист с подробными оц�
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid "Generate ORA Data Report"
 msgstr "Создать отчёт по заданиям с ответами в свободной форме"
+
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html
+msgid "Psychometrics"
+msgstr "Психометрика"
+
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html
+msgid "Click to generate an archive with psychometrics data."
+msgstr "Нажмите, чтобы сгенерировать архив содержащий психометрические данные"
+
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html
+msgid "Generate psychometrics data"
+msgstr "Создать архив с психометрическими данными"
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html
 msgid "Reports Available for Download"
