@@ -125,7 +125,7 @@ site_status_msg = get_site_status_msg(course_id)
             ${Text(_("You're logged in as {begin_strong}{nickname}{end_strong}")).format(
                 begin_strong=HTML('<b>'),
                 end_strong=HTML('</b>'),
-                nickname=self.real_user.profile.nickname_or_default
+                nickname=self.real_user.email
             )}
           </li>
           <li><a class="dropdown-menuitem" href="${reverse('dashboard')}">${_("My courses")}</a></li>

@@ -12,7 +12,9 @@ from openedx.core.djangolib.markup import HTML, Text
 from xmodule.tabs import CourseTabList
 %>
 
-% if settings.FEATURES.get('ENABLE_FEEDBACK_SUBMISSION', False):
+% if False:
+
+ <--settings.FEATURES.get('ENABLE_FEEDBACK_SUBMISSION', False):--!>
 
 <div class="help-tab">
   <a href="#help-modal" rel="leanModal" role="button">${_("Support")}</a>
@@ -31,7 +33,7 @@ from xmodule.tabs import CourseTabList
     <div id="help_wrapper">
 
         <header>
-          <h2 id="support-platform-name">
+          <h2 id="support-platform-name">. 
         ${Text(_('{platform_name} Support')).format(
             platform_name=HTML(u'<span class="edx">{}</span>').format(static.get_platform_name())
         )}

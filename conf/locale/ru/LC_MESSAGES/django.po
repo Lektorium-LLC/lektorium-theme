@@ -12345,8 +12345,7 @@ msgid ""
 "When the course starts, you'll get an email with a reminder and a link to "
 "the courseware. Also, you'll be able to access the courseware from your "
 "{site_name} dashboard."
-msgstr ""
-"Когда курс начнется, вы получите письмо о начале обучения и сможете перейти к курсу из раздела «Мои курсы» в вашем личном кабинете.""
+msgstr "Когда курс начнется, вы получите письмо о начале обучения и сможете перейти к курсу из раздела «Мои курсы» в вашем личном кабинете."
 
 #: common/templates/emails/enroll_email_message.txt
 msgid "For the description of the course, please visit {course_about_url}."
@@ -20417,14 +20416,10 @@ msgstr "Опрос перед началом курса"
 #: lms/templates/survey/survey.html
 msgid ""
 "You can begin your course as soon as you complete the following form. "
-"Required fields are marked with an asterisk (*). This information is for the "
-"use of {platform_name} only. It will not be linked to your public profile in "
-"any way."
+"Required fields are marked with an asterisk (*)."
 msgstr ""
 "Вы сможете перейти к курсу, как только пройдёте следующий опрос. "
-"Обязательные поля помечены звёздочкой (*). Предоставленная информация будет "
-"использована только {platform_name} и не будет добавлена в ваш публичный "
-"профиль."
+"Обязательные поля помечены звёздочкой (*)."
 
 #: lms/templates/survey/survey.html
 msgid "You are missing the following required fields:"
@@ -29662,12 +29657,12 @@ msgstr "Открытые онлайн-курсы от ведущих вузов 
 
 # Survey #####
 #: lms/templates/survey/survey.html
-msgid ""
-"You can begin your course as soon as you complete the following form. "
-"Required fields are marked with an asterisk (*)."
-msgstr ""
-"Вы сможете перейти к курсу, как только пройдёте следующий опрос. "
-"Обязательные поля помечены звёздочкой (*)."
+#msgid ""
+#"You can begin your course as soon as you complete the following form. "
+#"Required fields are marked with an asterisk (*)."
+#msgstr ""
+#"Вы сможете перейти к курсу, как только пройдёте следующий опрос. "
+#"Обязательные поля помечены звёздочкой (*)."
 
 msgid ""
 "This information is for the use of {platform_name} and course organization "
