@@ -29494,9 +29494,6 @@ msgstr "Спецпроекты"
 msgid "Online schools"
 msgstr "Онлайн-школы"
 
-msgid "Offline courses"
-msgstr "Очные курсы"
-
 msgctxt "lektorium header"
 msgid "Dashboard"
 msgstr "Личный кабинет"
