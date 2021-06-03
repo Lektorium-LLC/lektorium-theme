@@ -29491,6 +29491,9 @@ msgstr "Медиатека"
 msgid "Special projects"
 msgstr "Спецпроекты"
 
+msgid "Online schools"
+msgstr "Онлайн-школы"
+
 msgid "Offline courses"
 msgstr "Очные курсы"
 

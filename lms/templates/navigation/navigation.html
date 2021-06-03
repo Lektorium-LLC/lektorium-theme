@@ -19,11 +19,11 @@ from status.status import get_site_status_msg
 
 ## Add UI Toolkit components if using the Pattern Library
 % if uses_pattern_library:
-    <%block name="js_extra">
-    <%static:require_module module_name="js/header_factory" class_name="HeaderFactory">
-    HeaderFactory();
-    </%static:require_module>
-    </%block>
+<%block name="js_extra">
+<%static:require_module module_name="js/header_factory" class_name="HeaderFactory">
+HeaderFactory();
+</%static:require_module>
+</%block>
 % endif
 
 ## This template should not use the target student's details when masquerading, see TNL-4895
@@ -34,123 +34,131 @@ self.real_user = getattr(user, 'real_user', user)
 <%block>
 <%
 try:
-    course_id = course.id
+course_id = course.id
 except:
-    # can't figure out a better way to get at a possibly-defined course var
-    course_id = None
+# can't figure out a better way to get at a possibly-defined course var
+course_id = None
 site_status_msg = get_site_status_msg(course_id)
 %>
 % if site_status_msg:
 <div class="site-status">
-  <div class="inner-wrapper">
-    <span class="icon fa fa-warning"></span>
-    <p>${site_status_msg}</p>
-  </div>
+    <div class="inner-wrapper">
+        <span class="icon fa fa-warning"></span>
+        <p>${site_status_msg}</p>
+    </div>
 </div>
 % endif
 </%block>
 
 %if not settings.DEBUG and 'stage' not in settings.SITE_NAME:
 <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
+<script type="text/javascript">
     (function (d, w, c) {
-        (w[c] = w[c] || []).push(function() {
+        (w[c] = w[c] || []).push(function () {
             try {
                 w.yaCounter24232456 = new Ya.Metrika({
-                    id:24232456,
-                    clickmap:true,
-                    trackLinks:true,
-                    accurateTrackBounce:true,
-                    webvisor:true,
-                    trackHash:true
+                    id: 24232456,
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true,
+                    webvisor: true,
+                    trackHash: true
                 });
-            } catch(e) { }
+            } catch (e) {
+            }
         });
 
         var n = d.getElementsByTagName("script")[0],
             s = d.createElement("script"),
-            f = function () { n.parentNode.insertBefore(s, n); };
+            f = function () {
+                n.parentNode.insertBefore(s, n);
+            };
         s.type = "text/javascript";
         s.async = true;
         s.src = "https://mc.yandex.ru/metrika/watch.js";
 
         if (w.opera == "[object Opera]") {
             d.addEventListener("DOMContentLoaded", f, false);
-        } else { f(); }
+        } else {
+            f();
+        }
     })(document, window, "yandex_metrika_callbacks");
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/24232456" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<noscript>
+    <div><img src="https://mc.yandex.ru/watch/24232456" style="position:absolute; left:-9999px;" alt=""/></div>
+</noscript>
 <!-- /Yandex.Metrika counter -->
 %endif
 
-<header id="global-navigation" class="lek--header-global ${"slim" if course else ""}" >
-  <nav class="lek--wrapper-header"  aria-label="${_('Global')}">
+<header id="global-navigation" class="lek--header-global ${" slim" if course else ""}" >
+<nav class="lek--wrapper-header" aria-label="${_('Global')}">
     <h1 class="lek--logo-header">
-      <a class="lek--logo" href="${marketing_link('ROOT')}">
-        ${platform_name}
-      </a>
-      % if course:
-      <%
-      display_name = course.display_name_with_default
-      if settings.FEATURES.get('CUSTOM_COURSES_EDX', False):
+        <a class="lek--logo" href="${marketing_link('ROOT')}">
+            ${platform_name}
+        </a>
+        % if course:
+        <%
+        display_name = course.display_name_with_default
+        if settings.FEATURES.get('CUSTOM_COURSES_EDX', False):
         ccx = get_current_ccx(course.id)
         if ccx:
-          display_name = ccx.display_name
-      %>
-      <div class="lek--course-name">${display_name}</div>
-      % endif
+        display_name = ccx.display_name
+        %>
+        <div class="lek--course-name">${display_name}</div>
+        % endif
     </h1>
 
     <ol class="lek--nav-global">
-      <li><a class="lek--nav-global-link" href="https://www.lektorium.tv/mooc">${_("Online courses")}</a></li>
-      <li><a class="lek--nav-global-link" href="https://www.lektorium.tv/medialibrary">${_("Medialibrary")}</a></li>
-      <li><a class="lek--nav-global-link" href="http://project.lektorium.tv">${_("Special projects")}</a></li>
-      <li><a class="lek--nav-global-link" href="https://www.lektorium.tv/offline">${_("Offline courses")}</a></li>
+        <li><a class="lek--nav-global-link" href="https://www.lektorium.tv/mooc">${_("Online courses")}</a></li>
+        <li><a class="lek--nav-global-link" href="https://www.lektorium.tv/medialibrary">${_("Medialibrary")}</a></li>
+        <li><a class="lek--nav-global-link" href="http://project.lektorium.tv">${_("Online schools")}</a></li>
 
-    % if user.is_authenticated():
-      <li class="lek--nav-user">
-        <a href="${reverse('dashboard')}" class="lek--user-link">
-            <%
-            username = self.real_user.username
-            %>
-            <span class="sr">${_("Dashboard for:")} ${username}</span>
-            ${pgettext("lektorium header", "Dashboard")}
-        </a>
-        <button class="lek--user-dropdown user-dropdown" aria-expanded="false" area-haspopup="true">
-          <span class="sr">${_("More options")}</span>
-          <span class="fa fa-sort-desc" aria-hidden="true"></span>
-        </button>
-        <ul class="lek--user-dropdown-menu user-dropdown-menu" area-label="${_('More options')}" role="menu">
-          <li class="lek--user-nickname">
-            ${Text(_("You're logged in as {begin_strong}{nickname}{end_strong}")).format(
-                begin_strong=HTML('<b>'),
-                end_strong=HTML('</b>'),
-                nickname=self.real_user.email
-            )}
-          </li>
-          <li><a class="dropdown-menuitem" href="${reverse('dashboard')}">${_("My courses")}</a></li>
-          <li><a class="dropdown-menuitem" href="http://www.lektorium.tv/editprofile">${_("Settings")}</a></li>
-          <li><a class="dropdown-menuitem" href="${reverse('logout')}" role="menuitem">${_("Sign Out")}</a></li>
-        </ul>
-      </li>
-    % else:
-      <li class="lek--user-login">
-        <a class="lek--btn-login" href="${reverse('signin_user')}${login_query()}">${_("Sign in")}</a>
-      </li>
-    % endif
+        % if user.is_authenticated():
+        <li class="lek--nav-user">
+            <a href="${reverse('dashboard')}" class="lek--user-link">
+                <%
+                username = self.real_user.username
+                %>
+                <span class="sr">${_("Dashboard for:")} ${username}</span>
+                ${pgettext("lektorium header", "Dashboard")}
+            </a>
+            <button class="lek--user-dropdown user-dropdown" aria-expanded="false" area-haspopup="true">
+                <span class="sr">${_("More options")}</span>
+                <span class="fa fa-sort-desc" aria-hidden="true"></span>
+            </button>
+            <ul class="lek--user-dropdown-menu user-dropdown-menu" area-label="${_('More options')}" role="menu">
+                <li class="lek--user-nickname">
+                    ${Text(_("You're logged in as {begin_strong}{nickname}{end_strong}")).format(
+                    begin_strong=HTML('<b>'),
+                    end_strong=HTML('</b>'),
+                    nickname=self.real_user.email
+                    )}
+                </li>
+                <li><a class="dropdown-menuitem" href="${reverse('dashboard')}">${_("My courses")}</a></li>
+                <li><a class="dropdown-menuitem" href="http://www.lektorium.tv/editprofile">${_("Settings")}</a></li>
+                <li><a class="dropdown-menuitem" href="${reverse('logout')}" role="menuitem">${_("Sign Out")}</a></li>
+            </ul>
+        </li>
+        % else:
+        <li class="lek--user-login">
+            <a class="lek--btn-login" href="${reverse('signin_user')}${login_query()}">${_("Sign in")}</a>
+        </li>
+        % endif
     </ol>
 
-  </nav>
+</nav>
 </header>
 
 % if course:
 <!--[if lte IE 9]>
-<div class="ie-banner" aria-hidden="true">${Text(_('{begin_strong}Warning:{end_strong} Your browser is not fully supported. We strongly recommend using {chrome_link} or {ff_link}.')).format(
+<div class="ie-banner" aria-hidden="true">${Text(_('{begin_strong}Warning:{end_strong} Your browser is not fully
+    supported. We strongly recommend using {chrome_link} or {ff_link}.')).format(
     begin_strong=HTML('<strong>'),
-    end_strong=HTML('</strong>'),
+        end_strong=HTML('</strong>'),
     chrome_link=HTML('<a href="https://www.google.com/chrome" target="_blank">Chrome</a>'),
     ff_link=HTML('<a href="http://www.mozilla.org/firefox" target="_blank">Firefox</a>'),
-)}</div>
+    )}
+</div>
 <![endif]-->
 % endif
 
