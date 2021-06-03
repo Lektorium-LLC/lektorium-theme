@@ -17,7 +17,7 @@ from openedx.core.djangolib.markup import Text, HTML
 </%block>
 
 <section class="container">
-  <section role="main" class="content-primary">
+  <section role="main" class="content-primary" style="width:100% !important;">
     <form role="form" id="survey-form" method="post" data-remote="true" action="${postback_url}" novalidate>
       <input type="hidden" name="csrfmiddlewaretoken" value="${ csrf_token }" />
       <input type="hidden" name="_redirect_url" value="${redirect_url}" />
@@ -33,9 +33,19 @@ from openedx.core.djangolib.markup import Text, HTML
           <h3 class="title">${_("Pre-Course Survey")}</h3>
         </div>
 
-        <p class="instructions">
+        <p class="instructions" hidden="hidden">
           ${_("You can begin your course as soon as you complete the following form. Required fields are marked with an asterisk (*).")}<br />
           ${_("This information is for the use of {platform_name} and course organization only. It will not be linked to your public profile in any way.").format(platform_name=platform_name)}
+        </p>
+
+     
+        <h3 class="title" hidden="hidden">${_('Who can I contact if I have questions?')}</h3>
+        <p style="margin-bottom:1em;">
+          ${Text(_("If you have any questions about this course or this form, you can contact {link_start}{mail_to_link}{link_end}.")).format(
+                      link_start=HTML('<a href="mailto:{mail_to_link}">').format(mail_to_link=mail_to_link),
+                      link_end=HTML('</a>'),
+                      mail_to_link=mail_to_link
+          )}
         </p>
       % endif
 
@@ -53,16 +63,16 @@ from openedx.core.djangolib.markup import Text, HTML
     </form>
   </section>
 
-    <aside class="content-supplementary" role="complementary">
+   <!-- <aside class="content-supplementary" role="complementary">
 
-      <div class="bit">
+      <div class="bit" hidden="hidden">
         <h3 class="title">${_('Why do I need to complete this information?')}</h3>
         <p>
           ${_('We use the information you provide to improve our course for both current and future students. The more we know about your specific needs, the better we can make your course experience.')}
         </p>
       </div>
 
-      <div class="bit">
+      <div class="bit" hidden="hidden">
         <h3 class="title">${_('Who can I contact if I have questions?')}</h3>
         <p>
           ${Text(_("If you have any questions about this course or this form, you can contact {link_start}{mail_to_link}{link_end}.")).format(
@@ -72,6 +82,6 @@ from openedx.core.djangolib.markup import Text, HTML
           )}
         </p>
       </div>
-    </aside>
+    </aside>-->
 
 </section>
