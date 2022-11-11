@@ -69,7 +69,7 @@
                 <%
                 signatories = certificate_data.get('signatories', []);
                 %>
-                <div class="accomplishment-signatories${ ' long-list' if len(signatories) > 4 else ''} ">
+                <div class="accomplishment-signatories${ ' long-list' if len(signatories) > 2 else ''} ${ ' double-list' if 2 < len(signatories) < 4 else '' }">
                     <h3 class="accomplishment-signatories-title sr-only">${_("Noted by")}</h3>
 
                     <div class="wrapper-signatories">

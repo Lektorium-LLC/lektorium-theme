@@ -255,9 +255,15 @@ $font-arsenal-path: "#{$static-path}/fonts/arsenal_regular";
         vertical-align: top;
     }
 
-    .accomplishment-signatories.long-list .signatory {
+    .accomplishment-signatories.long-list:not(.double-list) .signatory {
         min-width: 300px;
         width: 33% !important;
+        font-size: 80%;
+    }
+
+    .accomplishment-signatories.long-list.double-list .signatory {
+        min-width: 300px;
+        width: 48% !important;
         font-size: 80%;
     }
 
