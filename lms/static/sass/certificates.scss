@@ -357,7 +357,7 @@ $font-arsenal-path: "#{$static-path}/fonts/arsenal_regular";
   }
 
   .accomplishment-rendering .accomplishment-signatories .signatory-signature {
-    height: 4em !important;
+    height: 5em !important;
   }
 
   .accomplishment-signatories::after {
@@ -365,7 +365,7 @@ $font-arsenal-path: "#{$static-path}/fonts/arsenal_regular";
   }
 
   .wrapper-metadata::after {
-      margin-bottom: -1.5rem;
+      margin-bottom: -1.3rem;
   }
 
   .beta .accomplishment-orgs {
