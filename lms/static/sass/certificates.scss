@@ -255,15 +255,9 @@ $font-arsenal-path: "#{$static-path}/fonts/arsenal_regular";
         vertical-align: top;
     }
 
-    .accomplishment-signatories.long-list:not(.double-list) .signatory {
+    .accomplishment-signatories.long-list .signatory {
         min-width: 300px;
         width: 33% !important;
-        font-size: 80%;
-    }
-
-    .accomplishment-signatories.long-list.double-list .signatory {
-        min-width: 300px;
-        width: 48% !important;
         font-size: 80%;
     }
 
@@ -336,7 +330,7 @@ $font-arsenal-path: "#{$static-path}/fonts/arsenal_regular";
   }
 
   .layout-accomplishment .wrapper-accomplishment-rendering {
-      margin-bottom: 0;
+      margin-bottom: 1rem;
   }
 
   .accomplishment-rendering .accomplishment-statement {
@@ -363,7 +357,7 @@ $font-arsenal-path: "#{$static-path}/fonts/arsenal_regular";
   }
 
   .accomplishment-rendering .accomplishment-signatories .signatory-signature {
-    height: 5em !important;
+    height: 4em !important;
   }
 
   .accomplishment-signatories::after {
@@ -371,7 +365,7 @@ $font-arsenal-path: "#{$static-path}/fonts/arsenal_regular";
   }
 
   .wrapper-metadata::after {
-      margin-bottom: -1.3rem;
+      margin-bottom: -1.5rem;
   }
 
   .beta .accomplishment-orgs {
